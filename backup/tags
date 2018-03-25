@@ -1,0 +1,89 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+#1	FrontBackmatter/Bibliography.tex	/^  \\addcontentsline{toc}{chapter}{\\tocEntry{#1}}%$/;"	c
+0	session.vim	/^normal! 0$/;"	m
+A New Section	Chapters/Chapter02.tex	/^\\subsection{Guided Microsurgery}$/;"	s
+A Paragraph Example	Chapters/Chapter02.tex	/^\\subsubsection{A Subsubsection}$/;"	P
+A Section	Examples/classicthesis-article.tex	/^    \\subsection{A Subsection}$/;"	s
+A Section	Examples/classicthesis-article.tex	/^    \\tableofcontents$/;"	s
+A Subsection	Examples/classicthesis-article.tex	/^    \\finalVersionString \\lipsum[1]$/;"	b
+A Subsection	Examples/classicthesis-article.tex	/^    \\lipsum[1]$/;"	b
+A Subsubsection	Chapters/Chapter02.tex	/^\\subsection{Personas Initialmente}$/;"	b
+Abstract	FrontBackmatter/Abstract.tex	/^\\let\\cleardoublepage\\relaxco$/;"	c
+Acknowledgements	FrontBackmatter/Acknowledgments.tex	/^\\let\\cleardoublepage\\relax$/;"	c
+Acquisition device	Chapters/Chapter03.tex	/^	\\subsection{Controlling the system}$/;"	s
+Acronyms	FrontBackmatter/Contents.tex	/^    \\markboth{\\spacedlowsmallcaps{Acronyms}}{\\spacedlowsmallcaps{Acronyms}}$/;"	c
+Amplified Photodiode	Chapters/Chapter04.tex	/^\\end{figure}%----------------------------------------------------------------------------------------$/;"	b
+Another Appendix Section Test	Chapters/Chapter0A.tex	/^\\graffito{More dummy text}$/;"	s
+Another Section in This Chapter	Chapters/Chapter02.tex	/^\\subsection{Autem Timeam}$/;"	s
+Appendix Section Test	Chapters/Chapter0A.tex	/^\\chapter{Appendix Test}$/;"	s
+Appendix Test	Chapters/Chapter0A.tex	/^% Appendix A$/;"	c
+Appendix Title	Chapters/Chapter0B.tex	/^% Appendix X$/;"	c
+Applications of OCT	Chapters/Chapter02.tex	/^\\end{align}$/;"	s
+Autem Timeam	Chapters/Chapter02.tex	/^\\graffito{Note: The content of this chapter is just some dummy text.}$/;"	b
+Axial Measurements	Chapters/Chapter04.tex	/^\\end{figure}$/;"	b
+Axial Resolution	Chapters/Chapter04.tex	/^\\subsubsection{Measuring path lengths}$/;"	b
+Balancing the optical paths	Chapters/Chapter04.tex	/^\\end{figure}$/;"	b
+Basic Setup	Chapters/Chapter04.tex	/^\\end{figure}$/;"	s
+Basic Theory of Optical Coherence Tomograpy	Chapters/Chapter02.tex	/^% Chapter 2$/;"	c
+Collimator calibration	Chapters/Chapter03.tex	/^    \\subsection{Reference Arm}$/;"	b
+Colophon	FrontBackmatter/Colophon.tex	/^\\pdfbookmark[0]{Colophon}{colophon}$/;"	s
+Conclusions	Chapters/Chapter05.tex	/^\\chapter{Conclusions}/;"	c
+Controlling the system	Chapters/Chapter03.tex	/^\\section{Galvanometric system}$/;"	b
+Couplers	Chapters/Chapter03.tex	/^    \\end{figure}$/;"	b
+Data Acquisition Software	Chapters/Chapter04.tex	/^\\label{ch:results} % For referencing the chapter elsewhere, use \\autoref{ch:name} $/;"	s
+Declaration	FrontBackmatter/Declaration.tex	/^\\pdfbookmark[0]{Declaration}{declaration}$/;"	c
+Description of the Setup	Chapters/Chapter03.tex	/^% Chapter 3$/;"	c
+Description of various OCT techniques	Chapters/Chapter02.tex	/^\\subsection{Spatial Coherence}$/;"	s
+Digital Signal Processing Chain for OCT	Chapters/Chapter04.tex	/^\\lipsum[1]$/;"	b
+Displaying graphics with OpenGL	Chapters/Chapter04.tex	/^    Blocking vs Non-blocking calls$/;"	b
+Figure Citations	Chapters/Chapter02.tex	/^\\enlargethispage{2cm}$/;"	b
+Frequency Domain OCT	Chapters/Chapter02.tex	/^Insert picture of basic Michelson interferometer and expand on that. Show axial measurements of rabbit eye and whatnot.$/;"	b
+Galvanometric System Control	Chapters/Chapter04.tex	/^Content$/;"	s
+Galvanometric system	Chapters/Chapter03.tex	/^    \\subsection{Photodiodes}$/;"	s
+Guided Microsurgery	Chapters/Chapter02.tex	/^\\subsection{Industrial}$/;"	b
+Industrial	Chapters/Chapter02.tex	/^\\subsection{Medicine}$/;"	b
+Interference	Chapters/Chapter02.tex	/^Copy from \\cite{Wolf1999,Someda2006}$/;"	b
+Introduction	Chapters/Chapter01.tex	/^% Chapter 1$/;"	c
+Light Source	Chapters/Chapter03.tex	/^\\section{Optical Devices}$/;"	b
+Mach Zender Interferometer	Chapters/Chapter04.tex	/^OpenMP\\footnote{\\url{http:\/\/www.openmp.org\/}} \\graffito{OpenMP stands for Open \\textbf{M}ulti-\\textbf{P}rocessing} is a multi-platform \\emph{Application Programming Interface} (API) for shared-memory parallel processing programming available for various programming languages, such as C, C++ and Fortran. $/;"	b
+Measuring path lengths	Chapters/Chapter04.tex	/^\\subsubsection{Working mechanism of a OBR}$/;"	b
+Medicine	Chapters/Chapter02.tex	/^\\section{Applications of OCT}$/;"	b
+New setup	Chapters/Chapter04.tex	/^\\subsubsection{Stability Analysis}$/;"	b
+Optical Devices	Chapters/Chapter03.tex	/^\\label{ch:setup} % For referencing the chapter elsewhere, use \\autoref{ch:mathtest}$/;"	s
+Parallel Computing with OpenMP	Chapters/Chapter04.tex	/^\\subsection{Displaying graphics with OpenGL}$/;"	b
+Personas Initialmente	Chapters/Chapter02.tex	/^\\end{description}$/;"	b
+Photodiodes	Chapters/Chapter03.tex	/^    \\subsubsection{Scanning lens}         $/;"	b
+Principles of Coherence and Interference	Chapters/Chapter02.tex	/^In this chapter I will report the basic theoretical background needed to comprehend the working mechanisms behind the OCT technique, introduce the different schemes and compare them in terms of performance. A brief description of the main areas of application will also be given.$/;"	s
+Publications	FrontBackmatter/Publications.tex	/^\\pdfbookmark[1]{Publications}{publications}$/;"	c
+Reference Arm	Chapters/Chapter03.tex	/^	\\subsection{Couplers}$/;"	b
+Results	Chapters/Chapter04.tex	/^% Chapter X$/;"	c
+Sample Arm	Chapters/Chapter03.tex	/^        \\subsubsection{Collimator calibration}$/;"	b
+Scanning lens	Chapters/Chapter03.tex	/^    \\subsection{Sample Arm}$/;"	b
+SessionLoad	session.vim	/^let SessionLoad = 1$/;"	v
+Some Formulas	Chapters/Chapter03.tex	/^\\end{figure}%----------------------------------------------------------------------------------------$/;"	s
+Sommario	FrontBackmatter/Abstract.tex	/^	\\pdfbookmark[1]{Sommario}{Sommario}$/;"	c
+Spatial Coherence	Chapters/Chapter02.tex	/^\\subsection{Temporal Coherence}$/;"	b
+Spectral Domain OCT	Chapters/Chapter02.tex	/^\\subsection{Frequency Domain OCT}$/;"	b
+Stability Analysis	Chapters/Chapter04.tex	/^\\end{figure}$/;"	b
+Summary on Optical Coherence Tomography	Chapters/Chapter01.tex	/^\\label{ch:introduction} % For referencing the chapter elsewhere, use \\autoref{ch:introduction} $/;"	s
+Swept Source OCT	Chapters/Chapter02.tex	/^How it works, laser sources, compensation, camera receiver...$/;"	b
+Temporal Coherence	Chapters/Chapter02.tex	/^\\subsection{Interference}$/;"	b
+Terminology	Chapters/Chapter02.tex	/^Make sure to talk about the compensation needed in case of SSOCT and SDOCT and how to solve it, both in hardware and post processing.$/;"	b
+Test for a Subsection	Chapters/Chapter02.tex	/^Acronym testing: \\ac{UML} -- \\acs{UML} -- \\acf{UML} -- \\acp{UML} -- \\ac{OCT}$/;"	b
+The Qt programming framework	Chapters/Chapter04.tex	/^\\subsection{Digital Signal Processing Chain for OCT}$/;"	b
+The Signal Slot paradigm	Chapters/Chapter04.tex	/^\\subsection{The Qt programming framework}$/;"	s
+Time Domain OCT	Chapters/Chapter02.tex	/^\\subsection{Terminology}$/;"	b
+USAF Target	Chapters/Chapter04.tex	/^	\\end{enumerate}$/;"	s
+Working mechanism of a OBR	Chapters/Chapter04.tex	/^\\end{figure}$/;"	b
+Workstation	Chapters/Chapter03.tex	/^    In \\autoref{fig:single-vs-dual-port} a comparison between the two acquisition techniques is available. For Single-port Acquisitions, in \\autoref{fig:dual-port-acq} we can see that no trigger events are missed and over 95\\% of CPU time is available for data processing, while in \\autoref{fig:single-port-acq} trigger events happening while the DMA transfer is ongoing are missed completely, and virtually all CPU cycles are used in managing the data acquisition. This leaves no room for data processing on the CPU. $/;"	s
+s:l	session.vim	/^let s:l = 131 - ((39 * winheight(0) + 22) \/ 44)$/;"	v
+s:l	session.vim	/^let s:l = 545 - ((30 * winheight(0) + 22) \/ 44)$/;"	v
+s:so_save	session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+zt	session.vim	/^normal! zt$/;"	m

@@ -1,0 +1,23 @@
+\documentclass[border=4pt]{standalone}
+
+\usepackage[osf,sc]{mathpazo}
+\linespread{1.05}
+\usepackage[euler-digits]{eulervm}
+  \usepackage{pgfplots}
+  \pgfplotsset{compat=newest}
+  %% the following commands are needed for some matlab2tikz features
+  \usetikzlibrary{plotmarks}
+  \usetikzlibrary{arrows.meta}
+  \usepgfplotslibrary{patchplots}
+  \usepackage{grffile}
+  \usepackage{amsmath}
+
+  %% you may also want the following commands
+  %\pgfplotsset{plot coordinates/math parser=false}
+  %\newlength\figureheight
+  %\newlength\figurewidth
+
+\begin{document}
+
+  \input{wristband-center.tikz}
+\end{document}

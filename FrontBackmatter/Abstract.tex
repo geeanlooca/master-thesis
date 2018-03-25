@@ -1,0 +1,38 @@
+%*******************************************************
+% Abstract
+%*******************************************************
+%\renewcommand{\abstractname}{Abstract}
+\pdfbookmark[1]{Abstract}{Abstract}
+\begingroup
+\let\clearpage\relax
+\let\cleardoublepage\relax
+\let\cleardoublepage\relax
+
+\chapter*{Abstract}
+\ac{OCT} is a non-invasive imaging technique that exploits the coherence property of light to generate 2-D (cross-sectional) and 3-D (volumetric) images of a live sample from the backscattered electromagnetic field. OCT imaging has found widespread application in medicine, mainly in the areas of \emph{Ophthalmology} and \emph{Angiography}, but also in industrial processes where non-destructive or contactless testing is necessary.\\ % \note{make examples: EXALOS} \\
+
+\noindent There are two main categories of OCT systems: \ac{TD-OCT} and \ac{FD-OCT}. As the names suggest, the former technique makes use of time domain measurements, while the latter takes advantage of the  frequency contents of the reflected signals. FD-OCT offers significant advantages over TD-OCT, such as faster scanning rates, better imaging resolution, and enhanced sensitivity, while at the same time requiring no mechanical movements of critical components such as lenses or collimators. \\
+
+\noindent In this thesis I focus on a particular FD-OCT technique called \ac{SS-OCT}, which uses a rapidly tunable narrow band laser as a light source. A working SS-OCT system capable of real-time imaging is fully developed, along with the data-acquisition and signal-processing modules needed for a complete tomographic imaging device. \\
+
+\noindent Future development includes the migration of the signal processing stack on a \ac{GPU} in order to enhance the performance of the system making use of the \ac{GPGPU} paradigm. This approach opens up the possibility to implent more advanced and refined OCT schemes, such as \ac{PS-OCT} and \ac{svOCT}. 
+
+\vfill
+
+\begin{otherlanguage}{italian}
+\pdfbookmark[1]{Sommario}{Sommario}
+\chapter*{Sommario}
+La Tomografia a Coerenza Ottica (\acs{OCT}) è una tecnica di imaging non invasiva che sfrutta la proprietà di coerenza della luce per generare immagini 2-D (a sezioni) e 3-D (volumetriche) di un campione in vivo a partire dalla luce retrodiffusa dallo stesso. La tecnica OCT ha trovato ampio utilizzo nel campo della medicina, in particolare nelle aree dell'\emph{Oftalmologia} e dell'\emph{Angiografia}, ma anche in processi industriali in cui sono necessarie misure non distruttive e senza
+contatto. \\
+
+\noindent Vi sono due principali categorie di sistemi OCT: TD-OCT (OCT nel dominio del tempo) e FD-OCT (OCT nel dominio della frequenza). Come suggerisce il nome, la prima di queste due tecniche sfrutta delle misure nel dominio del tempo, mentre la seconda utilizza il contenuto spettrale dei segnali riflessi per ricostruire l'immagine del campione in esame. FD-OCT offre vantaggi significativi rispetto a TD-OCT, come velocità di scansione più elevate, risoluzione più fine e migliore
+sensitività. Tutto ciò avviene senza che vi siano movimenti meccanici di componenti critici come lenti e collimatori. \\
+
+\noindent In questa tesi lavorerò su un particolare sistema FD-OCT chiamato Swept-Source OCT (\ac{SS-OCT}) che sfrutta un laser a banda molto stretta e con alta velocità di sintonizzazione. Verrà quindi sviluppato un sistema SS-OCT funzionante, capace di eseguire misure continue e in tempo reale. Il lavorò verterà sulla parte di progettazione e ottimizzazione dello schema ottico e sullo sviluppo di algoritmi per l'acquisizione ed elaborazione dei dati. \\
+
+\noindent Sviluppi futuri verteranno sulla migrazione dell'intero sistema di elaborazione dati su GPU (Graphical Processing Unit) facendo uso del paradigma di \acf {GPGPU}, che renderà più efficente il dispositivo e permetterà la progettazione di tecniche più avanzate come OCT sensibile alla polarizzazione (\acs{PS-OCT}), per ottenere misure di birifrangenza del campione, o \acf{svOCT}.
+\end{otherlanguage}
+
+\endgroup
+
+\vfill

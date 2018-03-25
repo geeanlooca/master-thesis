@@ -1,0 +1,111 @@
+%*******************************************************
+% Table of Contents
+%*******************************************************
+\pagestyle{scrheadings}
+%\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+%*******************************************************
+% List of Figures and of the Tables
+%*******************************************************
+\clearpage
+% \pagestyle{empty} % Uncomment this line if your lists should not have any headlines with section name and page number
+\begingroup
+    \let\clearpage\relax
+    \let\cleardoublepage\relax
+    %*******************************************************
+    % List of Figures
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listfigurename}
+    \pdfbookmark[1]{\listfigurename}{lof}
+    \listoffigures
+
+    \vspace{8ex}
+
+    %*******************************************************
+    % List of Tables
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listtablename}
+    \pdfbookmark[1]{\listtablename}{lot}
+    \listoftables
+
+    \vspace{8ex}
+    % \newpage
+
+    %*******************************************************
+    % List of Listings
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\lstlistlistingname}
+    \pdfbookmark[1]{\lstlistlistingname}{lol}
+    \lstlistoflistings
+
+    \vspace{8ex}
+
+    %*******************************************************
+    % Acronyms
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    \pdfbookmark[1]{Acronyms}{acronyms}
+    \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+    \chapter*{Acronyms}
+    \begin{acronym}[UMLX]
+        \acro{OCT}{Optical Coherence Tomography}
+        \acro{SS-OCT}{Swept-Source OCT}
+        \acro{TD-OCT}{Time-Domain OCT}
+        \acro{FD-OCT}{Fourier-Domain OCT}
+        \acro{SD-OCT}{Spectral-Domain OCT}
+        \acro{PS-OCT}{Polarization-Sensitive OCT}
+        \acro{svOCT}{Speckle Variance OCT}
+        \acro{GPGPU}{General-Purpose computing on Graphics Processing Units}
+        \acro{GPU}{Graphics Processing Unit}
+        \acro{MZI}{Mach-Zender interferometer}
+        \acro{PM}{Power Meter}
+        \acro{OPD}{Optical Path Difference}
+        \acro{PD}{Photodiode}
+        \acro{BPD}{Balanced Photodiode}
+        \acro{OSA}{Optical Spectrum Analyzer}
+        \acro{SMF}{Single Mode Fiber}
+        \acro{API}{Application Programming Interface}
+        \acro{UML}{Unified Modeling Language}
+        \acro{EOCT}{Endoscopic Optical Coherence Tomography}
+        \acro{IVUS}{Intravascular Ultrasound}
+        \acro{SEM}{Scanning Electron Microscope}
+        \acro{MRI}{Magnetic Resonance Imaging}
+        \acro{DOCT}{Doppler OCT}
+        \acro{PEG}{Photonic and Electromagnetic Group}
+        \acro{DEI}{Department of Information Engineering}
+        \acro{DAQ}{Data acquisition}
+        \acro{PZT}{piezoelectric transducer}
+        \acro{ADC}{Analog-to-Digital Converter}
+        \acro{SLD}{Superluminescent Diode}
+        \acro{CCD}{charged coupled device}
+        \acro{CMOS}{complementary metal-oxide semiconductor}
+        \acro{SNR}{signal-to-noise ratio}
+        \acro{FWHM}{full-width half-maximum}
+        \acro{PSD}{power spectral density}
+        \acro{OFDI}{optical frequency domain interferometry}
+        \acro{FFT}{Fast Fourier Transform}
+        \acro{MEMS}{micro electro-mechanical systems}
+        \acro{PZT}{piezoelectric transducer}
+        \acro{EOM}{electro-optic modulator}
+        \acro{SOA}{semiconductor optical amplifier}
+        \acro{FDML}{Fourier domain mode locking}
+        \acro{VCSEL}{vertical cavity surface-emitting laser}
+    \end{acronym}
+
+\endgroup
