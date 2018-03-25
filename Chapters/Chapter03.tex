@@ -73,7 +73,7 @@ f_0 = \frac{c_0}{\lambda_0 + \Delta\lambda /2} \approx 218.2 \,\,\text{THz}.
 \end{equation}
 
 \subsection{Axial Resolution}
-Using \autoref{eq:ss-axial-resolution} and the data provided by \autoref{tab:axsun-datasheet} it is possible to obtain an estimate of the axial resolution provided by the employed optical source. The axial resolution is then
+Using \autoref{eq:ss-axial-resolution} and the data provided by \autoref{tab:axsun-datasheet} it is possible to obtain an estimate of the axial resolution provided by the employed optical source. The axial resolution is found to be
 \begin{equation}
 \delta z \simeq 0.75 \frac{\lambda_0^2}{\Delta \lambda} \approx 9.2 \,\, \mu\text{m.}
 \end{equation}
@@ -300,7 +300,7 @@ The main parameters that characterize this device are the following:
  \begin{equation}
  	\delta x \simeq \frac{4\lambda_0}{\pi} \frac{f}{d}
  \end{equation}
- where $\lambda_0$ is the central wavelength of operation, $f$ is the focal length of the focusing lens and $d$ is the diameter of the beam at the entrance of the lens. The lateral resolution guaranteed by the LSM04 lens is thus
+ where $\lambda_0$ is the central wavelength of operation, $f$ is the focal length of the lens and $d$ is the diameter of the beam at the entrance of the lens. The lateral resolution guaranteed by the LSM04 is thus
  \begin{equation}
  	\delta x \simeq \frac{4\lambda_0}{\pi} \frac{EFL}{EP} \approx 22.5 \,\,\mu\text{m.}
  \end{equation}
@@ -330,23 +330,75 @@ The main parameters that characterize this device are the following:
 
 \subsection{Galvanometric Mirrors}
 
+In order to acquire B-scans and C-scans it is necessary to direct the laser beam emitted from the swept laser over a speficied area of the sample. This is accomplished by using a system of \emph{galvanometric mirrors}, also called \emph{galvo mirrors}. A cross-sectional image can be generated with a single 1D mirror, that is, a mirror which can rotate on a single axis, while volumetric data require the use of either a 2D mirror or a couple of 1D mirrors. In the second case, each mirror is responsible for the movement of the beam over a single direction on the focal plane, typically called X and Y. 
+
 \begin{figure}[bth]
 	\myfloatalign
 	{\includegraphics[width=0.6\linewidth]{gfx/ch3/galvo}}
 	\caption{The Thorlabs GVS002 galvo system.}\label{fig:galvo}
 \end{figure}
 
-\begin{figure}[bth]
-	\myfloatalign
-	{\includegraphics[width=0.75\linewidth]{gfx/ch3/galvo-distortion}}
-	\caption{Field distortion using two mirrors.}\label{fig:galvo-distortion}
-\end{figure}
+The galvo system employed in this thesis work is the Thorlabs GVS002\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=GVS002}}, which consists in two 1D silver plated mirrors, the motors that controls them, a detector to measure the mirrors' position  and the servo driver boards that interpret the error signals coming from the detector to correctly drive the motors to the demanded position. A photo of the dual axis motor/mirror assembly is available in \autoref{fig:galvo}. A thorough analysis of the electrical circuitry of the system is found in \cite{Calabrese2017}. 
+
+\subsubsection{Controlling the mirrors}
+The position of each mirror is controlled by sending a voltage signal to the respective driver board which is proportional to the mechanical angle of the respective motor. The maximum mechanical scan angle that the GVS002 system can handle is $\pm 12.5^\circ$, but it can vary depending on the laser beam diameter and the voltage scaling factor. This particular galvo system offers three different scaling factors which also govern the maximum input voltage applied to the servo boards:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{lll} \toprule
+	\tableheadline{Scaling factor} & \tableheadline{Max. voltage} & \tableheadline{Max. scan angle}
+	\\ \midrule
+	0.5 V/$^\circ$ & $\pm 6.25$ V & $\pm 12.5^\circ$ \\
+	0.8 V/$^\circ$ & $\pm 10$ V & $\pm 12.5^\circ$ \\
+	1 V/$^\circ$   & $\pm 10$ V & $\pm 10^\circ$ \\
+	\bottomrule
+\end{tabularx}
+\end{center}
+
+
+
+
+The scan angle seen by the focusing lens, called \emph{optical scan angle}, $\theta_o$, is twice the mechanical scan angle applied to the mirror, $\theta_m$. Setting the scaling factor  $\alpha = 1 V/^\circ$, the maximum optical scan angle then becomes $\pm 20^\circ$, which allows us fully exploit the maximum angle supported by the lens. In this case, the full FOV is scanned if the applied voltage is $v_{max} = \pm 7.5^\circ/(2\alpha) = \pm 3.75$ V. 
+
+The beam spot position on the focal plane is related to the mechanical angle applied to the mirrors and the focal length of the lens through the following relation
+
+\begin{align}
+	x = EFL \tan(2 \theta_{m,x})\label{eq:focusplane-positionx}\\
+	y = EFL \tan(2 \theta_{m,y})\label{eq:focusplane-positiony}
+\end{align}
+
+With a scaling factor equal to $\alpha$, the voltage signal $v_{x,y}(t)$ will therefore focus the beam at the following position
+\begin{align}
+x(t) = EFL \tan\left[2 \alpha_s v_x(t) \frac{\pi}{180}\right]\\
+y(t) = EFL \tan\left[2 \alpha_s v_y(t) \frac{\pi}{180}\right]
+\end{align}
+
+The two signals $v_x$ and $v_y$ are delivered to the driver boards as two pairs of positive voltage signals, $(v_x^+, v_x^-)$ and $(v_y^+, v_y^-)$. 
+
+
+\subsubsection{Image distortion}
+When using a two-mirror system three different effects can appear
+\begin{enumerate}
+	\item The arrangement of the mirrors leads to a distortion of the image field, which will be "pillow-shaped" instead of rectangular (fig:galvo-distortion). This is due to the fact that the distance between the two mirrors depends on the mechanical angle applied to the mirrors. 
+	
+	
+	\begin{figure}[bth]
+		\myfloatalign
+		{\includegraphics[width=0.75\linewidth]{gfx/ch3/galvo-distortion}}
+		\caption{Field distortion using two mirrors.}\label{fig:galvo-distortion}
+	\end{figure}
+	
+	
+	\item From \autoref{eq:focusplane-positionx} and \autoref{eq:focusplane-positiony} we can observe that the distance on the image field is not directly proportional to the applied angle but to its tangent. This can result in an additional distortion effect. 
+	
+	\item If an ordinary lens is used for focusing the laser beam, the focus lies on a sphere.
+	In a flat image field, a varying spot size results. 
+\end{enumerate}
 
 
 \begin{figure}[bth]
 	\myfloatalign
 	{\includegraphics[width=0.75\linewidth]{gfx/ch3/testa}}
-	\caption{Field distortion using two mirrors.}\label{fig:testa}
+	\caption{The final scanning system mounted on a movable vertical support.}\label{fig:testa}
 \end{figure}
 	
 \section{Acquisition Board}
