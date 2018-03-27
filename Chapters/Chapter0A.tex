@@ -26,9 +26,22 @@ quaestio philosophia & facto & demonstrated \\
 
 There is also a useless Pascal listing below: \autoref{lst:useless}.
 
-\begin{lstlisting}[float=b,language=Pascal,frame=tb,caption={A floating example (\texttt{listings} manual)},label=lst:useless]
-for i:=maxint downto 0 do
-begin
-{ do nothing }
-end;
+\begin{lstlisting}[float=b,language=C,frame=tb,caption={A floating example (\texttt{listings} manual)},label=lst:useless]
+
+int index = 0;
+float timeout = 2000;
+while (! stopAcquisition)
+{
+	index = index mod buffercount
+	
+	short integer* buffer = AlazarWaitBuffer(bufferArray[index], timeout);
+	
+	float* toDisk = processBuffer(buffer);
+	byte*  Bscan = createBitmap(buffer);
+	
+	emit newBuffer(toDisk);
+	emit newFrame(Bscan);
+	
+	index++;
+}
 \end{lstlisting}
