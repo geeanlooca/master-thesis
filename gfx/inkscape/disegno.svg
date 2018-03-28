@@ -12,9 +12,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="59.577881mm"
-   height="49.929726mm"
-   viewBox="0 0 59.577874 49.929727"
+   width="54.924965mm"
+   height="23.668604mm"
+   viewBox="0 0 54.924959 23.668604"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 2405546, 2018-03-11"
@@ -947,10 +947,10 @@
     </linearGradient>
     <inkscape:perspective
        id="perspective9703"
-       inkscape:persp3d-origin="526.18104 : 248.03149 : 1"
-       inkscape:vp_z="1052.3621 : 372.04725 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_x="50.627069 : 315.43202 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
+       inkscape:vp_z="1052.3621 : 372.04724 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_x="50.627067 : 315.43202 : 1"
        sodipodi:type="inkscape:persp3d" />
     <linearGradient
        y2="76.856003"
@@ -2192,10 +2192,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627069 : 315.43202 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_z="1052.3621 : 372.04725 : 1"
-       inkscape:persp3d-origin="526.18104 : 248.03149 : 1"
+       inkscape:vp_x="50.627067 : 315.43202 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_z="1052.3621 : 372.04724 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
        id="perspective9480" />
     <linearGradient
        id="linearGradient10536">
@@ -2459,10 +2459,10 @@
     </clipPath>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.1811 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_z="744.09444 : 526.1811 : 1"
-       inkscape:persp3d-origin="372.0472 : 350.7874 : 1"
+       inkscape:vp_x="0 : 526.18108 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_z="744.09441 : 526.18108 : 1"
+       inkscape:persp3d-origin="372.04719 : 350.78739 : 1"
        id="perspective6241" />
     <linearGradient
        inkscape:collect="always"
@@ -3060,10 +3060,10 @@
        r="18.992599" />
     <inkscape:perspective
        id="perspective44902"
-       inkscape:persp3d-origin="526.18104 : 248.03149 : 1"
-       inkscape:vp_z="1052.3621 : 372.04725 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_x="50.627069 : 315.43202 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
+       inkscape:vp_z="1052.3621 : 372.04724 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_x="50.627067 : 315.43202 : 1"
        sodipodi:type="inkscape:persp3d" />
     <radialGradient
        gradientUnits="userSpaceOnUse"
@@ -3565,10 +3565,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627069 : 315.43202 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_z="1052.3621 : 372.04725 : 1"
-       inkscape:persp3d-origin="526.18104 : 248.03149 : 1"
+       inkscape:vp_x="50.627067 : 315.43202 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_z="1052.3621 : 372.04724 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
        id="perspective45522" />
     <linearGradient
        id="linearGradient45530">
@@ -3705,10 +3705,10 @@
     </clipPath>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.1811 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_z="744.09444 : 526.1811 : 1"
-       inkscape:persp3d-origin="372.0472 : 350.7874 : 1"
+       inkscape:vp_x="0 : 526.18108 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_z="744.09441 : 526.18108 : 1"
+       inkscape:persp3d-origin="372.04719 : 350.78739 : 1"
        id="perspective68966" />
     <linearGradient
        inkscape:collect="always"
@@ -3732,10 +3732,10 @@
        r="6.7529998" />
     <inkscape:perspective
        id="perspective15715"
-       inkscape:persp3d-origin="526.18104 : 248.03149 : 1"
-       inkscape:vp_z="1052.3621 : 372.04725 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_x="50.627069 : 315.43202 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
+       inkscape:vp_z="1052.3621 : 372.04724 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_x="50.627067 : 315.43202 : 1"
        sodipodi:type="inkscape:persp3d" />
     <radialGradient
        gradientUnits="userSpaceOnUse"
@@ -4237,10 +4237,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627069 : 315.43202 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_z="1052.3621 : 372.04725 : 1"
-       inkscape:persp3d-origin="526.18104 : 248.03149 : 1"
+       inkscape:vp_x="50.627067 : 315.43202 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_z="1052.3621 : 372.04724 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
        id="perspective68472" />
     <linearGradient
        inkscape:collect="always"
@@ -4606,10 +4606,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627069 : 315.43202 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_z="1052.3621 : 372.04725 : 1"
-       inkscape:persp3d-origin="526.18104 : 248.03149 : 1"
+       inkscape:vp_x="50.627067 : 315.43202 : 1"
+       inkscape:vp_y="0 : 999.99994 : 0"
+       inkscape:vp_z="1052.3621 : 372.04724 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
        id="perspective68149" />
     <linearGradient
        id="linearGradient12233">
@@ -6438,6 +6438,126 @@
        y1="-158.28339"
        x2="-56.933422"
        y2="-158.28339" />
+    <g
+       id="g9217">
+      <symbol
+         id="glyph0-0-58"
+         overflow="visible"
+         style="overflow:visible">
+        <path
+           id="path9211"
+           d=""
+           style="stroke:none"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         id="glyph0-1-62"
+         overflow="visible"
+         style="overflow:visible">
+        <path
+           id="path9214-8"
+           d="M 3.078125,-7.09375 0.921875,-6.375 v 0.28125 H 1.75 c 0.609375,0 0.46875,0.8125 0.46875,1.921875 C 2.21875,-2.78125 2.1875,-1.390625 2.140625,0 L 2.25,0.046875 3.09375,-0.21875 C 3.0625,-0.984375 3.0625,-2.953125 3.0625,-4.3125 c 0,-0.875 0.015625,-1.78125 0.0625,-2.671875 z m 0,0"
+           style="stroke:none"
+           inkscape:connector-curvature="0" />
+      </symbol>
+    </g>
+    <clipPath
+       id="clip1-47">
+      <path
+         id="path9219"
+         d="M 0,0 H 4 V 6.882812 H 0 Z m 0,0"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       id="g9254">
+      <symbol
+         id="glyph0-0-29"
+         overflow="visible"
+         style="overflow:visible">
+        <path
+           id="path9248-9"
+           d=""
+           style="stroke:none"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         id="glyph0-1-08"
+         overflow="visible"
+         style="overflow:visible">
+        <path
+           id="path9251"
+           d="M 4.703125,-0.796875 4.65625,-0.875 H 1.578125 c -0.046875,0 -0.125,-0.015625 -0.125,-0.078125 0,-0.015625 0,-0.03125 0.015625,-0.03125 C 2.296875,-1.96875 3.1875,-2.96875 3.765625,-4.03125 4.03125,-4.5 4.25,-4.96875 4.25,-5.515625 4.25,-6.375 3.625,-7.0625 2.734375,-7.0625 c -0.828125,0 -1.5625,0.53125 -2.09375,1.125 L 0.84375,-5.734375 C 1.21875,-6.0625 1.65625,-6.375 2.203125,-6.375 c 0.84375,0 1.125,0.796875 1.125,1.3125 0,1.1875 -0.78125,2.1875 -1.546875,3.09375 C 1.25,-1.34375 0.6875,-0.75 0.125,-0.171875 v 0.15625 h 4.34375 z m 0,0"
+           style="stroke:none"
+           inkscape:connector-curvature="0" />
+      </symbol>
+    </g>
+    <clipPath
+       id="clip1-1">
+      <path
+         id="path9256-3"
+         d="M 0,0 H 4.980469 V 6.882812 H 0 Z m 0,0"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       id="g9291">
+      <symbol
+         id="glyph0-0-11"
+         overflow="visible"
+         style="overflow:visible">
+        <path
+           id="path9285"
+           d=""
+           style="stroke:none"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         id="glyph0-1-03"
+         overflow="visible"
+         style="overflow:visible">
+        <path
+           id="path9288-4"
+           d="M 2.40625,-3.8125 C 3.265625,-4.0625 3.984375,-4.703125 3.984375,-5.65625 3.984375,-6.53125 3.328125,-7 2.515625,-7 1.90625,-7 1.21875,-6.484375 0.71875,-6.0625 l 0.140625,0.21875 C 1.21875,-6.078125 1.6875,-6.375 2.078125,-6.375 c 0.59375,0 1.078125,0.375 1.078125,0.984375 0,0.90625 -0.6875,1.40625 -1.90625,1.6875 V -3.4375 c 0.59375,0 1.375,0.03125 1.765625,0.453125 0.296875,0.296875 0.5,0.703125 0.5,1.125 0,0.859375 -0.5625,1.625 -1.46875,1.625 -0.59375,0 -1.046875,-0.46875 -1.34375,-0.96875 H 0.59375 L 0.171875,-0.484375 0.25,-0.375 c 0.453125,0.34375 0.984375,0.546875 1.546875,0.546875 1.328125,0 2.65625,-0.953125 2.65625,-2.3125 0,-1 -0.78125,-1.484375 -2.046875,-1.59375 z m 0,0"
+           style="stroke:none"
+           inkscape:connector-curvature="0" />
+      </symbol>
+    </g>
+    <clipPath
+       id="clip1-0">
+      <path
+         id="path9293"
+         d="M 0,0 H 4.980469 V 6.882812 H 0 Z m 0,0"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       id="g9328">
+      <symbol
+         id="glyph0-0-3"
+         overflow="visible"
+         style="overflow:visible">
+        <path
+           id="path9322-9"
+           d=""
+           style="stroke:none"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         id="glyph0-1-19"
+         overflow="visible"
+         style="overflow:visible">
+        <path
+           id="path9325"
+           d="m 3.59375,-7.015625 -0.75,0.34375 -2.859375,4.328125 v 0.4375 h 2.84375 l 0.0625,0.09375 c 0,0.625 0,1.453125 -0.046875,1.796875 L 2.890625,0.046875 3.6875,-0.28125 C 3.65625,-0.5 3.65625,-1.28125 3.65625,-1.828125 L 3.734375,-1.90625 H 4.5625 L 4.71875,-2.265625 4.671875,-2.34375 h -0.9375 L 3.65625,-2.4375 c 0,-1.546875 0,-4.25 0.015625,-4.515625 z m -0.703125,4.59375 -0.0625,0.078125 H 0.6875 l -0.046875,-0.0625 c 0,-0.21875 0.84375,-1.59375 1.21875,-2.1875 0.296875,-0.453125 0.59375,-0.90625 0.9375,-1.296875 0,-0.015625 0.03125,-0.015625 0.046875,-0.015625 0.03125,0 0.046875,0.03125 0.046875,0.078125 z m 0,0"
+           style="stroke:none"
+           inkscape:connector-curvature="0" />
+      </symbol>
+    </g>
+    <clipPath
+       id="clip1-6">
+      <path
+         id="path9330-9"
+         d="M 0,0 H 4.980469 V 6.882812 H 0 Z m 0,0"
+         inkscape:connector-curvature="0" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -6446,9 +6566,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.0000002"
-     inkscape:cx="908.8768"
-     inkscape:cy="152.33821"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="82.073348"
+     inkscape:cy="66.345316"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -6465,7 +6585,7 @@
      inkscape:pagecheckerboard="false"
      inkscape:guide-bbox="true">
     <sodipodi:guide
-       position="155.82635,-9.2389955"
+       position="-168.32425,-31.8697"
        orientation="1,0"
        id="guide12964"
        inkscape:locked="false" />
@@ -6478,7 +6598,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -6486,7 +6606,7 @@
      inkscape:label="Livello 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(285.76125,269.99331)">
+     transform="translate(-38.389366,266.36289)">
     <g
        inkscape:label="Background"
        id="layer1-6"
@@ -6525,7 +6645,7 @@
       <polygon
          style="display:inline;fill:url(#radialGradient4704);fill-opacity:1;stroke:#000000;stroke-width:0.75"
          i:knockout="Off"
-         points="0.375,37.473 0.375,0.65 32.266,19.062 "
+         points="0.375,0.65 32.266,19.062 0.375,37.473 "
          id="polygon4687"
          transform="translate(1000.9736,788.21393)" />
       <g
@@ -6942,7 +7062,7 @@
           </radialGradient>
           <polygon
              id="polygon5028"
-             points="32.64,37.471 32.64,0.649 0.75,19.061 "
+             points="32.64,0.649 0.75,19.061 32.64,37.471 "
              i:knockout="Off"
              style="fill:url(#radialGradient5054);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <polyline
@@ -6952,7 +7072,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5" />
           <polygon
              id="polygon5032"
-             points="23.748,25.381 18.502,28.258 18.864,22.159 "
+             points="18.502,28.258 18.864,22.159 23.748,25.381 "
              i:knockout="Off" />
         </g>
       </g>
@@ -6995,7 +7115,7 @@
             </radialGradient>
             <polygon
                id="polygon5070"
-               points="0.375,37.472 0.375,0.649 32.265,19.062 "
+               points="0.375,0.649 32.265,19.062 0.375,37.472 "
                i:knockout="Off"
                style="fill:url(#radialGradient5094);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
             <polyline
@@ -7006,7 +7126,7 @@
           </g>
           <polygon
              id="polygon5074"
-             points="10.582,27.044 5.335,29.921 5.698,23.822 "
+             points="5.335,29.921 5.698,23.822 10.582,27.044 "
              i:knockout="Off" />
         </g>
       </g>
@@ -7225,7 +7345,7 @@
           </radialGradient>
           <polygon
              id="polygon5485"
-             points="32.641,37.471 32.641,0.649 0.75,19.061 "
+             points="32.641,0.649 0.75,19.061 32.641,37.471 "
              i:knockout="Off"
              style="fill:url(#radialGradient5520);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <g
@@ -7294,7 +7414,7 @@
           </radialGradient>
           <polygon
              id="polygon5534"
-             points="0.375,37.472 0.375,0.649 32.266,19.062 "
+             points="0.375,0.649 32.266,19.062 0.375,37.472 "
              i:knockout="Off"
              style="fill:url(#radialGradient5570);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <g
@@ -11302,7 +11422,7 @@
           </linearGradient>
           <polygon
              id="polygon4333"
-             points="50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 58.485,31.557 58.485,14.551 "
+             points="35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 "
              i:knockout="Off"
              style="fill:url(#linearGradient4376);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -11434,7 +11554,7 @@
           </linearGradient>
           <polygon
              id="polygon4399"
-             points="50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 58.485,31.557 58.485,14.551 "
+             points="35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 "
              i:knockout="Off"
              style="fill:url(#linearGradient4466);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -12068,7 +12188,7 @@
         <polygon
            style="fill:url(#linearGradient3672);fill-opacity:1;stroke:#000000;stroke-width:0.75"
            i:knockout="Off"
-           points="3.918,17.738 0.375,17.738 0.375,19.863 3.918,19.863 3.918,21.989 0.375,21.989 0.375,24.115 3.918,24.115 3.918,26.241 0.375,26.241 0.375,28.722 10.295,28.722 10.295,0.375 0.375,0.375 0.375,2.855 3.918,2.855 3.918,4.981 0.375,4.981 0.375,7.108 3.918,7.108 3.918,9.234 0.375,9.234 0.375,11.36 3.918,11.36 3.918,13.486 0.375,13.486 0.375,15.611 3.918,15.611 "
+           points="3.918,21.989 0.375,21.989 0.375,24.115 3.918,24.115 3.918,26.241 0.375,26.241 0.375,28.722 10.295,28.722 10.295,0.375 0.375,0.375 0.375,2.855 3.918,2.855 3.918,4.981 0.375,4.981 0.375,7.108 3.918,7.108 3.918,9.234 0.375,9.234 0.375,11.36 3.918,11.36 3.918,13.486 0.375,13.486 0.375,15.611 3.918,15.611 3.918,17.738 0.375,17.738 0.375,19.863 3.918,19.863 "
            id="polygon3653" />
         <rect
            style="stroke:#000000;stroke-width:0.75"
@@ -12229,7 +12349,7 @@
       <polygon
          style="display:inline;fill:url(#linearGradient4037);fill-opacity:1;stroke:#000000;stroke-width:0.75"
          i:knockout="Off"
-         points="10.08,0.375 5.271,23.053 0.463,0.375 "
+         points="5.271,23.053 0.463,0.375 10.08,0.375 "
          id="polygon4023"
          transform="translate(341.852,1111.076)" />
       <g
@@ -12464,7 +12584,7 @@
         <polygon
            style="fill:url(#linearGradient5297)"
            i:knockout="Off"
-           points="34.612,7.773 5.765,7.773 5.765,10.123 34.612,10.123 36.971,10.123 36.971,7.773 "
+           points="36.971,10.123 36.971,7.773 34.612,7.773 5.765,7.773 5.765,10.123 34.612,10.123 "
            id="polygon4156" />
         <linearGradient
            id="XMLID_10_"
@@ -12532,7 +12652,7 @@
         <polygon
            style="fill:url(#linearGradient5299)"
            i:knockout="Off"
-           points="34.612,10.713 5.765,10.713 5.765,13.063 34.612,13.063 36.971,13.063 36.971,10.713 "
+           points="36.971,13.063 36.971,10.713 34.612,10.713 5.765,10.713 5.765,13.063 34.612,13.063 "
            id="polygon4179" />
         <linearGradient
            id="XMLID_11_"
@@ -12600,7 +12720,7 @@
         <polygon
            style="fill:url(#linearGradient5301)"
            i:knockout="Off"
-           points="34.612,13.653 5.765,13.653 5.765,16.004 34.612,16.004 36.971,16.004 36.971,13.653 "
+           points="36.971,16.004 36.971,13.653 34.612,13.653 5.765,13.653 5.765,16.004 34.612,16.004 "
            id="polygon4202" />
         <linearGradient
            id="XMLID_12_"
@@ -12668,7 +12788,7 @@
         <polygon
            style="fill:url(#linearGradient5303)"
            i:knockout="Off"
-           points="34.612,16.594 5.765,16.594 5.765,18.943 34.612,18.943 36.971,18.943 36.971,16.594 "
+           points="36.971,18.943 36.971,16.594 34.612,16.594 5.765,16.594 5.765,18.943 34.612,18.943 "
            id="polygon4225" />
         <linearGradient
            id="XMLID_13_"
@@ -12736,7 +12856,7 @@
         <polygon
            style="fill:url(#linearGradient5305)"
            i:knockout="Off"
-           points="34.612,19.533 5.765,19.533 5.765,21.883 34.612,21.883 36.971,21.883 36.971,19.533 "
+           points="36.971,21.883 36.971,19.533 34.612,19.533 5.765,19.533 5.765,21.883 34.612,21.883 "
            id="polygon4248" />
         <linearGradient
            id="XMLID_14_"
@@ -12804,12 +12924,12 @@
         <polygon
            style="fill:url(#linearGradient5307)"
            i:knockout="Off"
-           points="34.612,22.473 5.765,22.473 5.765,24.822 34.612,24.822 36.971,24.822 36.971,22.473 "
+           points="36.971,24.822 36.971,22.473 34.612,22.473 5.765,22.473 5.765,24.822 34.612,24.822 "
            id="polygon4271" />
         <polygon
            style="fill:none;stroke:#000000;stroke-width:0.75"
            i:knockout="Off"
-           points="34.641,7.523 5.827,7.523 5.827,24.594 34.641,24.594 37.004,24.594 37.004,7.523 "
+           points="37.004,24.594 37.004,7.523 34.641,7.523 5.827,7.523 5.827,24.594 34.641,24.594 "
            id="polygon4273" />
         <rect
            style="stroke:#000000;stroke-width:0.75"
@@ -13007,7 +13127,7 @@
           </linearGradient>
           <polygon
              id="polygon4487"
-             points="14.548,18.801 14.548,4.627 0.375,4.627 0.375,5.013 14.164,18.801 "
+             points="14.164,18.801 14.548,18.801 14.548,4.627 0.375,4.627 0.375,5.013 "
              i:knockout="Off"
              style="fill:url(#linearGradient4559);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -13038,7 +13158,7 @@
           </linearGradient>
           <polygon
              id="polygon4494"
-             points="37.226,18.801 37.226,4.627 51.397,4.627 51.397,5.013 37.608,18.801 "
+             points="37.608,18.801 37.226,18.801 37.226,4.627 51.397,4.627 51.397,5.013 "
              i:knockout="Off"
              style="fill:url(#linearGradient4549);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -13864,7 +13984,7 @@
              style="fill:none;stroke:#73be1e;stroke-width:2" />
           <polygon
              id="polygon4450"
-             points="26.594,3.211 26.594,20.395 11.713,11.803 "
+             points="26.594,20.395 11.713,11.803 26.594,3.211 "
              i:knockout="Off"
              style="fill:#73be1e" />
         </g>
@@ -14109,7 +14229,7 @@
              style="fill:none;stroke:#ff1a00;stroke-width:2" />
           <polygon
              id="polygon4586"
-             points="26.594,3.211 26.594,20.395 11.712,11.803 "
+             points="26.594,20.395 11.712,11.803 26.594,3.211 "
              i:knockout="Off"
              style="fill:#ff1a00" />
         </g>
@@ -14632,7 +14752,7 @@
         </linearGradient>
         <polygon
            id="polygon3398"
-           points="23.051,0.375 21.334,0.375 0.375,0.375 0.375,17.383 21.334,17.383 23.051,17.383 "
+           points="21.334,17.383 23.051,17.383 23.051,0.375 21.334,0.375 0.375,0.375 0.375,17.383 "
            i:knockout="Off"
            style="fill:url(#linearGradient3360);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
       </g>
@@ -14674,12 +14794,12 @@
         <polygon
            style="fill:url(#radialGradient4011);fill-opacity:1;stroke:#d4496d;stroke-width:1.24020004;stroke-linecap:round;stroke-linejoin:bevel"
            i:knockout="Off"
-           points="22.772,34.373 37.309,15.888 19.503,2.556 9.086,0.609 0.564,11.566 4.978,21.247 "
+           points="0.564,11.566 4.978,21.247 22.772,34.373 37.309,15.888 19.503,2.556 9.086,0.609 "
            id="polygon3990" />
         <polygon
            style="clip-rule:evenodd;fill:none;stroke:#d4496d;stroke-width:1.24020004;stroke-linecap:round;stroke-linejoin:bevel"
            i:knockout="Off"
-           points="30.162,25.119 3.586,18.223 16.179,2.104 "
+           points="3.586,18.223 16.179,2.104 30.162,25.119 "
            id="polygon3992" />
       </g>
       <g
@@ -14955,7 +15075,7 @@
             </radialGradient>
             <polygon
                id="polygon5790"
-               points="33.375,6.892 16.788,12.774 22.946,30.139 39.533,24.258 45.091,18.374 41.397,7.958 "
+               points="45.091,18.374 41.397,7.958 33.375,6.892 16.788,12.774 22.946,30.139 39.533,24.258 "
                i:knockout="Off"
                style="fill:url(#radialGradient5837);fill-opacity:1;stroke:#c28a36;stroke-width:0.75" />
             <line
@@ -15557,7 +15677,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round" />
           <polygon
              id="polygon5292"
-             points="3.078,15.965 10.23,6.412 17.382,15.965 "
+             points="10.23,6.412 17.382,15.965 3.078,15.965 "
              i:knockout="Off"
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" />
           <line
@@ -15681,7 +15801,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round" />
           <polygon
              id="polygon5372"
-             points="3.078,15.965 10.23,6.411 17.382,15.965 "
+             points="10.23,6.411 17.382,15.965 3.078,15.965 "
              i:knockout="Off"
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" />
           <line
@@ -27131,29 +27251,25 @@
        height="6.0872369"
        x="-116.85815"
        y="-145.69701" />
-    <g
-       id="g9089"
-       transform="matrix(0.75660799,0,0,0.75357457,-8.5664081,-5.1179688)"
-       style="stroke-width:1.32434595">
-      <rect
-         y="-167.67584"
-         x="-119.36567"
-         height="6.0872369"
-         width="9.93116"
-         id="rect13683-0-9-0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26486915;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <text
-         id="text13852-5-4"
-         y="-163.68619"
-         x="-117.20396"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.605546px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.08626647"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.605546px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.08626647"
-           y="-163.68619"
-           x="-117.20396"
-           id="tspan13850-5-1"
-           sodipodi:role="line">DAQ</tspan></text>
-    </g>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.19999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect13683-0-9-0"
+       width="7.5139952"
+       height="4.5871868"
+       x="-98.879425"
+       y="-131.47421" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.96742105px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.06513893"
+       x="-97.048729"
+       y="-128.72603"
+       id="text13852-5-4"
+       transform="scale(1.0020107,0.99799337)"><tspan
+         sodipodi:role="line"
+         id="tspan13850-5-1"
+         x="-97.048729"
+         y="-128.72603"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.96742105px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.06513893">DAQ</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.92451429px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.06513893"
@@ -27630,7 +27746,7 @@
         <polygon
            style="fill:none;stroke:#000000;stroke-width:1.54768956;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal"
            i:knockout="Off"
-           points="17.382,15.965 3.078,15.965 10.23,6.411 "
+           points="3.078,15.965 10.23,6.411 17.382,15.965 "
            id="polygon5372-1"
            transform="matrix(0,-0.18291219,0.18342791,0,-103.73143,-173.00913)" />
         <line
@@ -28825,5 +28941,223 @@
        id="path12914-9-8-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <g
+       id="surface8449"
+       transform="matrix(0.35277776,0,0,0.35277776,-54.647174,-221.40727)">
+      <g
+         id="g9228"
+         clip-path="url(#clip1-47)"
+         style="clip-rule:nonzero">
+        <g
+           id="g9226"
+           style="fill:#000000;fill-opacity:1">
+          <use
+             id="use9224"
+             y="6.8839998"
+             x="0"
+             xlink:href="#glyph0-1-62"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="surface30916"
+       transform="matrix(0.35277776,0,0,0.35277776,-55.035533,-201.17545)">
+      <g
+         id="g9265"
+         clip-path="url(#clip1-1)"
+         style="clip-rule:nonzero">
+        <g
+           id="g9263"
+           style="fill:#000000;fill-opacity:1">
+          <use
+             id="use9261"
+             y="6.8839998"
+             x="0"
+             xlink:href="#glyph0-1-08"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="surface33591"
+       transform="matrix(0.35277776,0,0,0.35277776,-16.605105,-221.33991)">
+      <g
+         id="g9302"
+         clip-path="url(#clip1-0)"
+         style="clip-rule:nonzero">
+        <g
+           id="g9300"
+           style="fill:#000000;fill-opacity:1">
+          <use
+             id="use9298"
+             y="6.8839998"
+             x="0"
+             xlink:href="#glyph0-1-03"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="surface37743"
+       transform="matrix(0.35277776,0,0,0.35277776,-16.605105,-201.0507)">
+      <g
+         id="g9339"
+         clip-path="url(#clip1-6)"
+         style="clip-rule:nonzero">
+        <g
+           id="g9337"
+           style="fill:#000000;fill-opacity:1">
+          <use
+             id="use9335"
+             y="6.8839998"
+             x="0"
+             xlink:href="#glyph0-1-19"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g9411"
+       transform="translate(6.2674701,1.5902536)">
+      <g
+         id="g5489-4-80"
+         transform="translate(179.15592,-80.635948)">
+        <path
+           style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -238.10751,-120.79298 h 7.684 c 0,0 2.05671,-1.31259 2.60587,-6.14786 0.54917,-4.83528 2.95142,-4.02013 2.95142,-4.02013"
+           id="path13625-3-1-1-5-5"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -238.10751,-141.12896 h 7.684 c 0,0 2.05671,1.31259 2.60587,6.14786 0.54917,4.83528 2.95142,4.02013 2.95142,4.02013"
+           id="path13625-3-1-1-2-93-6"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -224.86622,-130.96097 h 8.84808"
+           id="path13564-7-9-9-5-5-6"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -202.77685,-120.79298 h -7.684 c 0,0 -2.05671,-1.31259 -2.60587,-6.14786 -0.54917,-4.83528 -2.95142,-4.02013 -2.95142,-4.02013"
+           id="path13625-3-1-1-9-7-4"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -202.77685,-141.12896 h -7.684 c 0,0 -2.05671,1.31259 -2.60587,6.14786 -0.54917,4.83528 -2.95142,4.02013 -2.95142,4.02013"
+           id="path13625-3-1-1-2-9-0-0"
+           inkscape:connector-curvature="0" />
+      </g>
+      <rect
+         y="-212.29851"
+         x="-45.070736"
+         height="1.2628485"
+         width="7.4367752"
+         id="rect5651-0-4-6-6-0-26"
+         style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.64056432;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 81.82548,-263.28027 h 8.84808"
+       id="path13564-7-9-9-5-5-6-2"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g9521"
+       transform="matrix(1,0,0,-1,72.285877,-488.59135)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path13625-3-1-1-5-5-8"
+         d="m -25.791057,-225.31108 h 7.684 c 0,0 2.05671,-1.31259 2.60587,-6.14786 0.54917,-4.83528 2.95142,-4.02013 2.95142,-4.02013"
+         style="fill:none;fill-opacity:1;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path13625-3-1-1-2-93-6-7"
+         d="m -25.791057,-245.64706 h 7.684 c 0,0 2.05671,1.31259 2.60587,6.14786 0.54917,4.83528 2.95142,4.02013 2.95142,4.02013"
+         style="fill:none;stroke:#0000ff;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path13625-3-1-1-9-7-4-8"
+         d="m 9.539603,-225.31108 h -7.684 c 0,0 -2.05671,-1.31259 -2.60587,-6.14786 -0.54917,-4.83528 -2.95142,-4.02013 -2.95142,-4.02013"
+         style="fill:none;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path13625-3-1-1-2-9-0-0-2"
+         d="m 9.539603,-245.64706 h -7.684 c 0,0 -2.05671,1.31259 -2.60587,6.14786 -0.54917,4.83528 -2.95142,4.02013 -2.95142,4.02013"
+         style="fill:none;stroke:#ff0000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="-236.0988"
+         x="-12.842093"
+         height="1.2628485"
+         width="10.196333"
+         id="rect5651-0-4-6-6-0-26-9"
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.64056432;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-0-4-6-9"
+       width="0.72496861"
+       height="1.2628485"
+       x="81.46759"
+       y="-263.92307" />
+    <g
+       id="g13826-1-4-9-2"
+       style="fill:#ff0000;fill-opacity:1"
+       transform="matrix(0.56957042,0,0,0.56957042,62.951234,-239.05748)">
+      <text
+         id="text13548-0-9-0-7"
+         y="-33.633762"
+         x="-99.627998"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"><tspan
+           style="fill:#ff0000;fill-opacity:1;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
+           y="-33.633762"
+           x="-99.627998"
+           id="tspan13546-3-0-8-6"
+           sodipodi:role="line">*</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path13550-4-2-1-1"
+         d="m -97.110604,-39.044168 h 11.893493"
+         style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g9597"
+       transform="translate(2.6192412,-0.18708866)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="-266.07581"
+         x="35.870125"
+         height="6.1227622"
+         width="11.128616"
+         id="rect12739-1-3-9-0" />
+      <text
+         transform="scale(1.0020107,0.99799334)"
+         id="text13852-5-4-3"
+         y="-262.9093"
+         x="38.415375"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.06513893"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.06513893"
+           y="-262.9093"
+           x="38.415375"
+           id="tspan13850-5-1-2"
+           sodipodi:role="line">ODFR</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="83.547699"
+       y="-264.57135"
+       id="text9601"><tspan
+         sodipodi:role="line"
+         id="tspan9599"
+         x="83.547699"
+         y="-264.57135"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Patch cord</tspan></text>
   </g>
 </svg>
