@@ -317,7 +317,7 @@ The main parameters that characterize this device are the following:
 	 b = \frac{2 \delta x^2}{\lambda_0}.
  \end{equation}
  
- This effect is illustrated in \autoref{fig:na}, where we can observe that using lenses with a high numerical aperture (NA), or small spot size, the depth of view is limited. In OCT systems it is preferred to use low NA lenses to sacrifice lateral resolution in favor of a depth of view comparable to the coherence length of the source. Following this criterion the coherence length is fully exploited. 
+ This effect is illustrated in \autoref{fig:na}, where we can see that using lenses with a high numerical aperture (NA), or small spot size, the depth of view is limited. In OCT systems it is preferred to use low NA lenses to sacrifice lateral resolution in favor of a depth of view comparable to the coherence length of the source. Following this criterion the coherence length is fully exploited. 
  
   \begin{figure}[bth]
  	\myfloatalign
@@ -402,7 +402,7 @@ When using a two-mirror system three different effects can appear
 	\end{figure}
 	
 	
-	\item From \autoref{eq:focusplane-positionx} and \autoref{eq:focusplane-positiony} we can observe that the distance on the image field is not directly proportional to the applied angle but to its tangent. This can result in an additional distortion effect. 
+	\item From \autoref{eq:focusplane-positionx} and \autoref{eq:focusplane-positiony} we can notice that the distance on the image field is not directly proportional to the applied angle but to its tangent. This can result in an additional distortion effect. 
 	
 	\item If an ordinary lens is used for focusing the laser beam, the focus lies on a sphere.
 	In a flat image field, a varying spot size results. 
@@ -651,14 +651,8 @@ The resulting traces are available in \autoref{ch:appendixA}. The total length o
 
 
 \subsection{ Mach-Zender Interferometer }
-In order to test the \ac{DAQ} device and to determine the effect of sampling an interference signal with laser-supplied $k$-clock, a simple unbalanced \ac{MZI} was set up using two fiber couplers. The diagram of the setup for this test is reported in \autoref{fig:unbalanced-mzi}. In order to acquire a beat frequency with the ATS9350, two replicas of the laser pulse have to overlap with a relative delay $\tau$ that is less than the source coherence time. Additionally, the beat frequency has to fall in the electronic bandwidth of 1) the photodiodes and 2) the acquisition device. The delay element in the unbalanced interferometer arises from the difference in length of the couplers' arms. 
+In order to test the \ac{DAQ} device and to determine the effect of sampling an interference signal with laser-supplied $k$-clock, a simple unbalanced \ac{MZI} was set up using two 50-50 fiber couplers. The diagram of the setup for this test is reported in \autoref{fig:unbalanced-mzi}. In order to acquire a beat frequency with the ATS9350, two replicas of the laser pulse have to overlap with a relative delay $\tau$ that is less than the source coherence time. Additionally, the beat frequency has to fall in the electronic bandwidth of 1) the photodiodes and 2) the acquisition device. The delay element in the unbalanced interferometer arises from the difference in length of the couplers' arms. 
 
-
-
-The swept laser emits a signal with a time-varying frequency
-\begin{equation}
-E_{ss} = E_{in} e^{j2\pi f(t) t}
-\end{equation}
 
 \begin{figure}[bth]
 	\myfloatalign
@@ -666,33 +660,94 @@ E_{ss} = E_{in} e^{j2\pi f(t) t}
 	\caption{Diagram of an unbalanced Mach-Zender Interferometer.}\label{fig:unbalanced-mzi}
 \end{figure}
 
+
+The swept laser emits a signal with a time-varying frequency that can be described as follows
+\begin{equation}
+E_{ss} = E_{in} e^{j2\pi f(t) t} = E_{in}e^{j\phi(t)},
+\end{equation}
+hence the signals at the input ports of the second coupler will be respectively
+\begin{equation}
+	E_1 = \frac{1}{\sqrt{2}}E_{in} e^{j\phi(t-\tau)}\quad
+	E_2 = j\frac{1}{\sqrt{2}}E_{in} e^{j\phi(t)}
+\end{equation}
+The $+$ and $-$ ports of the BPD will instead see two signals expressed by
+\begin{align}
+	&E_+ = \frac{1}{2}E_{in} e^{j\phi(t-\tau)} - \frac{1}{2}E_{in} e^{j\phi(t)}\\
+	&E_- = j\frac{1}{2}E_{in} e^{j\phi(t)} + j \frac{1}{2}E_{in} e^{j\phi(t-\tau)}
+\end{align}
+which will be converted by the photodiode in the following currents
+\begin{align}
+	& I_+ \propto \langle E_+ E_+^* \rangle = \frac{1}{2}|E_{in}|^2 - \frac{1}{2}\cos\left[\phi(t)-\phi(t-\tau)\right]\\
+	& I_- \propto \langle E_- E_-^* \rangle = \frac{1}{2}|E_{in}|^2 + \frac{1}{2}\cos\left[\phi(t)-\phi(t-\tau)\right]
+\end{align}
+The output of the BPD will then be the sum the two currents
+\begin{equation}
+	I_{tot} = I_+ - I_- \propto \cos\left[\phi(t)-\phi(t-\tau)\right].
+\end{equation}
+We can observe that the DC term has been canceled out, leaving only an oscillating term that depends on the phase of the light source. 
+
+
 If the frequency sweep of the laser is assumed linear, the \ac{BPD} generates a sinusoidal current with frequency that is proportional to the \ac{OPD} between the arms of the interferometer:
 \begin{equation}
+	I_{tot} \propto \cos \left[ 2\pi \sigma_f\tau t +\phi_0 \right].
+\end{equation}
+The beat frequency is determined by the \ac{OPD} $\Delta z$ through the following relation
+\begin{equation}\label{eq:mzi-freqtoopd}
 	f = \sigma_f \tau = \sigma_f \frac{n\Delta z}{c_0},
 \end{equation}
-where $n=1.4674$ is the refractive index of the optical fiber used for the manufacturing of the couplers\footnote{\url{https://www.corning.com/media/worldwide/coc/documents/PI1463_07-14_English.pdf}} and $\Delta z$ is the \ac{OPD}. Connecting the White and Red ports of coupler A to the White and Blue ports of coupler B we obtain $\Delta z = 6.25-2.62\approx 3.63$ mm (\autoref{tab:couplers-diff}), which corresponds to a beat frequency $f \approx 87$ MHz. This frequency is sufficiently low to satisfy Nyquist's criterion and be sampled using the $k$-clock, as its maximum frequency is $\approx 330$ MHz. 
+where $n=1.4674$ is the refractive index of the optical fiber used for the manufacturing of the couplers\footnote{\url{https://www.corning.com/media/worldwide/coc/documents/PI1463_07-14_English.pdf}} and $c_0$ is the speed of light in vacuum. 
 
-Using the provided AlazarDSO acquisition software, it was possible to acquire the current generated by the photodiode using both the interal 500 MHz clock and the $k$-clock. Describe triggering and number of data points acquired in both cases. Also mention windowing (Hamming)
+Connecting the White and Red ports of coupler A to the White and Blue ports of coupler B we obtain $\Delta z = 6.25-2.62\approx 3.63$ mm (\autoref{tab:couplers-diff}), which corresponds to a beat frequency $f \approx 87$ MHz. This frequency is sufficiently low to satisfy Nyquist's criterion and be sampled using the $k$-clock, as its maximum frequency is $\approx 330$ MHz. 
+
+The total BPD current was acquired with the ATS9350 digitizer using the provided AlazarDSO software. Two acquisitions were made, first using the internal 500 MHz clock and then clocking the board with the $k$-clock. In order to synchronize the acquisition with the laser sweep, the board was externally triggered by the sweep-start signal supplied by the laser. 
+
+When acquiring with the internal clock, the number of useful samples to acquire was calculated as follows
+\begin{equation}
+	N = F_s \frac{d_c}{f} = 2525,
+\end{equation}
+where $F_s=500$ MHz is the sampling frequency, $d_c = 0.505$ is the laser duty cycle and $f=100$ kHz is the sweep repetition rate. In order to satisfy the bit alignment requirement of the board, the actual number of samples was set to the nearest multiple of 32, $\hat{N}=2528$. Instead, when using the external clock option of the board, this number is determined by the number of useful sampling instants of the $k$-clock, $1536$ (\autoref{tab:axsun-datasheet}).  
+
+The acquired signals were multiplied by a Hamming window and then Fourier-trasformed. The result of this procedure is illustrated in \autoref{fig:mzi-comparison}, where the x-axis is mapped from frequency to OPD by inverting \autoref{eq:mzi-freqtoopd}. We can notice that when using the internal clock of the board, the frequency content of the signal is spread over a relatively wide band (left). In fact, since the frequency sweep is not linear, uniformly sampling the interference signal results in a distorted sinusoidal term. Thus,  a precise estimation of the OPD between the \ac{MZI} arms is not possible. 
+
 
 \begin{figure}[hbt]
 	{\myfloatalign
 		\includegraphics[width=\linewidth]{gfx/ch3/interferometer/interferometer}}
-	\caption{Comparison between the beat frequency acquired with the uniform clock (left) and the $k$-clock (right).}\label{fig:mzi-internal}
+	\caption{Comparison between the beat frequency acquired with the uniform clock (left) and the $k$-clock (right).}\label{fig:mzi-comparison}
 \end{figure}
+
+On the other hand, sampling with the provided $k$-clock produces a clearly defined peak in the frequency domain (right) and permits a precise evalutation of the OPD. 
+
+To better appreciate the effect of external clocking on the imaging quality of an OCT system, a number of $W = 1000$ consecutive A-scans were captured, from which an artificial B-scan was generated (\autoref{fig:mzi-frame}). 
+
 
 \begin{figure}[hbt]
 	{\myfloatalign
 		\includegraphics[width=\linewidth]{gfx/ch3/interferometer/interferometer-frame}}
-	\caption{Beat frequency generated by the unbalanced \ac{MZI}, sampled with the internal 500MS/s clock.}\label{fig:mzi-frame}
+	\caption{Simulated B-scans using the internal 500 MHz clock (top) and the $k$-clock (bottom).}\label{fig:mzi-frame}
 \end{figure}
 
-\subsection{Basic setup and Stability Analysis}
+Using the internal clock and a logarithmic color scale (top), the width of the peak is significantly more pronounced: in this case a perfect reflector would take up a considerable portion of the imaging range. Moreover, the axial resolution of the OCT would not be acceptable for a functioning system. In this image it is also possible to notice two faint peaks at $\sim 7$ mm and $\sim 10$ mm. These are due to reflections accumulating a delay which is a multiple of the OPD between the arms of the interferometer. 
+
+As expected, the improvement when sampling with the $k$-clock is remarkable (bottom left). We can also notice that since the frequency of the $k$-clock is smaller than 500 MHz, the second of the two peaks generated by reflections is undersampled and appears at $\sim 2.5$ mm. The third image (bottom right) was captured after distancing the APC connectors on one of the arms of the \ac{MZI}, introducing a $\sim 1$ mm layer of air ($n=1$) which corresponds to an additional $\sim 0.68$ mm of OPD in the fiber. The reflection peaks in this case do not appear as the received power is too low. 
 
 
+\subsection{Fiber Michelson interferometer}
+
+\begin{figure}[bth]
+	\myfloatalign
+	{\includegraphics[width=0.8\linewidth]{gfx/setup-diagrams/basic-oct.pdf}}
+	\caption{SS-OCT setup using a fiber Michelson interferometer.}\label{fig:basic-oct}
+\end{figure}
 
 
 \subsection{Final Setup with OBR balancing}
 Add couplers length measurements;  focus in the middle of the imaging range. 
+\begin{figure}[bth]
+	\myfloatalign
+	{\includegraphics[width=\linewidth]{gfx/setup-diagrams/final-setup.pdf}}
+	\caption{Final SS-OCT setup.}\label{fig:final-setup}
+\end{figure}
 
 \subsection{Axial Resolution}
 Try with new measurements

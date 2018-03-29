@@ -403,15 +403,15 @@ Different methods to solve this issue and restore the full imaging range have be
 \subsection{Swept-Source OCT}
 \acf{SS-OCT}, also known as \ac{OFDI}, is a \ac{FD-OCT} technique that employs a narrow-bandwidth frequency-swept laser as an optical source. The introduction of tunable sources simplifies the detection scheme, removing the need for diffraction gratings and photodetector arrays. Ideally, a swept-source laser for \ac{SS-OCT} should present a frequency sweep that is linear, i.e, the istantaneous optical frequency should be expressed as
 \begin{equation}\label{eq:frequency-sweep-linear}
-	f(t) = f_0 + \delta f \cdot t,
+	f(t) = f_0 + \sigma_f \cdot t,
 \end{equation}
-where $\delta f$, typically measured in Terahertz per microsecond, is the sweep rate of the source. If this requirement is satisfied, the intensity at the ouput of the interferometer when the sample is a sigle reflector positioned at the depth $d = \Delta z/2$, can be expressed as
+where $\sigma_f$, typically measured in Terahertz per microsecond, is the sweep rate of the source. If this requirement is satisfied, the intensity at the ouput of the interferometer when the sample is a sigle reflector positioned at the depth $d = \Delta z/2$, can be expressed as
 \begin{equation}
 	I(t) = I_1 + I_2 + 2\sqrt{I_1I_2}\cos\left( 2\pi \Delta f  t\right)\,
 \end{equation}
 where 
 \begin{equation}
-	\Delta f = \delta f \cdot \Delta t = \delta f \cdot \frac{\Delta z}{c} = \delta f \cdot \frac{d}{2c},
+	\Delta f = \sigma_f \cdot \Delta t = \sigma_f \cdot \frac{\Delta z}{c} = \sigma_f \cdot \frac{d}{2c},
 \end{equation}
 
  called the \emph{beat frequency}, is linearly dependant on the depth of the reflector. When the reflector is replaced by a real sample, multiple beat frequencies arise in the photodetector's current and the reflectivity profile can be reconstructed with a Fourier Transform. This technique is equivalent to \ac{SD-OCT}, with the key difference that the frequency sweep enables the detection as a function of time through a simple photodetector, while the diffraction grating spatially separates the different wavelengths and directs them to a detector array.
@@ -427,7 +427,7 @@ where
 A tunable laser generally consists of a gain medium, typically a \ac{SOA}, a tunable wavelength filter and a laser cavity that supports a large bandwidth. The frequency-sweep is achieved by controlling the tunable filter through electrical signals to select the desired wavelength. \autoref{fig:sslaser} shows the diagram of a Axsun swept source in which frequency tuning is achieved by tilting a \ac{MEMS} mirror at the end of a Fabry-Perot filter. Rapidly changing the selected wavelength can affect the linearity frequency sweep, contributing to a nonlinear term in \autoref{eq:frequency-sweep-linear}, which then becomes
 
 \begin{equation}
-	f(t) = f_0 + \delta f \cdot t + \eta (t),
+	f(t) = f_0 + \sigma_f \cdot t + \eta (t),
 \end{equation}
 
 where $\eta(t)$ contains the aforementioned nonlinearities. If the detector's output is digitized with a uniform clock rate, a similar effect to that described for \ac{SD-OCT} systems can arise (\autoref{fig:fdoct-resampling}), resulting in a non-linear sampling in the $k$-space. Consequently, distortions in the acquired A-scans can appear, hindering the image quality. A resampling of the acquired signal is then required in order to linearize the frequency sweep, adding to the total computational cost and possibly reducing the acquisition rate of the system. 
