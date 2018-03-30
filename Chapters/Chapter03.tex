@@ -326,7 +326,7 @@ The main parameters that characterize this device are the following:
  \end{figure}
  
  
- Using the EP size the confocal parameter is $b \approx 0.61$ mm, equal to the value reported in \autoref{tab:lens-datasheet}, while using the beam size diameter $d = 3.4$ mm it becomes $b \approx 0.84$ mm. 
+ Using the EP size when calculating $\delta x$, the confocal parameter is $b \approx 0.61$ mm, equal to the value reported in \autoref{tab:lens-datasheet}, while using the beam size diameter $d = 3.4$ mm it becomes $b \approx 0.84$ mm. 
  
  
 
@@ -340,7 +340,7 @@ In order to acquire B-scans and C-scans it is necessary to direct the laser beam
 	\caption{The Thorlabs GVS002 galvo system.}\label{fig:galvo}
 \end{figure}
 
-The galvo system employed in this thesis work is the Thorlabs GVS002\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=GVS002}}, which consists in two 1D silver plated mirrors, the motors that controls them, a detector to measure the mirrors' position  and the servo driver boards that interpret the error signals coming from the detector to correctly drive the motors to the demanded position. A photo of the dual axis motor/mirror assembly is available in \autoref{fig:galvo}. A thorough analysis of the electrical circuitry of the system is found in \cite{Calabrese2017}. 
+The galvo system employed in this thesis work is the Thorlabs GVS002\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=GVS002}}, which consists in two 1D silver plated mirrors, the motors that controls them, a detector to measure the mirrors' position  and the servo driver boards that interpret the error signals coming from the detector to correctly drive the motors to the demanded position. A photo of the dual axis motor/mirror assembly is available in \autoref{fig:galvo}. A thorough analysis of the electrical circuitry of the system and its performance characterization is found in \cite{Calabrese2017}. 
 
 \subsubsection{Controlling the mirrors}
 The position of each mirror is controlled by sending a voltage signal to the respective driver board which is proportional to the mechanical angle of the respective motor. The maximum mechanical scan angle that the GVS002 system can handle is $\pm 12.5^\circ$, but it can vary depending on the laser beam diameter and the voltage scaling factor. This particular galvo system offers three different scaling factors which also govern the maximum input voltage applied to the servo boards:
@@ -359,7 +359,7 @@ The position of each mirror is controlled by sending a voltage signal to the res
 
 
 
-The scan angle seen by the focusing lens, called \emph{optical scan angle}, $\theta_o$, is twice the mechanical scan angle applied to the mirror, $\theta_m$. Setting the scaling factor  $\alpha = 1 V/^\circ$, the maximum optical scan angle then becomes $\pm 20^\circ$, which allows us fully exploit the maximum angle supported by the lens. In this case, the full FOV is scanned if the applied voltage is $v_{max} = \pm 7.5^\circ/(2\alpha) = \pm 3.75$ V. 
+Through simple trigonometric, it can be shown that the scan angle seen by the focusing lens, called \emph{optical scan angle}, $\theta_o$, is twice the mechanical scan angle applied to the mirror, $\theta_m$. Setting the scaling factor  $\alpha = 1 V/^\circ$, the maximum optical scan angle then becomes $\pm 20^\circ$, which allows us fully exploit the maximum angle supported by the lens. In this case, the full FOV is scanned if the applied voltage is $v_{max} = \pm 7.5^\circ/(2\alpha) = \pm 3.75$ V. 
 
 The beam spot position on the focal plane is related to the mechanical angle applied to the mirrors and the focal length of the lens through the following relation
 
@@ -370,8 +370,8 @@ The beam spot position on the focal plane is related to the mechanical angle app
 
 With a scaling factor equal to $\alpha$, the voltage signal $v_{x,y}(t)$ will therefore focus the beam at the following position
 \begin{align}
-x(t) = EFL \tan\left[2 \alpha_s v_x(t) \frac{\pi}{180}\right]\\
-y(t) = EFL \tan\left[2 \alpha_s v_y(t) \frac{\pi}{180}\right]
+x(t) = EFL \tan\left[2 \alpha v_x(t) \frac{\pi}{180}\right]\\
+y(t) = EFL \tan\left[2 \alpha v_y(t) \frac{\pi}{180}\right]
 \end{align}
 
 The two signals $v_x$ and $v_y$ are delivered to the driver boards as two pairs of positive voltage signals, $(v_x^+, v_x^-)$ and $(v_y^+, v_y^-)$, where
@@ -734,6 +734,9 @@ As expected, the improvement when sampling with the $k$-clock is remarkable (bot
 
 \subsection{Fiber Michelson interferometer}
 
+The first OCT circuit that was tested was a simple Michelson interferometer realized with a 50-50 fiber coupler. The schematic diagram of this setup is illustrated in \autoref{fig:basic-oct}. The reference arm consists in a cage system with a silver mirror mounted on a translatable support and an adjustable FiberPort collimator (\autoref{fig:reference-arm-photo}). This collimator permits a fine aligment with five degrees of freedom to easily maximize the amount of power that gets coupled back in the optical fiber after being reflected by the mirror. Through a careful alignment procedure, the attenuation of the reference arm is minimized, reaching a value of $\sim 4$ dB. 
+
+
 \begin{figure}[bth]
 	\myfloatalign
 	{\includegraphics[width=0.8\linewidth]{gfx/setup-diagrams/basic-oct.pdf}}
@@ -741,15 +744,113 @@ As expected, the improvement when sampling with the $k$-clock is remarkable (bot
 \end{figure}
 
 
-\subsection{Final Setup with OBR balancing}
-Add couplers length measurements;  focus in the middle of the imaging range. 
 \begin{figure}[bth]
 	\myfloatalign
-	{\includegraphics[width=\linewidth]{gfx/setup-diagrams/final-setup.pdf}}
+	{\includegraphics[width=0.6\linewidth]{gfx/ch3/reference-arm-photo}}
+	\caption{SS-OCT setup using a fiber Michelson interferometer.}\label{fig:reference-arm-photo}
+\end{figure}
+
+This setup, while fairly simple, gave rise to two different issues:
+\begin{enumerate}
+	\item a balanced detection scheme could not be implemented.
+	
+	\item the output of the optical source experienced instability, as half of the power reflected by the two arms is coupled back in the laser output port. This behaviour was tested by replacing the reference arm with a photodiode and monitoring its current. In \autoref{fig:first-scheme-instability} we can see that the power profile of the source is substantially distorted when a high-reflectivity object such as a mirror is placed under the focusing lens of the sample arm. With the additional power reflected by the reference mirror this behaviour can only worsen. 
+	
+	
+\end{enumerate}
+\begin{figure}[bth]
+	\myfloatalign
+	{\includegraphics[width=0.8\linewidth]{gfx/ch3/first-scheme-instability}}
+	\caption{Instability of the laser output power.}\label{fig:first-scheme-instability}
+\end{figure}
+
+
+
+
+\subsection{Second scheme}
+In order to limit the amount of power returning to the laser and avoid permanent damage, the setup in \autoref{fig:final-setup} has been designed. Connecting the source to the 90-10 coupler, only 10\% of the total output power is directed to the sample and only 10\% of the reflected power is directed back to the laser, reducing the reflected power by a factor of 25. The power profile of the source was measured by connecting a photodiode to connector D and monitoring its current. Unlike before, placing a mirror in the sample arm did not alter the shape of the laser pulse. 
+
+With respect to the previous scheme, the power returning to the laser from the reference arm is attenuated by $\sim 2$ dB thanks to the 90-10 coupler. 
+The effect of the reference arm on the stability of the laser output was tested in a similar way, connecting the photodiode to connector I. With the silver mirror stilll on the sample arm, the FiberPort collimator was slightly mis-aligned until the measured power profile did not exhibit any distortion. 
+
+\begin{figure}[bth]
+	\myfloatalign
+	{\includegraphics[width=\linewidth]{gfx/setup-diagrams/final-setup-2.pdf}}
 	\caption{Final SS-OCT setup.}\label{fig:final-setup}
 \end{figure}
 
-\subsection{Axial Resolution}
+\subsubsection{Balancing the interferometer}
+As already explained, interference fringes are only visible if the mismatch between the length of sample and reference arm is less than the coherence length of the source.
+
+With reference to \autoref{fig:final-setup}, the length of the sample arm, defined by the letters ABCJCBGK is
+\begin{equation}
+L_{\text{sample}} = \overline{\text{ABCJCBGK}} = 5L_{\text{arm}} + 2L_{\text{patch}},
+\end{equation}
+where $L_{\text{arm}}$ is the length of the couplers' arm and $L_{\text{patch}}$ is the length of the fiber patch cord (illustrated in blue). The reference arm is instead defined by the path ABDEFEHK, whose length is
+\begin{equation}
+	L_{\text{ref}} = \overline{\text{ABDEFEHK}} = 7L_{\text{arm}},
+\end{equation}
+meaning that, ideally
+\begin{equation}
+	| L_{\text{ref}} - L_{\text{sample}}| = 0 \implies L_{\text{patch}} = L_{\text{arm}},
+\end{equation}
+Since $L_{\text{arm}} \sim 1$ m, a patch cord of the same length has to be used. Potentially, light travelling the path ABDEFEDBGK could cause unwanted interference, but since
+\begin{equation}
+| L_{\text{ref}} - \overline{\text{ABDEFEDBGK}}| = 2L_{\text{arm}} \approx 2 \text{ m},
+\end{equation}
+the mismatch is far greater than the coherence length of the source, $l_c \approx 12$ mm meaning that no interference will be generated. 
+
+This setup is therefore able to protect the laser source from damage caused by strong reflections, removes unwanted coherent noise and enables balanced detection. In order to minimize distortions due to the detection scheme, the BPD is connected to the fiber coupler with the smallest mismatch between adjacent ports: looking at \autoref{tab:couplers-diff}, the Blue and White arms of coupler 50-50 A are the optimal choice. 
+
+\subsubsection{OFDR measurement}
+
+For a more precise analysis on the balancing of sample and reference arm, the difference between the two optical paths is measured with an OFDR using the setup in \autoref{fig:obr-balancing-setup}. The optical circulator enables us to select the path to measure, obtaining traces that are easier to interpret, while the fiber attenuator is used as a safety measure to protect the OFDR receiver. 
+
+\begin{figure}[hbt]
+	\myfloatalign
+	{	\includegraphics[width=\linewidth]{gfx/ch3/obr-balancing-setup}}
+	\caption{Time signal when the optical path difference is close to 0.}\label{fig:obr-balancing-setup}
+\end{figure}
+
+The acquired traces are illustrated in \autoref{fig:obr-balancing}. From left to right we can observe:
+\begin{itemize}
+	\item The reflection coming from connector I, measured with the circulator connected to port 1. This is the "unwanted" reflection that was previously discussed. 
+	
+	\item The reflection coming from connector C, when no patch cord is connected.
+	\item The reflection coming from connector J, corresponding to the end of the fiber patch cord. 
+	
+	\item The two reflections coming from connectors F and I. As we can see, the two are distanced by $\sim 2$ centimeters, confirming the measurements reported in \autoref{tab:couplers-diff}. 
+\end{itemize}
+
+Connecting the reference system to connector F, the path length difference becomes $\Delta L \approx 35$ mm. Since the interference between the two signals occurs in the fused part of coupler 50-50 A (point K in \autoref{fig:final-setup}), the length mismatch of its White and Red arms ($\approx 6.2$ mm) can be exploited to bring the total \ac{OPD} down to $\Delta L \approx 29$ mm. These 3 centimeters can be compensated with the translatable mirror in the reference arm. 
+
+
+
+
+\begin{figure}[hbt]
+	\myfloatalign
+	{	\includegraphics[width=\linewidth]{gfx/ch3/obr-balancing}}
+	\caption{OFDR traces used to balance the interferometer.}\label{fig:obr-balancing}
+\end{figure}
+
+
+
+\begin{figure}[hbt]
+	\myfloatalign
+	{	\includegraphics[width=\linewidth]{gfx/tikz/balancing/balanced}}
+	\caption{Time signal when the optical path difference is close to 0.}\label{fig:signal-balanced}
+\end{figure}
+
+\begin{figure}[hbt]
+	\myfloatalign
+	{	\includegraphics[width=\linewidth]{gfx/tikz/balancing/unbalanced}}
+	\caption{Effect of reference arm unbalancing on the beat frequenc
+		y}\label{fig:unbalanced-spectrum}
+\end{figure}
+
+
+\subsection{Signal-to-noise ratio profile}
+
 Try with new measurements
 
 \subsection{Thickness measurements}

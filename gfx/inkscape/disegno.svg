@@ -12,9 +12,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="54.924965mm"
-   height="23.668604mm"
-   viewBox="0 0 54.924959 23.668604"
+   width="102.78854mm"
+   height="46.59428mm"
+   viewBox="0 0 102.78853 46.594281"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 2405546, 2018-03-11"
@@ -947,10 +947,10 @@
     </linearGradient>
     <inkscape:perspective
        id="perspective9703"
-       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
-       inkscape:vp_z="1052.3621 : 372.04724 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_x="50.627067 : 315.43202 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:vp_z="1052.3621 : 372.04723 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_x="50.627067 : 315.43201 : 1"
        sodipodi:type="inkscape:persp3d" />
     <linearGradient
        y2="76.856003"
@@ -2192,10 +2192,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627067 : 315.43202 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_z="1052.3621 : 372.04724 : 1"
-       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
+       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_z="1052.3621 : 372.04723 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
        id="perspective9480" />
     <linearGradient
        id="linearGradient10536">
@@ -2459,10 +2459,10 @@
     </clipPath>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.18108 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_z="744.09441 : 526.18108 : 1"
-       inkscape:persp3d-origin="372.04719 : 350.78739 : 1"
+       inkscape:vp_x="0 : 526.18106 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_z="744.09442 : 526.18106 : 1"
+       inkscape:persp3d-origin="372.0472 : 350.78738 : 1"
        id="perspective6241" />
     <linearGradient
        inkscape:collect="always"
@@ -3060,10 +3060,10 @@
        r="18.992599" />
     <inkscape:perspective
        id="perspective44902"
-       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
-       inkscape:vp_z="1052.3621 : 372.04724 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_x="50.627067 : 315.43202 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:vp_z="1052.3621 : 372.04723 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_x="50.627067 : 315.43201 : 1"
        sodipodi:type="inkscape:persp3d" />
     <radialGradient
        gradientUnits="userSpaceOnUse"
@@ -3565,10 +3565,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627067 : 315.43202 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_z="1052.3621 : 372.04724 : 1"
-       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
+       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_z="1052.3621 : 372.04723 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
        id="perspective45522" />
     <linearGradient
        id="linearGradient45530">
@@ -3705,10 +3705,10 @@
     </clipPath>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.18108 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_z="744.09441 : 526.18108 : 1"
-       inkscape:persp3d-origin="372.04719 : 350.78739 : 1"
+       inkscape:vp_x="0 : 526.18106 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_z="744.09442 : 526.18106 : 1"
+       inkscape:persp3d-origin="372.0472 : 350.78738 : 1"
        id="perspective68966" />
     <linearGradient
        inkscape:collect="always"
@@ -3732,10 +3732,10 @@
        r="6.7529998" />
     <inkscape:perspective
        id="perspective15715"
-       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
-       inkscape:vp_z="1052.3621 : 372.04724 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_x="50.627067 : 315.43202 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:vp_z="1052.3621 : 372.04723 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_x="50.627067 : 315.43201 : 1"
        sodipodi:type="inkscape:persp3d" />
     <radialGradient
        gradientUnits="userSpaceOnUse"
@@ -4237,10 +4237,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627067 : 315.43202 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_z="1052.3621 : 372.04724 : 1"
-       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
+       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_z="1052.3621 : 372.04723 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
        id="perspective68472" />
     <linearGradient
        inkscape:collect="always"
@@ -4606,10 +4606,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627067 : 315.43202 : 1"
-       inkscape:vp_y="0 : 999.99994 : 0"
-       inkscape:vp_z="1052.3621 : 372.04724 : 1"
-       inkscape:persp3d-origin="526.18102 : 248.03149 : 1"
+       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_y="0 : 999.99991 : 0"
+       inkscape:vp_z="1052.3621 : 372.04723 : 1"
+       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
        id="perspective68149" />
     <linearGradient
        id="linearGradient12233">
@@ -6558,6 +6558,62 @@
          d="M 0,0 H 4.980469 V 6.882812 H 0 Z m 0,0"
          inkscape:connector-curvature="0" />
     </clipPath>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker10842-8-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10840-4-2"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker10842-83"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10840-0"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <radialGradient
+       id="radialGradient9664-2-5"
+       cx="16.320299"
+       cy="19.061501"
+       r="17.222401"
+       fx="16.320299"
+       fy="19.061501"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop9666-0-4" />
+      <stop
+         offset="1"
+         style="stop-color:#A0A0A0"
+         id="stop9668-7-9" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#A0A0A0" />
+    </radialGradient>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -6567,15 +6623,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.0000001"
-     inkscape:cx="82.073348"
-     inkscape:cy="66.345316"
+     inkscape:cx="260.85383"
+     inkscape:cy="50.396111"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
-     inkscape:window-width="1440"
-     inkscape:window-height="868"
-     inkscape:window-x="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
@@ -6585,7 +6641,7 @@
      inkscape:pagecheckerboard="false"
      inkscape:guide-bbox="true">
     <sodipodi:guide
-       position="-168.32425,-31.8697"
+       position="-374.80989,17.043399"
        orientation="1,0"
        id="guide12964"
        inkscape:locked="false" />
@@ -6606,7 +6662,7 @@
      inkscape:label="Livello 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-38.389366,266.36289)">
+     transform="translate(-244.87502,240.37546)">
     <g
        inkscape:label="Background"
        id="layer1-6"
@@ -6645,7 +6701,7 @@
       <polygon
          style="display:inline;fill:url(#radialGradient4704);fill-opacity:1;stroke:#000000;stroke-width:0.75"
          i:knockout="Off"
-         points="0.375,0.65 32.266,19.062 0.375,37.473 "
+         points="32.266,19.062 0.375,37.473 0.375,0.65 "
          id="polygon4687"
          transform="translate(1000.9736,788.21393)" />
       <g
@@ -7062,7 +7118,7 @@
           </radialGradient>
           <polygon
              id="polygon5028"
-             points="32.64,0.649 0.75,19.061 32.64,37.471 "
+             points="0.75,19.061 32.64,37.471 32.64,0.649 "
              i:knockout="Off"
              style="fill:url(#radialGradient5054);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <polyline
@@ -7072,7 +7128,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5" />
           <polygon
              id="polygon5032"
-             points="18.502,28.258 18.864,22.159 23.748,25.381 "
+             points="18.864,22.159 23.748,25.381 18.502,28.258 "
              i:knockout="Off" />
         </g>
       </g>
@@ -7115,7 +7171,7 @@
             </radialGradient>
             <polygon
                id="polygon5070"
-               points="0.375,0.649 32.265,19.062 0.375,37.472 "
+               points="32.265,19.062 0.375,37.472 0.375,0.649 "
                i:knockout="Off"
                style="fill:url(#radialGradient5094);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
             <polyline
@@ -7126,7 +7182,7 @@
           </g>
           <polygon
              id="polygon5074"
-             points="5.335,29.921 5.698,23.822 10.582,27.044 "
+             points="5.698,23.822 10.582,27.044 5.335,29.921 "
              i:knockout="Off" />
         </g>
       </g>
@@ -7345,7 +7401,7 @@
           </radialGradient>
           <polygon
              id="polygon5485"
-             points="32.641,0.649 0.75,19.061 32.641,37.471 "
+             points="0.75,19.061 32.641,37.471 32.641,0.649 "
              i:knockout="Off"
              style="fill:url(#radialGradient5520);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <g
@@ -7414,7 +7470,7 @@
           </radialGradient>
           <polygon
              id="polygon5534"
-             points="0.375,0.649 32.266,19.062 0.375,37.472 "
+             points="32.266,19.062 0.375,37.472 0.375,0.649 "
              i:knockout="Off"
              style="fill:url(#radialGradient5570);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <g
@@ -11422,7 +11478,7 @@
           </linearGradient>
           <polygon
              id="polygon4333"
-             points="35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 "
+             points="58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 "
              i:knockout="Off"
              style="fill:url(#linearGradient4376);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -11554,7 +11610,7 @@
           </linearGradient>
           <polygon
              id="polygon4399"
-             points="35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 "
+             points="58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 "
              i:knockout="Off"
              style="fill:url(#linearGradient4466);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -12188,7 +12244,7 @@
         <polygon
            style="fill:url(#linearGradient3672);fill-opacity:1;stroke:#000000;stroke-width:0.75"
            i:knockout="Off"
-           points="3.918,21.989 0.375,21.989 0.375,24.115 3.918,24.115 3.918,26.241 0.375,26.241 0.375,28.722 10.295,28.722 10.295,0.375 0.375,0.375 0.375,2.855 3.918,2.855 3.918,4.981 0.375,4.981 0.375,7.108 3.918,7.108 3.918,9.234 0.375,9.234 0.375,11.36 3.918,11.36 3.918,13.486 0.375,13.486 0.375,15.611 3.918,15.611 3.918,17.738 0.375,17.738 0.375,19.863 3.918,19.863 "
+           points="3.918,26.241 0.375,26.241 0.375,28.722 10.295,28.722 10.295,0.375 0.375,0.375 0.375,2.855 3.918,2.855 3.918,4.981 0.375,4.981 0.375,7.108 3.918,7.108 3.918,9.234 0.375,9.234 0.375,11.36 3.918,11.36 3.918,13.486 0.375,13.486 0.375,15.611 3.918,15.611 3.918,17.738 0.375,17.738 0.375,19.863 3.918,19.863 3.918,21.989 0.375,21.989 0.375,24.115 3.918,24.115 "
            id="polygon3653" />
         <rect
            style="stroke:#000000;stroke-width:0.75"
@@ -12349,7 +12405,7 @@
       <polygon
          style="display:inline;fill:url(#linearGradient4037);fill-opacity:1;stroke:#000000;stroke-width:0.75"
          i:knockout="Off"
-         points="5.271,23.053 0.463,0.375 10.08,0.375 "
+         points="0.463,0.375 10.08,0.375 5.271,23.053 "
          id="polygon4023"
          transform="translate(341.852,1111.076)" />
       <g
@@ -12584,7 +12640,7 @@
         <polygon
            style="fill:url(#linearGradient5297)"
            i:knockout="Off"
-           points="36.971,10.123 36.971,7.773 34.612,7.773 5.765,7.773 5.765,10.123 34.612,10.123 "
+           points="5.765,10.123 34.612,10.123 36.971,10.123 36.971,7.773 34.612,7.773 5.765,7.773 "
            id="polygon4156" />
         <linearGradient
            id="XMLID_10_"
@@ -12652,7 +12708,7 @@
         <polygon
            style="fill:url(#linearGradient5299)"
            i:knockout="Off"
-           points="36.971,13.063 36.971,10.713 34.612,10.713 5.765,10.713 5.765,13.063 34.612,13.063 "
+           points="5.765,13.063 34.612,13.063 36.971,13.063 36.971,10.713 34.612,10.713 5.765,10.713 "
            id="polygon4179" />
         <linearGradient
            id="XMLID_11_"
@@ -12720,7 +12776,7 @@
         <polygon
            style="fill:url(#linearGradient5301)"
            i:knockout="Off"
-           points="36.971,16.004 36.971,13.653 34.612,13.653 5.765,13.653 5.765,16.004 34.612,16.004 "
+           points="5.765,16.004 34.612,16.004 36.971,16.004 36.971,13.653 34.612,13.653 5.765,13.653 "
            id="polygon4202" />
         <linearGradient
            id="XMLID_12_"
@@ -12788,7 +12844,7 @@
         <polygon
            style="fill:url(#linearGradient5303)"
            i:knockout="Off"
-           points="36.971,18.943 36.971,16.594 34.612,16.594 5.765,16.594 5.765,18.943 34.612,18.943 "
+           points="5.765,18.943 34.612,18.943 36.971,18.943 36.971,16.594 34.612,16.594 5.765,16.594 "
            id="polygon4225" />
         <linearGradient
            id="XMLID_13_"
@@ -12856,7 +12912,7 @@
         <polygon
            style="fill:url(#linearGradient5305)"
            i:knockout="Off"
-           points="36.971,21.883 36.971,19.533 34.612,19.533 5.765,19.533 5.765,21.883 34.612,21.883 "
+           points="5.765,21.883 34.612,21.883 36.971,21.883 36.971,19.533 34.612,19.533 5.765,19.533 "
            id="polygon4248" />
         <linearGradient
            id="XMLID_14_"
@@ -12924,12 +12980,12 @@
         <polygon
            style="fill:url(#linearGradient5307)"
            i:knockout="Off"
-           points="36.971,24.822 36.971,22.473 34.612,22.473 5.765,22.473 5.765,24.822 34.612,24.822 "
+           points="5.765,24.822 34.612,24.822 36.971,24.822 36.971,22.473 34.612,22.473 5.765,22.473 "
            id="polygon4271" />
         <polygon
            style="fill:none;stroke:#000000;stroke-width:0.75"
            i:knockout="Off"
-           points="37.004,24.594 37.004,7.523 34.641,7.523 5.827,7.523 5.827,24.594 34.641,24.594 "
+           points="5.827,24.594 34.641,24.594 37.004,24.594 37.004,7.523 34.641,7.523 5.827,7.523 "
            id="polygon4273" />
         <rect
            style="stroke:#000000;stroke-width:0.75"
@@ -13127,7 +13183,7 @@
           </linearGradient>
           <polygon
              id="polygon4487"
-             points="14.164,18.801 14.548,18.801 14.548,4.627 0.375,4.627 0.375,5.013 "
+             points="0.375,5.013 14.164,18.801 14.548,18.801 14.548,4.627 0.375,4.627 "
              i:knockout="Off"
              style="fill:url(#linearGradient4559);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -13158,7 +13214,7 @@
           </linearGradient>
           <polygon
              id="polygon4494"
-             points="37.608,18.801 37.226,18.801 37.226,4.627 51.397,4.627 51.397,5.013 "
+             points="51.397,5.013 37.608,18.801 37.226,18.801 37.226,4.627 51.397,4.627 "
              i:knockout="Off"
              style="fill:url(#linearGradient4549);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -13984,7 +14040,7 @@
              style="fill:none;stroke:#73be1e;stroke-width:2" />
           <polygon
              id="polygon4450"
-             points="26.594,20.395 11.713,11.803 26.594,3.211 "
+             points="11.713,11.803 26.594,3.211 26.594,20.395 "
              i:knockout="Off"
              style="fill:#73be1e" />
         </g>
@@ -14229,7 +14285,7 @@
              style="fill:none;stroke:#ff1a00;stroke-width:2" />
           <polygon
              id="polygon4586"
-             points="26.594,20.395 11.712,11.803 26.594,3.211 "
+             points="11.712,11.803 26.594,3.211 26.594,20.395 "
              i:knockout="Off"
              style="fill:#ff1a00" />
         </g>
@@ -14752,7 +14808,7 @@
         </linearGradient>
         <polygon
            id="polygon3398"
-           points="21.334,17.383 23.051,17.383 23.051,0.375 21.334,0.375 0.375,0.375 0.375,17.383 "
+           points="0.375,0.375 0.375,17.383 21.334,17.383 23.051,17.383 23.051,0.375 21.334,0.375 "
            i:knockout="Off"
            style="fill:url(#linearGradient3360);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
       </g>
@@ -14794,12 +14850,12 @@
         <polygon
            style="fill:url(#radialGradient4011);fill-opacity:1;stroke:#d4496d;stroke-width:1.24020004;stroke-linecap:round;stroke-linejoin:bevel"
            i:knockout="Off"
-           points="0.564,11.566 4.978,21.247 22.772,34.373 37.309,15.888 19.503,2.556 9.086,0.609 "
+           points="19.503,2.556 9.086,0.609 0.564,11.566 4.978,21.247 22.772,34.373 37.309,15.888 "
            id="polygon3990" />
         <polygon
            style="clip-rule:evenodd;fill:none;stroke:#d4496d;stroke-width:1.24020004;stroke-linecap:round;stroke-linejoin:bevel"
            i:knockout="Off"
-           points="3.586,18.223 16.179,2.104 30.162,25.119 "
+           points="16.179,2.104 30.162,25.119 3.586,18.223 "
            id="polygon3992" />
       </g>
       <g
@@ -15075,7 +15131,7 @@
             </radialGradient>
             <polygon
                id="polygon5790"
-               points="45.091,18.374 41.397,7.958 33.375,6.892 16.788,12.774 22.946,30.139 39.533,24.258 "
+               points="22.946,30.139 39.533,24.258 45.091,18.374 41.397,7.958 33.375,6.892 16.788,12.774 "
                i:knockout="Off"
                style="fill:url(#radialGradient5837);fill-opacity:1;stroke:#c28a36;stroke-width:0.75" />
             <line
@@ -15677,7 +15733,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round" />
           <polygon
              id="polygon5292"
-             points="10.23,6.412 17.382,15.965 3.078,15.965 "
+             points="17.382,15.965 3.078,15.965 10.23,6.412 "
              i:knockout="Off"
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" />
           <line
@@ -15801,7 +15857,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round" />
           <polygon
              id="polygon5372"
-             points="10.23,6.411 17.382,15.965 3.078,15.965 "
+             points="17.382,15.965 3.078,15.965 10.23,6.411 "
              i:knockout="Off"
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" />
           <line
@@ -27130,7 +27186,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path5947-9"
-       d="m -189.9742,-187.72058 a 8.2937783,8.5252884 0 0 0 -8.29355,8.52557 8.2937783,8.5252884 0 0 0 2.78536,6.36189 21.874891,16.450931 0 0 1 13.52424,-8.5323 8.2937783,8.5252884 0 0 0 -8.01605,-6.35516 z"
+       d="m -164.04503,-184.41329 a 8.2937783,8.5252884 0 0 0 -8.29355,8.52557 8.2937783,8.5252884 0 0 0 2.78536,6.36189 21.874891,16.450931 0 0 1 13.52424,-8.5323 8.2937783,8.5252884 0 0 0 -8.01605,-6.35516 z"
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#e6e6e6;stroke-width:0.24812105;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <ellipse
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:#00222b;stroke-width:0.52177352;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -27746,7 +27802,7 @@
         <polygon
            style="fill:none;stroke:#000000;stroke-width:1.54768956;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal"
            i:knockout="Off"
-           points="3.078,15.965 10.23,6.411 17.382,15.965 "
+           points="10.23,6.411 17.382,15.965 3.078,15.965 "
            id="polygon5372-1"
            transform="matrix(0,-0.18291219,0.18342791,0,-103.73143,-173.00913)" />
         <line
@@ -29066,37 +29122,34 @@
        d="m 81.82548,-263.28027 h 8.84808"
        id="path13564-7-9-9-5-5-6-2"
        inkscape:connector-curvature="0" />
-    <g
-       id="g9521"
-       transform="matrix(1,0,0,-1,72.285877,-488.59135)">
-      <path
-         inkscape:connector-curvature="0"
-         id="path13625-3-1-1-5-5-8"
-         d="m -25.791057,-225.31108 h 7.684 c 0,0 2.05671,-1.31259 2.60587,-6.14786 0.54917,-4.83528 2.95142,-4.02013 2.95142,-4.02013"
-         style="fill:none;fill-opacity:1;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path13625-3-1-1-2-93-6-7"
-         d="m -25.791057,-245.64706 h 7.684 c 0,0 2.05671,1.31259 2.60587,6.14786 0.54917,4.83528 2.95142,4.02013 2.95142,4.02013"
-         style="fill:none;stroke:#0000ff;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path13625-3-1-1-9-7-4-8"
-         d="m 9.539603,-225.31108 h -7.684 c 0,0 -2.05671,-1.31259 -2.60587,-6.14786 -0.54917,-4.83528 -2.95142,-4.02013 -2.95142,-4.02013"
-         style="fill:none;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path13625-3-1-1-2-9-0-0-2"
-         d="m 9.539603,-245.64706 h -7.684 c 0,0 -2.05671,1.31259 -2.60587,6.14786 -0.54917,4.83528 -2.95142,4.02013 -2.95142,4.02013"
-         style="fill:none;stroke:#ff0000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         y="-236.0988"
-         x="-12.842093"
-         height="1.2628485"
-         width="10.196333"
-         id="rect5651-0-4-6-6-0-26-9"
-         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.64056432;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 46.49482,-263.28027 h 7.684 c 0,0 2.05671,1.31259 2.60587,6.14786 0.54917,4.83528 2.95142,4.02013 2.95142,4.02013"
+       id="path13625-3-1-1-5-5-8"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 46.49482,-242.94429 h 7.684 c 0,0 2.05671,-1.31259 2.60587,-6.14786 0.54917,-4.83528 2.95142,-4.02013 2.95142,-4.02013"
+       id="path13625-3-1-1-2-93-6-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 81.82548,-263.28027 h -7.684 c 0,0 -2.05671,1.31259 -2.60587,6.14786 -0.54917,4.83528 -2.95142,4.02013 -2.95142,4.02013"
+       id="path13625-3-1-1-9-7-4-8"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 81.82548,-242.94429 h -7.684 c 0,0 -2.05671,-1.31259 -2.60587,-6.14786 -0.54917,-4.83528 -2.95142,-4.02013 -2.95142,-4.02013"
+       id="path13625-3-1-1-2-9-0-0-2"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.64056432;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-0-4-6-6-0-26-9"
+       width="10.196333"
+       height="1.2628485"
+       x="59.443783"
+       y="252.49255"
+       transform="scale(1,-1)" />
     <rect
        style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect5651-0-4-6-9"
@@ -29159,5 +29212,480 @@
          x="83.547699"
          y="-264.57135"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Patch cord</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-250.16838"
+       y="-162.8649"
+       id="text5726-9"><tspan
+         sodipodi:role="line"
+         id="tspan5724-6"
+         x="-250.16838"
+         y="-162.8649"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">10%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-249.8558"
+       y="-137.60849"
+       id="text5726-9-9"><tspan
+         sodipodi:role="line"
+         id="tspan5724-6-8"
+         x="-249.8558"
+         y="-137.60849"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">90%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-286.707"
+       y="-125.96683"
+       id="text5730-6"><tspan
+         sodipodi:role="line"
+         id="tspan5728-0"
+         x="-286.707"
+         y="-125.96683"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">50-50</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-231.04391"
+       y="-126.25964"
+       id="text5730-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan5728-0-6"
+         x="-231.04391"
+         y="-126.25964"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">50-50</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-259.08975"
+       y="-147.16171"
+       id="text5730-6-2-4"><tspan
+         sodipodi:role="line"
+         id="tspan5728-0-6-1"
+         x="-259.08975"
+         y="-147.16171"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">90-10</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-213.36696"
+       y="-123.14178"
+       id="text5726-4-6-3"><tspan
+         sodipodi:role="line"
+         id="tspan5724-7-0-8"
+         x="-213.36696"
+         y="-123.14178"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">I</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-284.97192"
+       y="-132.81512"
+       id="text5726-4-6-6-5"><tspan
+         sodipodi:role="line"
+         id="tspan5724-7-0-6-2"
+         x="-284.97192"
+         y="-132.81512"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">K</tspan></text>
+    <path
+       style="fill:#cccccc;stroke:#0000ff;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 317.64234,-236.87807 h 17.50093"
+       id="path13564-7-9-9-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 309.95834,-216.54209 h 8.34695"
+       id="path13564-7-2-5-4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 310.62129,-196.20611 h 7.684 c 0,0 2.05671,-1.31259 2.60587,-6.14786 0.54917,-4.83528 2.95142,-4.02013 2.95142,-4.02013"
+       id="path13625-3-1-1-8"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 310.61853,-216.5428 h 7.89704 c 0,0 2.11373,1.3064 2.67811,6.11886 0.5644,4.81247 3.03325,4.00116 3.03325,4.00116"
+       id="path13625-3-1-1-2-1"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#cccccc;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 323.86258,-206.3741 h 8.84808"
+       id="path13564-7-9-9-5-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 345.95195,-196.20611 h -7.684 c 0,0 -2.05671,-1.31259 -2.60587,-6.14786 -0.54917,-4.83528 -2.95142,-4.02013 -2.95142,-4.02013"
+       id="path13625-3-1-1-9-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 345.95447,-216.5428 h -7.87767 c 0,0 -2.10854,1.3064 -2.67154,6.11886 -0.56302,4.81247 -3.02581,4.00116 -3.02581,4.00116"
+       id="path13625-3-1-1-2-9-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#0000ff;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 282.3059,-216.54138 h 8.12944 c 0,0 2.17593,-1.3064 2.75693,-6.11886 0.581,-4.81247 3.12251,-4.00116 3.12251,-4.00116"
+       id="path13625-3-1-1-5-53"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 282.31167,-236.87807 h 7.684 c 0,0 2.05671,1.31259 2.60587,6.14786 0.54917,4.83528 2.95142,4.02013 2.95142,4.02013"
+       id="path13625-3-1-1-2-93-4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#cccccc;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 295.55296,-226.71008 h 8.84808"
+       id="path13564-7-9-9-5-5-90"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#cccccc;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 317.64233,-216.54209 h -7.684 c 0,0 -2.05671,-1.31259 -2.60587,-6.14786 -0.54917,-4.83528 -2.95142,-4.02013 -2.95142,-4.02013"
+       id="path13625-3-1-1-9-7-2"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 317.64737,-236.87901 h -8.07133 c 0,0 -2.16039,1.30433 -2.73723,6.10918 -0.57685,4.80487 -3.1002,3.99485 -3.1002,3.99485"
+       id="path13625-3-1-1-2-9-0-01"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.49999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 282.91807,-196.20611 h 35.38722"
+       id="path13564-7-7-2-7"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-06"
+       width="0.72496861"
+       height="1.2628485"
+       x="317.16852"
+       y="-237.5313" />
+    <rect
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5722-6"
+       width="0.66966337"
+       height="5.3300495"
+       x="227.86722"
+       y="-328.75568"
+       transform="rotate(25.458595)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="285.06009"
+       y="-238.25098"
+       id="text5726-0"><tspan
+         sodipodi:role="line"
+         id="tspan5724-66"
+         x="285.06009"
+         y="-238.25098"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="299.30731"
+       y="-228.04816"
+       id="text5730-4"><tspan
+         sodipodi:role="line"
+         id="tspan5728-6"
+         x="299.30731"
+         y="-228.04816"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="312.91904"
+       y="-217.88785"
+       id="text5726-4-2"><tspan
+         sodipodi:role="line"
+         id="tspan5724-7-8"
+         x="312.91904"
+         y="-217.88785"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="316.6796"
+       y="-238.02802"
+       id="text5726-48-9"><tspan
+         sodipodi:role="line"
+         id="tspan5724-5-6"
+         x="316.6796"
+         y="-238.02802"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="327.79984"
+       y="-207.95874"
+       id="text5726-4-8-0"><tspan
+         sodipodi:role="line"
+         id="tspan5724-7-2-7"
+         x="327.79984"
+         y="-207.95874"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="342.80005"
+       y="-218.50821"
+       id="text5726-4-6-0"><tspan
+         sodipodi:role="line"
+         id="tspan5724-7-0-1"
+         x="342.80005"
+         y="-218.50821"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="283.9191"
+       y="-197.25146"
+       id="text5726-4-6-6-0"><tspan
+         sodipodi:role="line"
+         id="tspan5724-7-0-6-1"
+         x="283.9191"
+         y="-197.25146"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">H</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="283.05685"
+       y="-217.79886"
+       id="text5726-46-3"><tspan
+         sodipodi:role="line"
+         id="tspan5724-2-7"
+         x="283.05685"
+         y="-217.79886"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">G</tspan></text>
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-0-7"
+       width="0.72496861"
+       height="1.2628485"
+       x="285.9364"
+       y="-237.53131" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-0-4-2"
+       width="0.72496861"
+       height="1.2628485"
+       x="282.07782"
+       y="-217.10335" />
+    <path
+       style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50000001, 1.00000003;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 266.54565,-222.1003 0.0432,19.6947 c 0,0 -0.89565,6.17257 3.31734,6.17257 4.21296,0 13.01191,0.0269 13.01191,0.0269"
+       id="path6298"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-0-4-6-64"
+       width="0.72496861"
+       height="1.2628485"
+       x="282.4971"
+       y="-196.86093" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-0-4-6-7-5"
+       width="0.72496861"
+       height="1.2628485"
+       x="313.59506"
+       y="-217.10738" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.64056432;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-0-4-6-6-2"
+       width="7.4367752"
+       height="1.2628485"
+       x="324.64249"
+       y="-207.05229" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.64056432;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5651-0-4-6-6-0-0"
+       width="7.4367752"
+       height="1.2628485"
+       x="296.25098"
+       y="-227.3532" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="333.2312"
+       y="-238.42249"
+       id="text5726-48-2-9"><tspan
+         sodipodi:role="line"
+         id="tspan5724-5-2-9"
+         x="333.2312"
+         y="-238.42249"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">J</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="306.24442"
+       y="-238.27803"
+       id="text5726-9-3"><tspan
+         sodipodi:role="line"
+         id="tspan5724-6-7"
+         x="306.24442"
+         y="-238.27803"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">10%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="306.55701"
+       y="-213.02162"
+       id="text5726-9-9-8"><tspan
+         sodipodi:role="line"
+         id="tspan5724-6-8-7"
+         x="306.55701"
+         y="-213.02162"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">90%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="325.3689"
+       y="-201.67278"
+       id="text5730-6-2-9"><tspan
+         sodipodi:role="line"
+         id="tspan5728-0-6-0"
+         x="325.3689"
+         y="-201.67278"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">50-50</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="297.32303"
+       y="-222.57484"
+       id="text5730-6-2-4-9"><tspan
+         sodipodi:role="line"
+         id="tspan5728-0-6-1-8"
+         x="297.32303"
+         y="-222.57484"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">90-10</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="343.04584"
+       y="-198.5549"
+       id="text5726-4-6-3-8"><tspan
+         sodipodi:role="line"
+         id="tspan5724-7-0-8-5"
+         x="343.04584"
+         y="-198.5549"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">I</tspan></text>
+    <path
+       style="fill:none;stroke:#ff7f2a;stroke-width:0.49999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 255.7972,-236.87807 h 26.51447"
+       id="path13564-7-7-2-7-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ff7f2a;stroke-width:0.49999991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 266.54566,-235.9511 v 13.8508"
+       id="path13564-7-7-2-7-9-7"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g6202"
+       transform="matrix(-0.60225241,0,0,-0.60225241,362.0504,-380.49462)"
+       style="stroke-width:1.66043341">
+      <circle
+         r="4.4901276"
+         cy="-238.32661"
+         cx="158.77898"
+         id="path6172"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.33208668;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path6198"
+         d="m 158.66163,-235.56834 c -0.18398,-0.0134 -0.34103,-0.0375 -0.50045,-0.0772 -1.03563,-0.25739 -1.83317,-1.11685 -2.00923,-2.16519 -0.0307,-0.18258 -0.0375,-0.27381 -0.0374,-0.49325 1.8e-4,-0.22656 0.008,-0.30707 0.0484,-0.50945 0.1647,-0.82142 0.71581,-1.53033 1.47444,-1.89665 0.27976,-0.1351 0.55536,-0.21602 0.8623,-0.25323 l 0.0725,-0.009 v -0.23787 c 0,-0.20386 8.1e-4,-0.23728 0.0103,-0.23378 0.0165,0.007 0.97107,0.71181 0.97087,0.71756 -1.7e-4,0.006 -0.96129,0.71726 -0.97412,0.72153 -0.005,8.2e-4 -0.007,-0.08 -0.007,-0.23566 v -0.23814 l -0.0279,0.003 c -0.25944,0.0366 -0.4816,0.10385 -0.69725,0.2109 -0.24193,0.12012 -0.40308,0.23556 -0.59149,0.42377 -0.38421,0.38373 -0.60317,0.8584 -0.64732,1.40324 -0.014,0.17343 0.002,0.41596 0.0413,0.60899 0.12814,0.635 0.54664,1.19883 1.11562,1.50303 0.31196,0.16679 0.59388,0.24371 0.97986,0.26737 l 0.0725,0.005 v 0.24473 0.24474 l -0.0614,-8.1e-4 c -0.0338,-8e-4 -0.0764,-0.002 -0.0948,-0.003 z"
+         style="fill:#000000;stroke-width:1.66043329" />
+    </g>
+    <g
+       id="g9597-3"
+       transform="translate(209.1049,26.242697)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="-266.07581"
+         x="35.870125"
+         height="6.1227622"
+         width="11.128616"
+         id="rect12739-1-3-9-0-7" />
+      <text
+         transform="scale(1.0020107,0.99799334)"
+         id="text13852-5-4-3-1"
+         y="-262.9093"
+         x="38.415375"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.06513893"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.06513893"
+           y="-262.9093"
+           x="38.415375"
+           id="tspan13850-5-1-2-3"
+           sodipodi:role="line">ODFR</tspan></text>
+    </g>
+    <rect
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5722-6-8"
+       width="0.66966337"
+       height="5.3300495"
+       x="219.02904"
+       y="-346.59436"
+       transform="rotate(25.458595)" />
+    <rect
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5722-6-0"
+       width="0.66966337"
+       height="5.3300495"
+       x="200.54889"
+       y="-360.52679"
+       transform="rotate(25.458595)" />
+    <path
+       style="fill:#ff7f2a;stroke:#ff7f2a;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 197.52459,-212.35257 c -2.11667,-4.10104 -9.78959,-24.34166 -9.78959,-24.34166"
+       id="path6294"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ff7f2a;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50000001, 1.00000003;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 266.54565,-222.1003 c 0,0 -0.27755,4.81655 5.57636,5.2465 5.8539,0.42994 10.18966,0.31171 10.18966,0.31171"
+       id="path6300"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="273.12473"
+       y="-218.26004"
+       id="text5726-0-4"><tspan
+         sodipodi:role="line"
+         id="tspan5724-66-3"
+         x="273.12473"
+         y="-218.26004"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="270.31888"
+       y="-198.01753"
+       id="text5726-0-4-7"><tspan
+         sodipodi:role="line"
+         id="tspan5724-66-3-1"
+         x="270.31888"
+         y="-198.01753"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">2</tspan></text>
+    <rect
+       style="opacity:1;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:0.50000001, 1.00000001;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect6407"
+       width="3.1749997"
+       height="4.4979167"
+       x="264.98337"
+       y="-225.86192" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944451px;line-height:1.25;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="246.10059"
+       y="-223.25717"
+       id="text5730-6-2-4-9-2"><tspan
+         sodipodi:role="line"
+         id="tspan5728-0-6-1-8-2"
+         x="246.10059"
+         y="-223.25717"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944451px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Fiber attenuator</tspan></text>
   </g>
 </svg>
