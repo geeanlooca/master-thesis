@@ -408,7 +408,6 @@ When using a two-mirror system three different effects can appear
 	In a flat image field, a varying spot size results. 
 \end{enumerate}
 
-
 \begin{figure}[bth]
 	\myfloatalign
 	{\includegraphics[width=0.75\linewidth]{gfx/ch3/testa}}
@@ -814,7 +813,6 @@ For a more precise analysis on the balancing of sample and reference arm, the di
 
 The acquired traces are illustrated in \autoref{fig:obr-balancing}. From left to right we can observe:
 \begin{itemize}
-	\item The reflection coming from connector I, measured with the circulator connected to port 1. This is the "unwanted" reflection that was previously discussed. 
 	
 	\item The reflection coming from connector C, when no patch cord is connected.
 	\item The reflection coming from connector J, corresponding to the end of the fiber patch cord. 
@@ -822,9 +820,7 @@ The acquired traces are illustrated in \autoref{fig:obr-balancing}. From left to
 	\item The two reflections coming from connectors F and I. As we can see, the two are distanced by $\sim 2$ centimeters, confirming the measurements reported in \autoref{tab:couplers-diff}. 
 \end{itemize}
 
-Connecting the reference system to connector F, the path length difference becomes $\Delta L \approx 35$ mm. Since the interference between the two signals occurs in the fused part of coupler 50-50 A (point K in \autoref{fig:final-setup}), the length mismatch of its White and Red arms ($\approx 6.2$ mm) can be exploited to bring the total \ac{OPD} down to $\Delta L \approx 29$ mm. These 3 centimeters can be compensated with the translatable mirror in the reference arm. 
-
-
+Using connector F to connect the reference system, the path length difference becomes $\Delta L \approx 70$ mm, as this path is travelled in the two directions. Since the interference between the two signals occurs in the fused section of coupler 50-50 A (point K in \autoref{fig:final-setup}), the length mismatch of its White and Red arms ($\approx 6.2$ mm) can be exploited to bring the total \ac{OPD} down to $\Delta L \approx 64$ mm. These 6 centimeters can be compensated with the translatable mirror in the reference arm. 
 
 
 \begin{figure}[hbt]
@@ -833,6 +829,7 @@ Connecting the reference system to connector F, the path length difference becom
 	\caption{OFDR traces used to balance the interferometer.}\label{fig:obr-balancing}
 \end{figure}
 
+After connecting the scanning system and the reference arm, a silver mirror was placed on the focal plane of the focusing lens and the interference signal detected by the photodiode was monitored with a high-speed oscilloscope. The reference mirror was translated until the beat frequency was close to 0. In \autoref{fig:signal-balanced} we can see the signal captured at three different instants and observe the low-frequency oscillation. 
 
 
 \begin{figure}[hbt]
@@ -841,33 +838,94 @@ Connecting the reference system to connector F, the path length difference becom
 	\caption{Time signal when the optical path difference is close to 0.}\label{fig:signal-balanced}
 \end{figure}
 
+Finally, with the aid of the spectrum analyzer feature of the AlazarDSO software, the reference mirror was further adjusted in order to position the focal plane of the lens in the middle of the imaging range. An A-scan of the silver mirror was acquired using the external clock and a Hamming apodization window, resulting in the plot in \autoref{fig:ascan-fuoco}.
+
 \begin{figure}[hbt]
 	\myfloatalign
-	{	\includegraphics[width=\linewidth]{gfx/tikz/balancing/unbalanced}}
-	\caption{Effect of reference arm unbalancing on the beat frequenc
-		y}\label{fig:unbalanced-spectrum}
+	{	\includegraphics[width=\linewidth]{gfx/ch3/fuoco}}
+	\caption{Time signal when the optical path difference is close to 0.}\label{fig:ascan-fuoco}
 \end{figure}
+%\begin{figure}[hbt]
+%	\myfloatalign
+%	{	\includegraphics[width=\linewidth]{gfx/tikz/balancing/unbalanced}}
+%	\caption{Effect of reference arm unbalancing on the beat frequenc
+%		y}\label{fig:unbalanced-spectrum}
+%\end{figure}
 
 
 \subsection{Signal-to-noise ratio profile}
-
-Try with new measurements
-
-\subsection{Thickness measurements}
-No scattering detected, only reflections caused by the surface
+In order to test the combined effect of sensitivity falloff and the limited DOV of the lens, multiple A-scans were acquired while placing the mirror at different imaging depths. This was accomplished by translating the scanning system on a vertical support with the help of micrometer screw. The whole imaging range was covered with 11 acquisitions at multiples of $\sim 500$ $\mu$m, resulting in \autoref{fig:power-falloff}. An additional acquisition has been acquired without placing the silver mirror on the sample arm to obtain the noise level of the system. 
 
 
 \begin{figure}[hbt]
-\myfloatalign
-\includegraphics[width=\linewidth]{gfx/falloff}
-\caption{Signal spectrum at various depths.}\label{fig:power-falloff}
+	\myfloatalign
+	\includegraphics[width=\linewidth]{gfx/tikz/falloff}
+	\caption{A-scans of a silver mirror at various imaging depths.}\label{fig:power-falloff}
 \end{figure}
 
 
+
 \begin{figure}[hbt]
-\myfloatalign
-\includegraphics[width=0.9\linewidth]{gfx/falloff-fit}
-\caption{Signal-to-noise ratio falloff.}\label{fig:falloff-fit}
+	\myfloatalign
+	\includegraphics[width=0.8\linewidth]{gfx/tikz/falloff-fit}
+	\caption{Signal-to-noise ratio falloff.}\label{fig:falloff-fit}
+\end{figure}
+
+
+
+
+The \acf{SNR} profile was then measured by subtracting the average noise level from the peak power of each A-scan, obtaining the graph in \autoref{fig:falloff-fit}. The SNR dropoff factor was determined by fitting the data points to two lines using the Linear Least Squares method, obtaining $\alpha' = 5.6$ dB/mm for the first half of the imaging range and $ \alpha'' = 7.1$ dB/mm for the second half, guaranteeing a 6 dB range of $\sim 1.86$ mm. 
+
+\subsection{Axial Resolution}
+The axial resolution of a OCT system is arguably its most important parameter. As discussed in \autoref{ch:theory}, the resolution of an SS-OCT can be estimated in the case of a Gaussian source with \autoref{eq:ss-axial-resolution}. For our source, this value is found to be
+
+\begin{equation}
+	\delta z = 0.75 \frac{\lambda_0^2}{\Delta \lambda} = 0.75 \frac{(1305 \times 10^{-9})^2}{140 \times 10^{-9}} \approx 9.12\,\,\mu\text{m}.
+\end{equation}
+
+Since the spectrum of the laser is not Gaussian, the axial resolution has to be determined experimentally by measuring the FWHM of the A-scan generated by a mirror. This measurement will also take into account all the dispersion introduced by the optical components of the system. The acquired A-scans will first be spline-interpolated and then fit to a Lorentzian function of the form
+\begin{equation}
+	L(x) = L_0 + \frac{A}{\pi}\frac{\frac{1}{2} \gamma }{(x-x_0)^2 + (\frac{1}{2}\gamma)^2},
+\end{equation}
+to determine the FWHM parameter $\gamma/2$ . \autoref{fig:axial-resolution} pictures the results of this method when using four different apodization functions. The Blackman-Harris window guarantees the worst result of the four, while the Hanning and Hamming windows improve the resolution by about $3$ $\mu$m. The best result is instead achieved by the Kaiser window, which is just $2$ $\mu$m short from reaching the theoretical value. A side effect of using the Kaiser window is the introduction of more pronounced side lobes which can result in distorted images. Further improvements to the axial resolution could be achieved by replacing the fiber patch cord connecting the interferometer to the scanning system. In fact, this patch cord is a \ac{SMF} centered at 1550 nm which is not designed to work in the 1300 nm range used by the laser, meaning that modal dispersion could impact the system's performance. 
+
+
+
+\begin{figure}[hbt]
+	{\myfloatalign
+		\includegraphics[width=\linewidth]{gfx/tikz/axial_resolution}}
+	\caption{Estimate of the axial resolution by fitting a Lorentzian curve to the A-scan of mirror using a Nonlinear Least Squares method.}\label{fig:axial-resolution}
+\end{figure}
+
+The same method was tested for different mirror depths in order to estimate the behaviour of the resolution over the whole imaging range. The obtained profile is presented in \autoref{fig:axial-resolution-depth}, A few observations can be made
+\begin{itemize}
+	\item The resolution worsens at higher imaging depths. This can be explained by the fact that light has to travel for longer distance in air, therefore enhancing the dispersion mismatch between the sample and reference arm. 
+	
+	\item The Kaiser window exhibits a more irregular trend compared to the other three windows while still generally guaranteeing the best axial resolution. 
+	
+	\item The variation in axial resolution is in the order of 2-3 $\mu$m over the entire imaging range for all three windows. 
+\end{itemize}
+
+\begin{figure}[hbt]
+	{\myfloatalign
+		\includegraphics[width=\linewidth]{gfx/ch3/risoluzione-profondita}}
+	\caption{Axial resolution profile on the entire imaging depth using four different apodization windows.}\label{fig:axial-resolution-depth}
+\end{figure}
+
+
+\subsection{Thickness measurements}
+One of the first 
+
+\begin{figure}[hbt]
+	\myfloatalign
+	\includegraphics[width=\linewidth]{gfx/tikz/thickness-measure/target-thickness}
+	\caption{Axial measurement of the USAF target.}\label{fig:target-thickness}
+\end{figure}
+
+\begin{figure}[hbt]
+	\myfloatalign
+	\includegraphics[width=\linewidth]{gfx/tikz/thickness-measure/fiber-thickness}
+	\caption{Axial measurement of an optical fiber.}\label{fig:fiber-thickness}
 \end{figure}
 
 
