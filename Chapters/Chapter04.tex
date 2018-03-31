@@ -3,6 +3,13 @@
 \chapter{Results} % Chapter title
 \label{ch:results} % For referencing the chapter elsewhere, use \autoref{ch:name} 
 
+This chapter is dedicated to the description of the OCT software that was developed for this thesis. This application handles the data acquisition task, controls the galvanometric system and performs real-time processing and visualization of the acquired OCT data. \\
+
+\noindent The transversal resolution of the system described in \autoref{ch:setup} is also evaluted using a test resolution target. \\
+
+\noindent Finally, a series of B-scans, C-scans and \emph{en-face} images of a variety of different samples is presented. A part of these were acquired using a slighly different SS-OCT system designed to work in the 1060 nm range. 
+
+
 %----------------------------------------------------------------------------------------
 
 \section{Data Acquisition Software}
@@ -22,6 +29,7 @@ Explain in detail the fact that for real time the average time to process has to
 \subsection{Parallel Computing with OpenMP}
 OpenMP\footnote{\url{http://www.openmp.org/}} \graffito{OpenMP stands for Open \textbf{M}ulti-\textbf{P}rocessing} is a multi-platform \emph{Application Programming Interface} (API) for shared-memory parallel processing programming available for various programming languages, such as C, C++ and Fortran. 
 
+T
 
 
 
@@ -53,6 +61,27 @@ OpenMP\footnote{\url{http://www.openmp.org/}} \graffito{OpenMP stands for Open \
 
 \subsection{Amplified Photodiode}
 
+
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=\linewidth]{gfx/tikz/axsun/banana-peel}
+	\caption{B-scan of banana peel.}\label{fig:banana-peel}
+\end{figure}%----------------------------------------------------------------------------------------
+\begin{figure}[hbt]
+	\myfloatalign
+	{\includegraphics[width=\linewidth]{gfx/tikz/axsun/dry-orange-peel}}
+	\caption{B-scan of dry orange peel.}\label{fig:dry-orange-peel}
+\end{figure}%----------------------------------------------------------------------------------------
+
+\begin{figure}[hbt]
+	\myfloatalign
+	{\includegraphics[width=\linewidth]{gfx/tikz/axsun/finger}}
+	\caption{B-scan of a human finger.}\label{fig:finger}
+\end{figure}%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+
 \begin{figure}[hbt]
 \myfloatalign
 \includegraphics[width=\linewidth]{gfx/tikz/axsun/spurious-frequencies}
@@ -75,6 +104,25 @@ Content
 		\item X-Motor -> Triangle Wave
 		\item Y-Motor -> Staircase for C-scans		
 	\end{enumerate}
+
+
+
+
+
+\begin{figure}[bth]
+	\myfloatalign
+	\subfloat[Asia personas duo.]
+	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/banana-peel}} \quad
+	\subfloat[Pan ma signo.]
+	{\label{fig:banan-peel}
+		\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/tape}} \\
+	\subfloat[Methodicamente o uno.]
+	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/nastro}} \quad
+	\subfloat[Titulo debitas.]
+	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/spugna-1}}
+	\caption{Tu duo titulo debitas latente.}\label{fig:example}
+\end{figure}
+
 
 \section{USAF Target}
     \begin{figure}[hbt]
