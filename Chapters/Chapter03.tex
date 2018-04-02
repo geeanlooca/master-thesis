@@ -376,7 +376,7 @@ y(t) = EFL \tan\left[2 \alpha v_y(t) \frac{\pi}{180}\right]
 
 The two signals $v_x$ and $v_y$ are delivered to the driver boards as two pairs of positive voltage signals, $(v_x^+, v_x^-)$ and $(v_y^+, v_y^-)$, where
 
-\begin{equation}
+\begin{equation}\label{eq:galvo-split-signals}
 	v_i^+(t) = \begin{cases}
 		v_i(t) & v_i(t) \geq 0\\
 		0 & v_i(t) < 0
@@ -906,7 +906,7 @@ The same method was tested for different mirror depths in order to estimate the 
 	
 	\item The Kaiser window exhibits a more irregular trend compared to the other three windows while still generally guaranteeing the best axial resolution. 
 	
-	\item The variation in axial resolution is in the order of 2-3 $\mu$m over the entire imaging range for all three windows. 
+	\item The variation in axial resolution is in the order of 2-3 $\mu$m over the entire imaging range for all four windows. 
 \end{itemize}
 
 \begin{figure}[hbt]

@@ -12,9 +12,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="102.78854mm"
-   height="46.59428mm"
-   viewBox="0 0 102.78853 46.594281"
+   width="57.875214mm"
+   height="42.028664mm"
+   viewBox="0 0 57.875206 42.028664"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 2405546, 2018-03-11"
@@ -24,282 +24,302 @@
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6500"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6498"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6496"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6494"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6418"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6416"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6414"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6412"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6267"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6265"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6263"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6261"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6234"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6232"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6230"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6228"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow2Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6226"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6224"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ff0000;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(0.3) rotate(180) translate(-2.3,0)" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6221"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
-         transform="scale(0.4) rotate(180) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6155"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6153"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6151"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6149"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Sstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6147"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6145"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6129"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6127"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#00ff00;stroke-width:1pt;stroke-opacity:1;fill:#00ff00;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:#00ff00;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Sstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6125"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path5855"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#00ff00;stroke-width:1pt;stroke-opacity:1;fill:#00ff00;fill-opacity:1"
-         transform="scale(0.2) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:#00ff00;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6122"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6120"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#00ff00;stroke-width:1pt;stroke-opacity:1;fill:#00ff00;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:#00ff00;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6118"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6116"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="DotS"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6114"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6112"
-         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) translate(7.4, 1)" />
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.2,0,0,0.2,1.48,0.2)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6110"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path6108"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(1.1) rotate(180) translate(1,0)" />
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Lstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker6106"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path5843"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.8) translate(12.5,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <linearGradient
        inkscape:collect="always"
@@ -1227,10 +1247,10 @@
     </linearGradient>
     <inkscape:perspective
        id="perspective9703"
-       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:persp3d-origin="526.18101 : 248.03148 : 1"
        inkscape:vp_z="1052.3621 : 372.04723 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
-       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_x="50.627066 : 315.43201 : 1"
        sodipodi:type="inkscape:persp3d" />
     <linearGradient
        y2="76.856003"
@@ -2472,10 +2492,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_x="50.627066 : 315.43201 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
        inkscape:vp_z="1052.3621 : 372.04723 : 1"
-       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:persp3d-origin="526.18101 : 248.03148 : 1"
        id="perspective9480" />
     <linearGradient
        id="linearGradient10536">
@@ -2741,8 +2761,8 @@
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="0 : 526.18106 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
-       inkscape:vp_z="744.09442 : 526.18106 : 1"
-       inkscape:persp3d-origin="372.0472 : 350.78738 : 1"
+       inkscape:vp_z="744.0944 : 526.18106 : 1"
+       inkscape:persp3d-origin="372.04719 : 350.78738 : 1"
        id="perspective6241" />
     <linearGradient
        inkscape:collect="always"
@@ -3340,10 +3360,10 @@
        r="18.992599" />
     <inkscape:perspective
        id="perspective44902"
-       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:persp3d-origin="526.18101 : 248.03148 : 1"
        inkscape:vp_z="1052.3621 : 372.04723 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
-       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_x="50.627066 : 315.43201 : 1"
        sodipodi:type="inkscape:persp3d" />
     <radialGradient
        gradientUnits="userSpaceOnUse"
@@ -3845,10 +3865,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_x="50.627066 : 315.43201 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
        inkscape:vp_z="1052.3621 : 372.04723 : 1"
-       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:persp3d-origin="526.18101 : 248.03148 : 1"
        id="perspective45522" />
     <linearGradient
        id="linearGradient45530">
@@ -3987,8 +4007,8 @@
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="0 : 526.18106 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
-       inkscape:vp_z="744.09442 : 526.18106 : 1"
-       inkscape:persp3d-origin="372.0472 : 350.78738 : 1"
+       inkscape:vp_z="744.0944 : 526.18106 : 1"
+       inkscape:persp3d-origin="372.04719 : 350.78738 : 1"
        id="perspective68966" />
     <linearGradient
        inkscape:collect="always"
@@ -4012,10 +4032,10 @@
        r="6.7529998" />
     <inkscape:perspective
        id="perspective15715"
-       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:persp3d-origin="526.18101 : 248.03148 : 1"
        inkscape:vp_z="1052.3621 : 372.04723 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
-       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_x="50.627066 : 315.43201 : 1"
        sodipodi:type="inkscape:persp3d" />
     <radialGradient
        gradientUnits="userSpaceOnUse"
@@ -4517,10 +4537,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_x="50.627066 : 315.43201 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
        inkscape:vp_z="1052.3621 : 372.04723 : 1"
-       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:persp3d-origin="526.18101 : 248.03148 : 1"
        id="perspective68472" />
     <linearGradient
        inkscape:collect="always"
@@ -4886,10 +4906,10 @@
        gradientUnits="userSpaceOnUse" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="50.627067 : 315.43201 : 1"
+       inkscape:vp_x="50.627066 : 315.43201 : 1"
        inkscape:vp_y="0 : 999.99991 : 0"
        inkscape:vp_z="1052.3621 : 372.04723 : 1"
-       inkscape:persp3d-origin="526.18102 : 248.03148 : 1"
+       inkscape:persp3d-origin="526.18101 : 248.03148 : 1"
        id="perspective68149" />
     <linearGradient
        id="linearGradient12233">
@@ -6948,8 +6968,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284273"
-     inkscape:cx="-808.87388"
-     inkscape:cy="383.93755"
+     inkscape:cx="122.05712"
+     inkscape:cy="-189.55589"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -6966,7 +6986,7 @@
      inkscape:pagecheckerboard="false"
      inkscape:guide-bbox="true">
     <sodipodi:guide
-       position="-374.80989,17.043399"
+       position="-113.99065,-73.928843"
        orientation="1,0"
        id="guide12964"
        inkscape:locked="false" />
@@ -6979,7 +6999,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -6987,7 +7007,7 @@
      inkscape:label="Livello 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-244.87502,240.37546)">
+     transform="translate(15.944238,326.78209)">
     <g
        inkscape:label="Background"
        id="layer1-6"
@@ -7026,7 +7046,7 @@
       <polygon
          style="display:inline;fill:url(#radialGradient4704);fill-opacity:1;stroke:#000000;stroke-width:0.75"
          i:knockout="Off"
-         points="32.266,19.062 0.375,37.473 0.375,0.65 "
+         points="0.375,37.473 0.375,0.65 32.266,19.062 "
          id="polygon4687"
          transform="translate(1000.9736,788.21393)" />
       <g
@@ -7443,7 +7463,7 @@
           </radialGradient>
           <polygon
              id="polygon5028"
-             points="0.75,19.061 32.64,37.471 32.64,0.649 "
+             points="32.64,37.471 32.64,0.649 0.75,19.061 "
              i:knockout="Off"
              style="fill:url(#radialGradient5054);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <polyline
@@ -7453,7 +7473,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5" />
           <polygon
              id="polygon5032"
-             points="18.864,22.159 23.748,25.381 18.502,28.258 "
+             points="23.748,25.381 18.502,28.258 18.864,22.159 "
              i:knockout="Off" />
         </g>
       </g>
@@ -7496,7 +7516,7 @@
             </radialGradient>
             <polygon
                id="polygon5070"
-               points="32.265,19.062 0.375,37.472 0.375,0.649 "
+               points="0.375,37.472 0.375,0.649 32.265,19.062 "
                i:knockout="Off"
                style="fill:url(#radialGradient5094);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
             <polyline
@@ -7507,7 +7527,7 @@
           </g>
           <polygon
              id="polygon5074"
-             points="5.698,23.822 10.582,27.044 5.335,29.921 "
+             points="10.582,27.044 5.335,29.921 5.698,23.822 "
              i:knockout="Off" />
         </g>
       </g>
@@ -7726,7 +7746,7 @@
           </radialGradient>
           <polygon
              id="polygon5485"
-             points="0.75,19.061 32.641,37.471 32.641,0.649 "
+             points="32.641,37.471 32.641,0.649 0.75,19.061 "
              i:knockout="Off"
              style="fill:url(#radialGradient5520);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <g
@@ -7795,7 +7815,7 @@
           </radialGradient>
           <polygon
              id="polygon5534"
-             points="32.266,19.062 0.375,37.472 0.375,0.649 "
+             points="0.375,37.472 0.375,0.649 32.266,19.062 "
              i:knockout="Off"
              style="fill:url(#radialGradient5570);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <g
@@ -11803,7 +11823,7 @@
           </linearGradient>
           <polygon
              id="polygon4333"
-             points="58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 "
+             points="43.461,14.549 43.461,14.551 35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 "
              i:knockout="Off"
              style="fill:url(#linearGradient4376);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -11935,7 +11955,7 @@
           </linearGradient>
           <polygon
              id="polygon4399"
-             points="58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 43.461,14.549 43.461,14.551 35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 "
+             points="43.461,14.549 43.461,14.551 35.808,14.551 35.808,31.557 45.709,31.557 48.868,31.557 58.485,31.557 58.485,14.551 50.266,14.551 50.266,14.549 "
              i:knockout="Off"
              style="fill:url(#linearGradient4466);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -12569,7 +12589,7 @@
         <polygon
            style="fill:url(#linearGradient3672);fill-opacity:1;stroke:#000000;stroke-width:0.75"
            i:knockout="Off"
-           points="3.918,26.241 0.375,26.241 0.375,28.722 10.295,28.722 10.295,0.375 0.375,0.375 0.375,2.855 3.918,2.855 3.918,4.981 0.375,4.981 0.375,7.108 3.918,7.108 3.918,9.234 0.375,9.234 0.375,11.36 3.918,11.36 3.918,13.486 0.375,13.486 0.375,15.611 3.918,15.611 3.918,17.738 0.375,17.738 0.375,19.863 3.918,19.863 3.918,21.989 0.375,21.989 0.375,24.115 3.918,24.115 "
+           points="10.295,0.375 0.375,0.375 0.375,2.855 3.918,2.855 3.918,4.981 0.375,4.981 0.375,7.108 3.918,7.108 3.918,9.234 0.375,9.234 0.375,11.36 3.918,11.36 3.918,13.486 0.375,13.486 0.375,15.611 3.918,15.611 3.918,17.738 0.375,17.738 0.375,19.863 3.918,19.863 3.918,21.989 0.375,21.989 0.375,24.115 3.918,24.115 3.918,26.241 0.375,26.241 0.375,28.722 10.295,28.722 "
            id="polygon3653" />
         <rect
            style="stroke:#000000;stroke-width:0.75"
@@ -12730,7 +12750,7 @@
       <polygon
          style="display:inline;fill:url(#linearGradient4037);fill-opacity:1;stroke:#000000;stroke-width:0.75"
          i:knockout="Off"
-         points="0.463,0.375 10.08,0.375 5.271,23.053 "
+         points="10.08,0.375 5.271,23.053 0.463,0.375 "
          id="polygon4023"
          transform="translate(341.852,1111.076)" />
       <g
@@ -12965,7 +12985,7 @@
         <polygon
            style="fill:url(#linearGradient5297)"
            i:knockout="Off"
-           points="5.765,10.123 34.612,10.123 36.971,10.123 36.971,7.773 34.612,7.773 5.765,7.773 "
+           points="34.612,7.773 5.765,7.773 5.765,10.123 34.612,10.123 36.971,10.123 36.971,7.773 "
            id="polygon4156" />
         <linearGradient
            id="XMLID_10_"
@@ -13033,7 +13053,7 @@
         <polygon
            style="fill:url(#linearGradient5299)"
            i:knockout="Off"
-           points="5.765,13.063 34.612,13.063 36.971,13.063 36.971,10.713 34.612,10.713 5.765,10.713 "
+           points="34.612,10.713 5.765,10.713 5.765,13.063 34.612,13.063 36.971,13.063 36.971,10.713 "
            id="polygon4179" />
         <linearGradient
            id="XMLID_11_"
@@ -13101,7 +13121,7 @@
         <polygon
            style="fill:url(#linearGradient5301)"
            i:knockout="Off"
-           points="5.765,16.004 34.612,16.004 36.971,16.004 36.971,13.653 34.612,13.653 5.765,13.653 "
+           points="34.612,13.653 5.765,13.653 5.765,16.004 34.612,16.004 36.971,16.004 36.971,13.653 "
            id="polygon4202" />
         <linearGradient
            id="XMLID_12_"
@@ -13169,7 +13189,7 @@
         <polygon
            style="fill:url(#linearGradient5303)"
            i:knockout="Off"
-           points="5.765,18.943 34.612,18.943 36.971,18.943 36.971,16.594 34.612,16.594 5.765,16.594 "
+           points="34.612,16.594 5.765,16.594 5.765,18.943 34.612,18.943 36.971,18.943 36.971,16.594 "
            id="polygon4225" />
         <linearGradient
            id="XMLID_13_"
@@ -13237,7 +13257,7 @@
         <polygon
            style="fill:url(#linearGradient5305)"
            i:knockout="Off"
-           points="5.765,21.883 34.612,21.883 36.971,21.883 36.971,19.533 34.612,19.533 5.765,19.533 "
+           points="34.612,19.533 5.765,19.533 5.765,21.883 34.612,21.883 36.971,21.883 36.971,19.533 "
            id="polygon4248" />
         <linearGradient
            id="XMLID_14_"
@@ -13305,12 +13325,12 @@
         <polygon
            style="fill:url(#linearGradient5307)"
            i:knockout="Off"
-           points="5.765,24.822 34.612,24.822 36.971,24.822 36.971,22.473 34.612,22.473 5.765,22.473 "
+           points="34.612,22.473 5.765,22.473 5.765,24.822 34.612,24.822 36.971,24.822 36.971,22.473 "
            id="polygon4271" />
         <polygon
            style="fill:none;stroke:#000000;stroke-width:0.75"
            i:knockout="Off"
-           points="5.827,24.594 34.641,24.594 37.004,24.594 37.004,7.523 34.641,7.523 5.827,7.523 "
+           points="34.641,7.523 5.827,7.523 5.827,24.594 34.641,24.594 37.004,24.594 37.004,7.523 "
            id="polygon4273" />
         <rect
            style="stroke:#000000;stroke-width:0.75"
@@ -13508,7 +13528,7 @@
           </linearGradient>
           <polygon
              id="polygon4487"
-             points="0.375,5.013 14.164,18.801 14.548,18.801 14.548,4.627 0.375,4.627 "
+             points="0.375,4.627 0.375,5.013 14.164,18.801 14.548,18.801 14.548,4.627 "
              i:knockout="Off"
              style="fill:url(#linearGradient4559);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -13539,7 +13559,7 @@
           </linearGradient>
           <polygon
              id="polygon4494"
-             points="51.397,5.013 37.608,18.801 37.226,18.801 37.226,4.627 51.397,4.627 "
+             points="51.397,4.627 51.397,5.013 37.608,18.801 37.226,18.801 37.226,4.627 "
              i:knockout="Off"
              style="fill:url(#linearGradient4549);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
           <linearGradient
@@ -14365,7 +14385,7 @@
              style="fill:none;stroke:#73be1e;stroke-width:2" />
           <polygon
              id="polygon4450"
-             points="11.713,11.803 26.594,3.211 26.594,20.395 "
+             points="26.594,3.211 26.594,20.395 11.713,11.803 "
              i:knockout="Off"
              style="fill:#73be1e" />
         </g>
@@ -14610,7 +14630,7 @@
              style="fill:none;stroke:#ff1a00;stroke-width:2" />
           <polygon
              id="polygon4586"
-             points="11.712,11.803 26.594,3.211 26.594,20.395 "
+             points="26.594,3.211 26.594,20.395 11.712,11.803 "
              i:knockout="Off"
              style="fill:#ff1a00" />
         </g>
@@ -15133,7 +15153,7 @@
         </linearGradient>
         <polygon
            id="polygon3398"
-           points="0.375,0.375 0.375,17.383 21.334,17.383 23.051,17.383 23.051,0.375 21.334,0.375 "
+           points="23.051,0.375 21.334,0.375 0.375,0.375 0.375,17.383 21.334,17.383 23.051,17.383 "
            i:knockout="Off"
            style="fill:url(#linearGradient3360);fill-opacity:1;stroke:#000000;stroke-width:0.75" />
       </g>
@@ -15175,12 +15195,12 @@
         <polygon
            style="fill:url(#radialGradient4011);fill-opacity:1;stroke:#d4496d;stroke-width:1.24020004;stroke-linecap:round;stroke-linejoin:bevel"
            i:knockout="Off"
-           points="19.503,2.556 9.086,0.609 0.564,11.566 4.978,21.247 22.772,34.373 37.309,15.888 "
+           points="22.772,34.373 37.309,15.888 19.503,2.556 9.086,0.609 0.564,11.566 4.978,21.247 "
            id="polygon3990" />
         <polygon
            style="clip-rule:evenodd;fill:none;stroke:#d4496d;stroke-width:1.24020004;stroke-linecap:round;stroke-linejoin:bevel"
            i:knockout="Off"
-           points="16.179,2.104 30.162,25.119 3.586,18.223 "
+           points="30.162,25.119 3.586,18.223 16.179,2.104 "
            id="polygon3992" />
       </g>
       <g
@@ -15456,7 +15476,7 @@
             </radialGradient>
             <polygon
                id="polygon5790"
-               points="22.946,30.139 39.533,24.258 45.091,18.374 41.397,7.958 33.375,6.892 16.788,12.774 "
+               points="33.375,6.892 16.788,12.774 22.946,30.139 39.533,24.258 45.091,18.374 41.397,7.958 "
                i:knockout="Off"
                style="fill:url(#radialGradient5837);fill-opacity:1;stroke:#c28a36;stroke-width:0.75" />
             <line
@@ -16058,7 +16078,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round" />
           <polygon
              id="polygon5292"
-             points="17.382,15.965 3.078,15.965 10.23,6.412 "
+             points="3.078,15.965 10.23,6.412 17.382,15.965 "
              i:knockout="Off"
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" />
           <line
@@ -16182,7 +16202,7 @@
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round" />
           <polygon
              id="polygon5372"
-             points="17.382,15.965 3.078,15.965 10.23,6.411 "
+             points="3.078,15.965 10.23,6.411 17.382,15.965 "
              i:knockout="Off"
              style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" />
           <line
@@ -28127,7 +28147,7 @@
         <polygon
            style="fill:none;stroke:#000000;stroke-width:1.54768956;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal"
            i:knockout="Off"
-           points="10.23,6.411 17.382,15.965 3.078,15.965 "
+           points="17.382,15.965 3.078,15.965 10.23,6.411 "
            id="polygon5372-1"
            transform="matrix(0,-0.18291219,0.18342791,0,-103.73143,-173.00913)" />
         <line
@@ -30149,7 +30169,7 @@
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6151)"
-       d="m 10.721876,-307.90526 v 3.36759 H 1.9403981 l 0,3.78855"
+       d="m 10.721876,-307.90526 v 3.36759 H 1.9403981 v 3.78855"
        id="path6141"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -30344,7 +30364,7 @@
         <polygon
            style="fill:none;stroke:#000000;stroke-width:1.54768956;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal"
            i:knockout="Off"
-           points="17.382,15.965 3.078,15.965 10.23,6.411 "
+           points="3.078,15.965 10.23,6.411 17.382,15.965 "
            id="polygon5372-1-1"
            transform="matrix(0,-0.18291219,0.18342791,0,-103.73143,-173.00913)" />
         <line
@@ -30398,7 +30418,7 @@
         <polygon
            transform="matrix(0,-0.18291219,0.18342791,0,-103.73143,-173.00913)"
            id="polygon5372-1-1-2"
-           points="17.382,15.965 3.078,15.965 10.23,6.411 "
+           points="3.078,15.965 10.23,6.411 17.382,15.965 "
            i:knockout="Off"
            style="fill:none;stroke:#000000;stroke-width:0.94485593;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal" />
         <line
