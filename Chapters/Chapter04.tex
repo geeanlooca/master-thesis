@@ -175,7 +175,7 @@ AlazarFFTSetWindowFunction(
 );
 \end{lstlisting}
 
-\subsubsection{The acquisition loop}
+\subsubsection{The acquisition loop}\label{sub:acq-loop}
 After determining the width of each B-scan, and consequently the buffer size, a list of buffers has to be allocated on the PC and posted to the board to be used for AutoDMA transfers. 
 
 \begin{lstlisting}[language=C,frame=tb]
@@ -233,7 +233,7 @@ The floating point values from which the image is computed are first clipped in 
 Finally, the raw floating point data are sent to an object that asynchronously saves it to disk while the computed image is displayed with OpenGL. 
 
 \subsection{Processing time and delay}
-Real-time data acquisition and visualization is achieved if mean processing time of a B-scan is smaller than the time between two consecutive "frame start" signals:
+Real-time data acquisition and visualization is achieved if the mean processing time of a B-scan is smaller than the time between two consecutive "frame start" signals:
 \begin{equation}\label{eq:processing-limit}
 	\mathbb{E}[T_p] < T_b = \frac{1}{f_b}.
 \end{equation}
@@ -270,7 +270,7 @@ Finally, the GPU throughput is estimated as
 \begin{equation}
 \eta_{\text{GPU}} = \frac{\text{bytes per image}}{\text{image upload time}} = \frac{\frac{1}{2}\frac{f_a}{f_b} \times 1024}{T_{\text{GPU}}},
 \end{equation}
-and illustrated in \autoref{fig:gpu-throughput}. The maximum throughput achieved by OpenGL is $\approx 9.8$ GB/s at 50 frames per second, corresponding to an image size of 1.024 MB. For lower framerates, and hence for bigger image sizes, the throughput decreases down to $7.7$ GB/s, which is about half of the theoretical maximum throughput supported by the bus. 
+and illustrated in \autoref{fig:gpu-throughput}. The maximum throughput achieved by OpenGL is $\approx 9.8$ GB/s at 50 frames per second, corresponding to an image size of 1.024 MB. For lower framerates, and hence for bigger image sizes, the throughput decreases down to $7.7$ GB/s, which is about half the  maximum theoretical throughput supported by the PCIe 3.0 bus. 
 \begin{figure}[htb]
 	\myfloatalign
 	\includegraphics[width=0.8\linewidth]{gfx/ch4/gpu-throughput}
@@ -279,7 +279,38 @@ and illustrated in \autoref{fig:gpu-throughput}. The maximum throughput achieved
 
 
 \subsection{Saving data to disk}
+A desirable feature for a OCT software is the ability to save the acquired data to disk so that further post-processing can be performed. In \autoref{sub:acq-loop} it was explained that each buffer returned by the board to the user application is duplicated, converted to floating point format and emitted using a Qt signal. A filesaving object is connected to this signal and appends the received buffer to a dynamic FIFO queue. This structure is then emptied in an asynchronous loop running on a separate thread, writing each buffer to file. If the writing speed is not sufficiently high, the buffer fills up until the amount of RAM available on the workstation completely filled up or the acquisition stops. 
 
+Considering that the size of each buffer is
+
+\begin{equation}
+	S = \frac{1}{2} \frac{f_a}{f_b} \times 1024 \times 4 \text{ bytes},
+\end{equation}
+
+the queue fills up at a rate of
+\begin{equation}
+\eta_{q} = S \cdot f_b = f_a \times 2046\text{ bytes/s} = 204.8\text{ Megabytes/s},
+\end{equation}
+meaning that a \ac{SSD} is needed for long acquisitions as regular \acp{HDD} usually do not exceed write speeds of $\sim 150$ MB/s. In fact, the write speed of the HDD installed in the OCT workstation was benchmarked with the AlazarDSO software, resulting in $141.3$ MB/s while the SSD averaged $348.7$ MB/s. 
+
+Even though this value is higher than $\eta_q$, for long acquisition sessions (tens of Gigabytes of data), the write speed of the SSD drops, the queue fills up and the application exhibits lags and unresponsiveness. This behaviour is due to the \emph{SSD write cliff}. In flash-based SSDs, the memory consists in a number of blocks, each of which contains a number of pages. Blocks are the smallest erasable units whereas pages are the smallest writable units. After an SSD is filled with data, unused pages must be erased before new data is written. Since a block is the smallest erasable unit, in order to erase the unused pages the SSD must erase all pages on the block, regardless if they are active or unused. This means that active pages must be rewritten into another block with free cells. Writing a single page can result in multiple corresponding re-write operations, which can then trigger additional erase operations, causing a \emph{write amplification}\footnote{\url{http://crestingwave.com/sites/default/files/collateral/velobit_whitepaper_ssdperformancetips.pdf}}. 
+
+\begin{figure}[htb]
+	\myfloatalign
+	\includegraphics[width=0.8\linewidth]{gfx/ch4/write-cliff}
+	\caption{The SSD write cliff.}\label{fig:write-cliff}
+\end{figure}
+
+Solutions to mitigate this effect could not be investigated in detail and will be addressed in future works. 
+
+
+\begin{figure}[htb]
+	\myfloatalign
+	\includegraphics[width=0.8\linewidth]{gfx/ch4/gui}
+	\caption{The SSD write cliff.}\label{fig:gui}
+\end{figure}
+
+\section{Acquisitions}
 \subsection{Amplified Photodiode}
 
 
