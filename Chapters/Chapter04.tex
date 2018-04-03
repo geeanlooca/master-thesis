@@ -297,7 +297,7 @@ Considering that the size of each buffer is
 
 the queue fills up at a rate of
 \begin{equation}
-\eta_{q} = S \cdot f_b = f_a \times 2046\text{ bytes/s} = 204.8\text{ Megabytes/s},
+\eta_{q} = S \cdot f_b = f_a \times 2048\text{ bytes/s} = 204.8\text{ Megabytes/s},
 \end{equation}
 meaning that a \ac{SSD} is needed for long acquisitions as regular \acp{HDD} usually do not exceed write speeds of $\sim 150$ MB/s. In fact, the write speed of the HDD installed in the OCT workstation was benchmarked with the AlazarDSO software, resulting in $141.3$ MB/s while the SSD averaged $348.7$ MB/s. 
 
@@ -322,7 +322,8 @@ Solutions to mitigate this effect could not be investigated in detail and will b
 \section{Acquisitions}
 In this section I will showcase a series of acquisitions made with the SS-OCT system that was described in the previous chapters and the custom-made OCT software. \\
 
-\noindent The first sample that was imaged is the Thorlabs test target introduced in \autoref{sub:thickness-measurements}. In \autoref{fig:target-bscan} we can see the highly reflective chrome coating on the top, while the bottom surface is only visible where the clear pattern is present.
+\subsection{B-scans}
+The first sample that was imaged is the Thorlabs test target introduced in \autoref{sub:thickness-measurements}. In \autoref{fig:target-bscan} we can see the highly reflective chrome coating on the top, while the bottom surface is only visible where the clear pattern is present.
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=0.8\linewidth]{gfx/ch4/axsun/target-bscan}
@@ -394,6 +395,8 @@ This can be seen in the following images, representing:
 	
 	\item a sliced cherry tomato (\autoref{fig:tomato-1}). Notice the highly scattering seeds and the reticular structure of the pulp;
 	
+	\item a strawberry (\autoref{fig:strawberry});
+	
 	\item an onion (\autoref{fig:red-onion-2});
 	
 	\item human fingernail (\autoref{fig:finger-gian}) and fingertip (\autoref{fig:finger-leo-2}): fingerprints, epidermis and dermis layers are all clearly recognizable.
@@ -415,9 +418,15 @@ This can be seen in the following images, representing:
 
 \begin{figure}[htb]
 	\centering
+	\includegraphics[width=0.9\linewidth]{gfx/ch4/axsun/no-bande/strawberry-1}
+	\caption{B-scan of a strawberry.}\label{fig:strawberry}
+\end{figure}	
+
+\begin{figure}[htb]
+	\centering
 	\includegraphics[width=0.9\linewidth]{gfx/ch4/axsun/no-bande/red-onion-2}
 	\caption{B-scan of an onion.}\label{fig:red-onion-2}
-\end{figure}	
+\end{figure}
 
 \begin{figure}[htb]
 	\myfloatalign
@@ -458,14 +467,15 @@ This can be seen in the following images, representing:
 %\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%
-\FloatBarrier
+
+\clearpage
 \subsection{SS-OCT at 1060 nm}
 A second SS-OCT system working in the 1060 nm range and based on the design presented in this thesis was also tested. The setup is available in \autoref{fig:santec-setup}: using a fixed fiber reflector in the reference arm requires a \ac{VOA} to limit the power received by the BPD and a more complicated calibration of the sample arm. In fact, after measuring the length of the reference arm with a \ac{OFDR}, a fiber patch cord of the appropriate length was built by cutting and splicing two separate patch cords. 
 
 Optical components such as scanning lens and collimators are equivalent to those introduced in \autoref{ch:setup}. The laser is instead a Santec HSL, capable of a selectable sweep rate and maximum imaging depth of $\sim 9$ mm. 
 
 
-\begin{figure}[H]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\linewidth]{gfx/ch4//santec-setup}
 	\caption{Setup of the SS-OCT system working in the 1060 nm range.}\label{fig:santec-setup}
@@ -475,7 +485,7 @@ Optical components such as scanning lens and collimators are equivalent to those
 
 Two B-scans acquired with this system are available in \autoref{fig:santec-bscans}: the juice vesicles of an orange slice are reported \autoref{fig:santec-orange}, while a scotch tape covering the entire imaging range is visible in \autoref{fig:santec-tape}. 
 
-\begin{figure}[H]
+\begin{figure}[htb]
 	\myfloatalign
 	\subfloat[Orange slice.]
 	{\label{fig:santec-orange}
@@ -498,79 +508,124 @@ By changing the state of polarization of the field reflected by the reference ar
 		\includegraphics[width=.47\linewidth]{gfx/ch4/santec/tape-birefringence}} \\
 	\caption{Birefringence of a scotch tape.}\label{fig:santec-tape-birefringence}
 \end{figure}
-
+\FloatBarrier
 \subsubsection{Imaging of dynamic samples}
 In order to test the OCT software with a dynamic sample, vinegar was poured in a microscope slide containing a small quantity of sodium bicarbonate. The two components cause a small reaction resulting in the generation of foam and bubbles. 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\linewidth]{gfx/ch4/santec/aceto}
-	\caption[]{3D rendering of a human finger.}\label{fig:aceto}
+	\caption[]{Reaction between sodium bicarbonate and vinegar.}\label{fig:aceto}
 \end{figure}
-A few frames of the acquired video are presented in \autoref{fig:aceto}: in the top left the bicarbonate is in its resting state; after pouring vinegar with a syringe, bubbles start forming (top right); after a few seconds, the reaction slows down and the bicarbonate begins to settle on the bottom surface (bottom left) while a few particles jump out of the slide; finally the reaction halts (bottom right) with the particles completely sedimented on the bottom of the slide. 
+A few frames of the acquired video are presented in \autoref{fig:aceto}: in the top left the bicarbonate is in its resting state; after pouring vinegar with a syringe, bubbles start forming (top right); a few seconds later the reaction slows down and the bicarbonate begins to settle on the bottom surface (bottom left) while a few particles jump out of the slide; finally the reaction halts (bottom right) with the particles completely sedimented on the bottom of the slide. 
 
-\FloatBarrier
+\clearpage
 \subsection{En-face images}
-In the introductory chapters of this thesis the concept of \emph{en-face} images was explained: a frontal view of the imaged sample can be reconstructed from a series of B-scans acquired at slightly different positions on the transverse plane. Usually, each pixel of the \emph{en-face} image is obtained from the corresponding A-scan by summing its values: in this way parts of the sample that are beneath the surface are represented in the frontal view. Another method that can be used to build the image is selecting the maximum value of each A-scan. Since the reflection coming from the surface of the sample is usually the most intense, the resulting image is essentially a magnified version of the sample. 
+\label{sub:enface}
+In the introductory chapters of this thesis the concept of \emph{en-face} images was explained: a frontal view of the imaged sample can be reconstructed from a series of B-scans acquired at slightly different positions on the transverse plane. 
 
+Usually, each pixel of the \emph{en-face} image is obtained from the corresponding A-scan by summing its values: in this way parts of the sample that are beneath the surface are represented in the frontal view. A second method that can be used to build the image is selecting the maximum value of each A-scan. Since the reflection coming from the surface of the sample is often the most intense, the resulting image is essentially a magnified version of the sample. 
 
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/onion-surf}
-	\caption{\emph{En-face} view of a sliced onion.}\label{fig:onion-surf}
-\end{figure}
+The two processing methods are compared in the following figures, where the images on the left are generated with the \emph{max} method, while those on the right are the result of the traditional \emph{sum} method. 
 
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=\linewidth]{gfx/ch4/santec/fingervolume-2}
-	\caption{\emph{En-face} view of fingerprints.}\label{fig:enface-fingerprint}
-\end{figure}
-
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/tomato-surf}
-	\caption{\emph{En-face} view of a sliced cherry tomato.}\label{fig:tomato-surf}
-\end{figure}
-
-
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/strawberry-surf}
-	\caption{\emph{En-face} view of a strawberry.}\label{fig:strawberry-surf}
-\end{figure}
-
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/orange-surf}
-	\caption{\emph{En-face} view of an orange slice.}\label{fig:orange-surf}
-\end{figure}
-
-
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/orange-peel-surf}
+\begin{figure}[H]
+	\myfloatalign
+	\subfloat[]
+	{\label{fig:orange-peel-surf-photo}
+		\includegraphics[width=0.4\linewidth]{gfx/ch4/orange-peel}}\\
+	\subfloat[]
+	{\label{fig:orange-peel-surf-enface}
+	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/orange-peel-surf}}
 	\caption{\emph{En-face} view of an orange peel.}\label{fig:orange-peel-surf}
 \end{figure}
+The difference between the two procedures is clearly observable in \autoref{fig:orange-peel-surf}, where the \emph{en-face} view of an orange peel is presented. In the left image we can see the opening of the glans and a defect mark on the lower part of the picture, while on the right the glans are entirely represented and the defect is not visible. 
+
+\begin{figure}[H]
+	\myfloatalign
+	\subfloat[]
+	{\label{fig:tomato-surf-photo}
+		\includegraphics[width=0.4\linewidth]{gfx/ch4/tomato}}\\
+	\subfloat[]
+	{\label{fig:orange-peel-enface}
+		\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/tomato-surf}}
+	\caption{\emph{En-face} view of an orange peel.}\label{fig:tomato-surf}
+\end{figure}
+
+A similar effect is observable in the \emph{en-face} projections of a cherry tomato presented in \autoref{fig:tomato-surf}, where the veins located underneath the top surface are only detected by the \emph{sum} method.
+
+Other examples are available in \autoref{fig:enface-examples} which includes, from top to bottom: a sliced onion, a human fingertip, a strawberry, and an orange slice. As can be seen from these figures, the \emph{sum} method generally produces smoother images. 
+
+\begin{figure}[hbt]
+	\myfloatalign
+%	\subfloat[]
+	{\label{fig:fig:onion-surf}
+		\includegraphics[width=1\linewidth]{gfx/ch4/axsun/enface/onion-surf}}\\
+%	\subfloat[]
+	{\label{fig:enface-fingerprint}
+		\includegraphics[width=1\linewidth]{gfx/ch4/santec/fingervolume-2}}\\
+%	\subfloat[]
+	{\label{fig:strawberry-surf}
+		\includegraphics[width=1\linewidth]{gfx/ch4/axsun/enface/strawberry-surf}}\\
+%	\subfloat[]
+	{\label{fig:fig:orange-surf}
+		\includegraphics[width=1\linewidth]{gfx/ch4/axsun/enface/orange-surf}}\\
+	\caption{\emph{En-face} images generated using the \emph{max} (left) and \emph{sum} (right) methods. From top to bottom: sliced onion, human fingertip, strawberry, orange slice.}\label{fig:enface-examples}
+\end{figure}
+%
+%\begin{figure}[hbt]
+%	\centering
+%	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/onion-surf}
+%	\caption{\emph{En-face} view of a sliced onion.}\label{fig:onion-surf}
+%\end{figure}
+%
+%\begin{figure}[hbt]
+%	\centering
+%	\includegraphics[width=\linewidth]{gfx/ch4/santec/fingervolume-2}
+%	\caption{\emph{En-face} view of fingerprints.}\label{fig:enface-fingerprint}
+%\end{figure}
+%
+%
+%
+%
+%\begin{figure}[hbt]
+%	\centering
+%	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/strawberry-surf}
+%	\caption{\emph{En-face} view of a strawberry.}\label{fig:strawberry-surf}
+%\end{figure}
+%
+%\begin{figure}[hbt]
+%	\centering
+%	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/orange-surf}
+%	\caption{\emph{En-face} view of an orange slice.}\label{fig:orange-surf}
+%\end{figure}
 
 
 \FloatBarrier
 \subsection{Measuring the transversal resolution}
+The transversal resolution of the SS-OCT is experimentally determined by generating \emph{en-face} images of the Thorlabs resolution test target introduced in \autoref{sub:thickness-measurements}. The resolution of an imaging system is often specified in \emph{line pairs per millimiter} (lp/mm), whose value represents the smallest distance between two objects that can be registered by the system. The R1L1S1N test target is composed of five different patterns that will be presented in the following sections. Every acquisition has been performed by placing the top surface of the target on the focal plane of the scanning lens and with a sufficient number of points to guarantee a step size smaller than $1$ $\mu$m in each direction. 
+
+\subsubsection{Grids}
+This pattern consists in three grid patterns of different sizes: $10$ $\mu$m, $50$ $\mu$m and $100$ $\mu$m. The $10$ $\mu$m grid is a $20\times 20$ array with $1.5$ $\mu$m wide lines and a $10$ $\mu$m pitch in the $x$ and $y$ directions. The $50$ $\mu$m grid is a $20\times 20$ array with $1.5$ $\mu$m wide lines and a $50$ $\mu$m pitch in the $x$ and $y$ directions. The $100$ $\mu$m grid is a $20\times 20$ array with $5$ $\mu$m wide lines and a $100$ $\mu$m pitch in the $x$ and $y$ directions. 
+
+The Grid arrays are used to determine the distortion of a system, as the horizontal and vertical lines of the grid should be perpendicular to each other. A distorted image will show the lines as bent. The acquired image of this pattern is available in \autoref{fig:target-grid}: the $50$ and $100$ $\mu$m grids (center and right) are clearly visible and do not present any distortion. The $10$ $\mu$m is instead completely blurred, with the lines appearing as a unique block. The resolution of the system is then necessarily worse than $10$ $\mu$m. 
+
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=\linewidth]{gfx/ch4/axsun/target/grid}
 	\caption{B-scan of the Thorlabs test target.}\label{fig:target-grid}
 \end{figure}
 
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/ronchi}
-	\caption{B-scan of the Thorlabs test target.}\label{fig:target-ronchi}
-\end{figure}
 
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/star-sector}
-	\caption{B-scan of the Thorlabs test target.}\label{fig:target-star}
-\end{figure}
+\subsubsection{USAF 1951}
+The USAF 1951 is a resolution test pattern conforming to the MIL-STD-150A standard set by the United States Air Force in 1951. The pattern is composed by six groups of six elements, each consisting in horizontal and vertical line pairs of different sizes. The resolution in lp/mm is computed as
+\begin{equation}\label{eq:usaf}
+	\delta x,y = 2^{\text{Group} + \left(\frac{\text{Element} - 1}{6}\right)},
+\end{equation}
+where "Element" is the largest set of non-distinguishable horizontal and vertical lines and "Group" is the index of the group in which it is contained. The central part of this pattern is acquired and illustrated in \autoref{fig:target-usaf}, where groups 4, 5, 6 and 7 are visible. Looking at elements 4, 5 and 6 of group 5, it appears that vertical lines are more easily distinguished than horizontal lines. In fact, the first element in which vertical lines are not distinguished is element 1 of group 6, while for horizontal lines it is element 6 of group 5. Using \autoref{eq:usaf}, the $x$ and $y$ resolutions are
+\begin{align}
+	&\delta x \approx 64 \text{ lp/mm} \implies 15.6\,\mu\text{m} \\
+	&\delta y \approx 57 \text{ lp/mm} \implies 17.5\,\mu\text{m},
+\end{align}
+which are a considerable improvement with respect to the theoretical value of $22.5$ $\mu$m computed in \autoref{eq:transversal-resolution-theory}. 
 
 \begin{figure}[hbt]
 	\centering
@@ -578,6 +633,60 @@ In the introductory chapters of this thesis the concept of \emph{en-face} images
 	\caption{B-scan of the Thorlabs test target.}\label{fig:target-usaf}
 \end{figure}
 
+\subsubsection{Ronchi rulings}
+Ronchi rulings are a set of parallel bars with widths that are equal to the distance between. This pattern consists in thirteen 1 mm square Ronchi gratings with variable widths capable of measuring resolutions from 30 lp/mm up to 150 lp/mm. \autoref{fig:target-ronchi} all the thirteen gratings are visible. while the bottom images are details of the 60, 70 and 80 lp/mm gratings. 
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/ronchi-full}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:target-ronchi}
+\end{figure}
+
+
+
+
+A detailed view of the 60, 70 and 80 lp/mm rulings is instead presented in \autoref{fig:target-ronchi-detail}, where we can see that the vertical lines are distinguishable in the first two gratings but not in the last. Unlike with the USAF target, the resolution in this case is determined by the last grating that the system is able to resolve, resulting in
+\begin{equation}
+\delta x \approx 70 \text{ lp/mm} \implies 14.3\, \mu\text{m}
+\end{equation}
+
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/ronchi-detail}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:target-ronchi-detail}
+\end{figure}
+
+\subsubsection{Star Sector}
+Sector star targets, also known as Siemens star targets, consist of a number of dark bars that increase in thickness as they radiate out from a shared center. Theoretically, the bars meet only at the exact middle point of the target, however this particular target has a blank center circle that cuts the bars off before they touch. Depending on the resolution of the optical system, the bars will appear to touch at some distance $r$ from the center. By measuring this distance, the user is able to define the resolution of the optical system with the following equation:
+\begin{equation}
+ \delta x  = \frac{1}{2r \sin(\theta / 2)},
+\end{equation}
+where $\theta$ is the number of degrees covered by one pair of light and dark bars, which for this particular target is equal to $\theta = 10^\circ$. To facilitate the reading of the radial distance, 10 clear concentric circles cut through the bars. The radii of these circles are: 50, 100, 150, 200, 250, 300, 350, 400, 450 and 500 $\mu$m. 
+
+From \autoref{fig:target-star}, the bars appear to touch when reaching the second circle, meaning that $r = 100$ $\mu$m and resulting in
+
+\begin{equation}
+	\delta x \approx 57.4 \text{lp/mm} \implies 17.4\, \mu\text{m}
+\end{equation}
+
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/star-sector}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:target-star}
+\end{figure}
+
+\subsubsection{Concentric circle}
+This pattern consists in 10 concentric circles with cross lines in the center. The radius of each circle is a multiple of $100$ $\mu$m, starting from $100$ $\mu$ up to $1$ mm. The width of the arc line is instead $5$ $\mu$m. Concentric circles are mainly used to identify focusing errors, astigmatism and other aberrations introduced by the scanning system. 
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.5\linewidth]{gfx/ch4/axsun/target/concentric-circles}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:concentric-circles}
+\end{figure}
+
+From \autoref{fig:concentric-circles} no apparent distortion is visible, suggesting a correct setup of the focusing optics. 
 
 
 
@@ -598,32 +707,68 @@ In the introductory chapters of this thesis the concept of \emph{en-face} images
 
 \FloatBarrier
 \subsection{Volumetric Data}
-    \begin{figure}[hbt]
-        \centering
-        \includegraphics[width=0.8\linewidth]{gfx/3d/finger}
-        \caption[]{3D rendering of a human finger.}\label{fig:finger-3d}
-    \end{figure}
+The last type of data that can be acquired with a OCT system is volumetric data. Each volume, or C-scan, is composed by a series of B-scans acquired at different positions on the sample. Unlike B-scans and \emph{en-face} projections, 3D data requires complex and efficient algorithms for a correct visualization. For this purpose, a C++ OpenGL application implementing a basic frame-based volumetric algorithm was developed.
+
+
+ 3D data is stored in a 3D texture object on the GPU, which will then compute a series of slices that cut through the texture perpendicular to the viewing direction (\autoref{fig:volume-slices}). Slices are then blended together using a blending equation and displayed on screen. Each time the viewing direction changes the slices have to be recomputed. 
+  
+ \begin{figure}[hbt]
+ 	\centering
+ 	\includegraphics[scale=0.5]{gfx/ch4/volume-slices}
+ 	\caption{Slicing of a 3D texture.}\label{fig:volume-slices}
+ \end{figure}
+ 
+
+
+In this implementation, B-scans are mapped from intensity to RGBA space (Red, Green, Blue, Alpha) with a linear mapping, meaning that low intensity pixels will have a small Alpha value, making them more transparent. Advanced transfer functions can be implemented depending on the particular data that has to be visualized in order to use different colors for each material or structure in the sample. 
+
+The application can also slice the texture along three orthogonal axes to obtain an equivalent B-scan for each direction. An example of these slices can be seen in \autoref{fig:target-3d} along with the volumetric rendering of the USAF 1951 target. 
+
+Other examples of C-scan rendering are available in \autoref{fig:3d-volumes}, where the same datasets used to compute \emph{en-face} projections in \autoref{sub:enface} are visualized. 
 
 	\begin{figure}[hbt]
 		\centering
-		\includegraphics[width=0.8\linewidth]{gfx/3d/strawberry}
-		\caption[]{3D rendering of a strawberry.}\label{fig:strawberry-3d}
+		\includegraphics[width=0.92\linewidth,height=0.8\linewidth]{gfx/3d/target}
+		\caption[]{Slicing of a 3D texture.}\label{fig:target-3d}
 	\end{figure}
+%
+%
+%
+%    \begin{figure}[hbt]
+%        \centering
+%        \includegraphics[width=0.9\linewidth]{gfx/3d/finger}
+%        \caption[]{3D rendering of a human finger.}\label{fig:finger-3d}
+%    \end{figure}
+%
+%	\begin{figure}[hbt]
+%		\centering
+%		\includegraphics[width=0.8\linewidth]{gfx/3d/strawberry}
+%		\caption[]{3D rendering of a strawberry.}\label{fig:strawberry-3d}
+%	\end{figure}
+%
+%	\begin{figure}[hbt]
+%		\centering
+%		\includegraphics[width=0.8\linewidth]{gfx/3d/onion}
+%		\caption[]{3D rendering of an onion slice.}\label{fig:onion-3d}
+%	\end{figure}
+%
+%	\begin{figure}[hbt]
+%		\centering
+%		\includegraphics[width=0.8\linewidth]{gfx/3d/orange}
+%		\caption[]{3D rendering of an orange slice.}\label{fig:orange-3d}
+%	\end{figure}
 
-	\begin{figure}[hbt]
-		\centering
-		\includegraphics[width=0.8\linewidth]{gfx/3d/onion}
-		\caption[]{3D rendering of an onion slice.}\label{fig:onion-3d}
-	\end{figure}
+\begin{figure}[bth]
+	\myfloatalign
+	\subfloat[Human fingertip.]
+	{\includegraphics[width=.45\linewidth]{gfx/3d/finger}} \quad
+	\subfloat[Strawberry.]
+	{\includegraphics[width=.45\linewidth]{gfx/3d/strawberry}} \\
+	\subfloat[Onion.]
+	{\includegraphics[width=.45\linewidth]{gfx/3d/onion}} \quad
+	\subfloat[Orange.]
+	{\includegraphics[width=.45\linewidth]{gfx/3d/orange}}
+	\caption{Tu duo titulo debitas latente.}\label{fig:3d-volumes}
+\end{figure}
 
-	\begin{figure}[hbt]
-		\centering
-		\includegraphics[width=0.8\linewidth]{gfx/3d/orange}
-		\caption[]{3D rendering of an orange slice.}\label{fig:orange-3d}
-	\end{figure}
-
-    \begin{figure}[hbt]
-        \centering
-        \includegraphics[width=1\linewidth]{gfx/3d/target}
-        \caption[]{3D rendering of the USAF target}\label{fig:targer-3d}
-    \end{figure}
+    

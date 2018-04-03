@@ -303,7 +303,7 @@ The main parameters that characterize this device are the following:
  	\delta x \simeq \frac{4\lambda_0}{\pi} \frac{f}{d}
  \end{equation}
  where $\lambda_0$ is the central wavelength of operation, $f$ is the focal length of the lens and $d$ is the diameter of the beam at the entrance of the lens. The lateral resolution guaranteed by the LSM04 is thus
- \begin{equation}
+ \begin{equation}\label{eq:transversal-resolution-theory}
  	\delta x \simeq \frac{4\lambda_0}{\pi} \frac{EFL}{EP} \approx 22.5 \,\,\mu\text{m.}
  \end{equation}
  
@@ -408,10 +408,12 @@ When using a two-mirror system three different effects can appear
 	In a flat image field, a varying spot size results. 
 \end{enumerate}
 
+Galvo system, collimator and scanning lens are housed in a cage system mount\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=GCM102/M}} and mounted on a movable vertical support. A photo of the final system is available in \autoref{fig:testa}.
+
 \begin{figure}[bth]
 	\myfloatalign
-	{\includegraphics[width=0.75\linewidth]{gfx/ch3/testa}}
-	\caption{The final scanning system mounted on a movable vertical support.}\label{fig:testa}
+	{\includegraphics[width=0.5\linewidth]{gfx/ch3/testa}}
+	\caption{The final scanning system.}\label{fig:testa}
 \end{figure}
 	
 	\newpage
@@ -760,6 +762,8 @@ This setup, while fairly simple, gave rise to two different issues:
 	
 	
 \end{enumerate}
+
+
 \begin{figure}[bth]
 	\myfloatalign
 	{\includegraphics[width=0.8\linewidth]{gfx/ch3/first-scheme-instability}}
