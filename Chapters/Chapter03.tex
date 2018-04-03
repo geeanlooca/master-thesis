@@ -106,7 +106,7 @@ The constant $\mathcal{R}$ is called \emph{responsivity} [A/W] and is specific t
 \begin{figure}[hbt]
 	\myfloatalign
 	{\includegraphics[width=0.8\linewidth]{gfx/ch3/power-profile}}\\
-	\caption{Sweep trigger of the SSOCT-1310 laser.}\label{fig:axsun-power}
+	\caption{Power profile of the SSOCT-1310 laser.}\label{fig:axsun-power}
 \end{figure}
 
 
@@ -515,7 +515,7 @@ When using a two-mirror system three different effects can appear
     \begin{figure}[bth]
     	\myfloatalign
     	{\includegraphics[width=.95\linewidth]{gfx/ch3/fft-module}}
-    	\caption{Time diagram of a NPT AutoDMA acquisition.}\label{fig:fft-module}
+    	\caption{Diagram of the FPGA FFT module.}\label{fig:fft-module}
     \end{figure}
     
     The format of frequency-domain data can be chosen between amplitude, real or imaginary part of the signal and can be converted in either single-precision floating point or unsigned integer. 
@@ -626,10 +626,10 @@ The resulting traces are available in \autoref{ch:appendixA}. The total length o
 		& \multicolumn{3}{c}{Path length [mm]}\\
 		\tableheadline{Path} & \tableheadline{50-50A} & \tableheadline{50-50B} & \tableheadline{90-10}
 		\\ \midrule
-		White $\xleftrightarrow{}$ White &  2101.9939   & 2098.610325 &  2112.5832\\
-		White $\xleftrightarrow{}$ Red   &  2108.25695  & 2119.471656 &  2113.8573\\
-		White $\xleftrightarrow{}$ Blue  &  2101.149125 & 2095.978125 &  2129.024925\\
-		Blue $\xleftrightarrow{}$ Red    &  2107.402875 & 2116.86915  &  2130.299\\
+		White $\xleftrightarrow{}$ White &  2102    & 2098.61 &  2112.58\\
+		White $\xleftrightarrow{}$ Red   &  2108.26 & 2119.47 &  2113.86\\
+		White $\xleftrightarrow{}$ Blue  &  2101.15 & 2095.97 &  2129.02\\
+		Blue $\xleftrightarrow{}$ Red    &  2107.40 & 2116.87 &  2130.3\\
 		\bottomrule
 	\end{tabularx}
 	\caption{Length of the paths of the fiber couplers.}\label{tab:couplers-length}
@@ -916,7 +916,7 @@ The same method was tested for different mirror depths in order to estimate the 
 \end{figure}
 
 
-\subsection{Thickness measurements}
+\subsection{Thickness measurements}\label{sub:thickness-measurements}
 The simplest type of measurement that can be performed with an OCT system consists in the estimation of the thickness of various layers of a sample. This technique, also called \emph{axial ranging}, was the first example of OCT imaging demonstrated in the literature \cite{Fujimoto1986}. 
 
 The first sample we measured is a Thorlabs R1L1S1N\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=R1L1S1N}}, which is a test target designed for the calibration and the determination of the resolution of imaging systems (\autoref{fig:target-photo}). It consists in a $18\times18\times1.5$ mm$^3$ soda lime glass substrate with the top surface coated with a reflective chrome layer apart from a clear pattern that lets light penetrate. 

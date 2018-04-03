@@ -139,8 +139,15 @@ Similarly, clocking the board with the $k$-clock is achieved by using the \textt
 \subsubsection{FFT module configuration}
 Achieving real-time performance without the use of \ac{GPGPU} is possible only with the use of the onboard FPGA module that computes the FFT of acquired records. To configure this module, the following code snippet is used
 \begin{lstlisting}[language=C,frame=tb]
-AlazarFFTSetup(	fftHandle,	CHANNEL_A,	samplesPerAscan,	fftLength,
-	FFT_OUTPUT_FORMAT_U16_LOG,	fftFooter,	0,	&bytesPerOutputRecord);
+AlazarFFTSetup(	fftHandle,
+	CHANNEL_A,
+	samplesPerAscan,
+	fftLength,
+	FFT_OUTPUT_FORMAT_U16_LOG,
+	fftFooter,
+	0,
+	&bytesPerOutputRecord
+);
 \end{lstlisting}
 where 
 
@@ -179,7 +186,8 @@ AlazarFFTSetWindowFunction(
 After determining the width of each B-scan, and consequently the buffer size, a list of buffers has to be allocated on the PC and posted to the board to be used for AutoDMA transfers. 
 
 \begin{lstlisting}[language=C,frame=tb]
-for (unsigned int i = 0; i < bufferCount; i++){
+for (unsigned int i = 0; i < bufferCount; i++)
+{
    U16 *buffer = (U16*)VirtualAlloc(NULL, bytesPerBuffer, MEM_COMMIT, PAGE_READWRITE);
    AlazarPostAsyncBuffer(boardHandle, buffer, bytesPerBuffer);
 }
@@ -279,7 +287,7 @@ and illustrated in \autoref{fig:gpu-throughput}. The maximum throughput achieved
 
 
 \subsection{Saving data to disk}
-A desirable feature for a OCT software is the ability to save the acquired data to disk so that further post-processing can be performed. In \autoref{sub:acq-loop} it was explained that each buffer returned by the board to the user application is duplicated, converted to floating point format and emitted using a Qt signal. A filesaving object is connected to this signal and appends the received buffer to a dynamic FIFO queue. This structure is then emptied in an asynchronous loop running on a separate thread, writing each buffer to file. If the writing speed is not sufficiently high, the buffer fills up until the amount of RAM available on the workstation completely filled up or the acquisition stops. 
+A desirable feature for a OCT software is the ability to save the acquired data to disk so that further post-processing can be performed. In \autoref{sub:acq-loop} it was explained that each buffer returned by the board to the user application is duplicated, converted to floating point format and emitted using a Qt signal. A filesaving object is connects to this signal and appends the received buffer to a dynamic FIFO queue. This structure is then emptied in an asynchronous loop running on a separate thread, writing each buffer to file. If the writing speed is not sufficiently high, the buffer fills up until the amount of RAM available on the workstation is completely used or the acquisition stops. 
 
 Considering that the size of each buffer is
 
@@ -293,7 +301,8 @@ the queue fills up at a rate of
 \end{equation}
 meaning that a \ac{SSD} is needed for long acquisitions as regular \acp{HDD} usually do not exceed write speeds of $\sim 150$ MB/s. In fact, the write speed of the HDD installed in the OCT workstation was benchmarked with the AlazarDSO software, resulting in $141.3$ MB/s while the SSD averaged $348.7$ MB/s. 
 
-Even though this value is higher than $\eta_q$, for long acquisition sessions (tens of Gigabytes of data), the write speed of the SSD drops, the queue fills up and the application exhibits lags and unresponsiveness. This behaviour is due to the \emph{SSD write cliff}. In flash-based SSDs, the memory consists in a number of blocks, each of which contains a number of pages. Blocks are the smallest erasable units whereas pages are the smallest writable units. After an SSD is filled with data, unused pages must be erased before new data is written. Since a block is the smallest erasable unit, in order to erase the unused pages the SSD must erase all pages on the block, regardless if they are active or unused. This means that active pages must be rewritten into another block with free cells. Writing a single page can result in multiple corresponding re-write operations, which can then trigger additional erase operations, causing a \emph{write amplification}\footnote{\url{http://crestingwave.com/sites/default/files/collateral/velobit_whitepaper_ssdperformancetips.pdf}}. 
+\subsubsection{The SSD write cliff}
+Even though this value is higher than $\eta_q$, for long acquisition sessions (tens of Gigabytes of data), the write speed of the SSD drops significantly, the queue fills up and the application exhibits lags and unresponsiveness. This behaviour is due to the \emph{SSD write cliff}. In flash-based SSDs, the memory consists in a number of blocks, each of which contains a number of pages. Blocks are the smallest erasable units whereas pages are the smallest writable units. After an SSD is filled with data, unused pages must be erased before new data is written. Since a block is the smallest erasable unit, in order to erase the unused pages the SSD must erase all pages on the block, regardless if they are active or unused. This means that active pages must be rewritten into another block with free cells. Writing a single page can result in multiple corresponding re-write operations, which can then trigger additional erase operations, causing a \emph{write amplification}\footnote{\url{http://crestingwave.com/sites/default/files/collateral/velobit_whitepaper_ssdperformancetips.pdf}}. 
 
 \begin{figure}[htb]
 	\myfloatalign
@@ -311,57 +320,284 @@ Solutions to mitigate this effect could not be investigated in detail and will b
 \end{figure}
 
 \section{Acquisitions}
-\subsection{Amplified Photodiode}
+In this section I will showcase a series of acquisitions made with the SS-OCT system that was described in the previous chapters and the custom-made OCT software. \\
+
+\noindent The first sample that was imaged is the Thorlabs test target introduced in \autoref{sub:thickness-measurements}. In \autoref{fig:target-bscan} we can see the highly reflective chrome coating on the top, while the bottom surface is only visible where the clear pattern is present.
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.8\linewidth]{gfx/ch4/axsun/target-bscan}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:target-bscan}
+\end{figure}%----------
+
+
+As explained in \autoref{sub:thickness-measurements}, the BPD utilized up until now does not amplify the received signal, meaning that the scattering generated by the analyzed samples could not be detected. To solve this issue, the BPD was replaced with another photodiode available in our laboratory, the Exalos EBR370010-02\footnote{\url{http://www.exalos.com/balanced-receivers/}}, which is equipped with a 50 dB transimpedance amplifier. A few comments have to be made in this regard:
+\begin{itemize}
+	\item Even though this receiver is designed to work in the 900-1200 nm range, acquisitions in the 1300 nm window were still possible. 
+	
+	\item The nominal bandwidth of 100 MHz will theoretically limit the imaging depth of the system, but in practice this effect was not appreciable. 
+	
+	\item The saturation power of $-13$ dBm required a slight adjustment of the reference arm: the collimator was misaligned until the received power was sufficiently low. 
+\end{itemize}
+
+The use of this receiver enabled the imaging of a lot of different samples. In \autoref{fig:bscans-artifacts} a few are presented:
+\begin{itemize}
+	\item Scotch tape (\autoref{fig:tape-bande}): the various layers of tape are clearly distinguishable. Each layer is measured at $\sim 60$ $\mu$m of thickness using $n=1$. 
+		\item A fiber optic ribbon cable consisting of 12 \acp{SMF} (\autoref{fig:nastro-bande})
+		
+	\item A dry orange peel (\autoref{fig:dry-orange-peel-bande}). 
+	
+	
+\end{itemize} 
+
+\begin{figure}[bth]
+	\myfloatalign
+	\subfloat[Scotch tape.]
+	{\label{fig:tape-bande}
+		\includegraphics[width=0.75\linewidth]{gfx/ch4/axsun/bande/tape}}\\
+	\subfloat[Fiber optic ribbon cable.]
+	{\label{fig:nastro-bande}
+		\includegraphics[width=.45\linewidth]{gfx/ch4/axsun/bande/nastro}} \quad
+	\subfloat[Dry orange peel.]
+	{\label{fig:dry-orange-peel-bande}
+		\includegraphics[width=.45\linewidth]{gfx/ch4/axsun/bande/dry-orange-peel}}
+	\caption{B-scans of various samples afflicted by striped artifacts.}\label{fig:bscans-artifacts}
+\end{figure}
+
+
+%\begin{figure}[htb]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{gfx/ch4/axsun/bande/nastro}
+%	\caption{B-scan of a fiber optic ribbon cable.}\label{fig:nastro-bande}
+%\end{figure}
+%
+%
+%\begin{figure}[htb]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{gfx/ch4/axsun/bande/dry-orange-peel}
+%	\caption{B-scan of dry orange peel.}\label{fig:dry-orange-peel-bande}
+%\end{figure}
+
+
+%\begin{figure}[hbt]
+%	\myfloatalign
+%	\includegraphics[width=\linewidth]{gfx/tikz/axsun/spurious-frequencies}
+%	\caption{Spurious beat frequencies detected by the Exalos \ac{BPD}.}\label{fig:spurious-frequencies}
+%\end{figure}
+
+
+
+In these images a series of horizontal bands occupies the middle of the imaging range. The cause of this effect has not yet been determined, but it has been observed that placing a polarization controller after the reference arm reduces the visibility of these artifacts. 
+
+This can be seen in the following images, representing:
+\begin{itemize}
+	\item a fresh orange peel (\autoref{fig:orange-peel}). The glans containing the natural oil are visible.
+	
+	\item a sliced cherry tomato (\autoref{fig:tomato-1}). Notice the highly scattering seeds and the reticular structure of the pulp;
+	
+	\item an onion (\autoref{fig:red-onion-2});
+	
+	\item human fingernail (\autoref{fig:finger-gian}) and fingertip (\autoref{fig:finger-leo-2}): fingerprints, epidermis and dermis layers are all clearly recognizable.
+	
+	\item a piece of beef steak (\autoref{fig:steak}): \autoref{fig:beef-steak} represents the various layers of muscle of a lean part of the steak, while in \autoref{fig:fat-steak} a section of fat tissue is illustrated.
+\end{itemize}
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.9\linewidth]{gfx/ch4/axsun/no-bande/orange-peel}
+	\caption{B-scan of an orange peel.}\label{fig:orange-peel}
+\end{figure}
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.9\linewidth]{gfx/ch4/axsun/no-bande/tomato-1}
+	\caption{B-scan of a cherry tomato.}\label{fig:tomato-1}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.9\linewidth]{gfx/ch4/axsun/no-bande/red-onion-2}
+	\caption{B-scan of an onion.}\label{fig:red-onion-2}
+\end{figure}	
+
+\begin{figure}[htb]
+	\myfloatalign
+	\subfloat[Human nail.]
+	{\label{fig:finger-gian}
+		\includegraphics[width=.47\linewidth]{gfx/ch4/axsun/no-bande/finger-gian}} \quad
+	\subfloat[Fingertip.]
+	{\label{fig:finger-leo-2}
+		\includegraphics[width=.47\linewidth]{gfx/ch4/axsun/no-bande/finger-leo-2}} \\
+	\caption{B-scans of a human finger.}\label{fig:human-finger}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\myfloatalign
+	\subfloat[Lean tissue.]
+	{\label{fig:beef-steak}
+		\includegraphics[width=.47\linewidth]{gfx/ch4/axsun/no-bande/steak-2}} \quad
+	\subfloat[Fat tissue.]
+	{\label{fig:fat-steak}
+		\includegraphics[width=.47\linewidth]{gfx/ch4/axsun/no-bande/steak-fat-2}} \\
+	\caption{B-scans of a beef steak.}\label{fig:steak}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[hbt]
+%	\centering
+%	\includegraphics[width=0.8\linewidth]{gfx/ch4/axsun/no-bande/finger-gian}
+%	\caption{B-scan of the Thorlabs test target.}\label{fig:finger-gian}
+%\end{figure}
+%
+%
+%\begin{figure}[hbt]
+%	\centering
+%	\includegraphics[width=0.8\linewidth]{gfx/ch4/axsun/no-bande/finger-leo-2}
+%	\caption{B-scan of the Thorlabs test target.}\label{fig:finger-leo-2}
+%\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
+\subsection{SS-OCT at 1060 nm}
+A second SS-OCT system working in the 1060 nm range and based on the design presented in this thesis was also tested. The setup is available in \autoref{fig:santec-setup}: using a fixed fiber reflector in the reference arm requires a \ac{VOA} to limit the power received by the BPD and a more complicated calibration of the sample arm. In fact, after measuring the length of the reference arm with a \ac{OFDR}, a fiber patch cord of the appropriate length was built by cutting and splicing two separate patch cords. 
+
+Optical components such as scanning lens and collimators are equivalent to those introduced in \autoref{ch:setup}. The laser is instead a Santec HSL, capable of a selectable sweep rate and maximum imaging depth of $\sim 9$ mm. 
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{gfx/ch4//santec-setup}
+	\caption{Setup of the SS-OCT system working in the 1060 nm range.}\label{fig:santec-setup}
+\end{figure}
+
+\subsubsection{B-scans}
+
+Two B-scans acquired with this system are available in \autoref{fig:santec-bscans}: the juice vesicles of an orange slice are reported \autoref{fig:santec-orange}, while a scotch tape covering the entire imaging range is visible in \autoref{fig:santec-tape}. 
+
+\begin{figure}[H]
+	\myfloatalign
+	\subfloat[Orange slice.]
+	{\label{fig:santec-orange}
+		\includegraphics[width=.47\linewidth]{gfx/ch4/santec/orange-2}} \quad
+	\subfloat[Scotch tape.]
+	{\label{fig:santec-tape}
+		\includegraphics[width=.47\linewidth]{gfx/ch4/santec/tape-3}} \\
+	\caption{B-scans acquired with the 1060 nm system.}\label{fig:santec-bscans}
+\end{figure}
+
+By changing the state of polarization of the field reflected by the reference arm with the polarization controller, some birefringence-induced effects can be observed. An example is provided in \autoref{fig:santec-tape-birefringence}, where B-scans of a roll of scotch tape are acquired with the polarization controller in two different positions. We can see that in the right image a black band appears in the middle of the tape. The birefringence of the material at that specific depth causes a reflection with a state of polarization that is almost-orthogonal to that imposed by the polarization controller, resulting in a lower intensity interference. 
+
+\begin{figure}[htb]
+	\myfloatalign
+	\subfloat[]
+	{\label{fig:tape-no-birefringence}
+		\includegraphics[width=.47\linewidth]{gfx/ch4/santec/tape-no-birefringence}} \quad
+	\subfloat[]
+	{\label{fig:tape-birefringence}
+		\includegraphics[width=.47\linewidth]{gfx/ch4/santec/tape-birefringence}} \\
+	\caption{Birefringence of a scotch tape.}\label{fig:santec-tape-birefringence}
+\end{figure}
+
+\subsubsection{Imaging of dynamic samples}
+In order to test the OCT software with a dynamic sample, vinegar was poured in a microscope slide containing a small quantity of sodium bicarbonate. The two components cause a small reaction resulting in the generation of foam and bubbles. 
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\linewidth]{gfx/ch4/santec/aceto}
+	\caption[]{3D rendering of a human finger.}\label{fig:aceto}
+\end{figure}
+A few frames of the acquired video are presented in \autoref{fig:aceto}: in the top left the bicarbonate is in its resting state; after pouring vinegar with a syringe, bubbles start forming (top right); after a few seconds, the reaction slows down and the bicarbonate begins to settle on the bottom surface (bottom left) while a few particles jump out of the slide; finally the reaction halts (bottom right) with the particles completely sedimented on the bottom of the slide. 
+
+\FloatBarrier
+\subsection{En-face images}
+In the introductory chapters of this thesis the concept of \emph{en-face} images was explained: a frontal view of the imaged sample can be reconstructed from a series of B-scans acquired at slightly different positions on the transverse plane. Usually, each pixel of the \emph{en-face} image is obtained from the corresponding A-scan by summing its values: in this way parts of the sample that are beneath the surface are represented in the frontal view. Another method that can be used to build the image is selecting the maximum value of each A-scan. Since the reflection coming from the surface of the sample is usually the most intense, the resulting image is essentially a magnified version of the sample. 
 
 
 \begin{figure}[hbt]
 	\centering
-	\includegraphics[width=\linewidth]{gfx/tikz/axsun/banana-peel}
-	\caption{B-scan of banana peel.}\label{fig:banana-peel}
-\end{figure}%----------------------------------------------------------------------------------------
-\begin{figure}[hbt]
-	\myfloatalign
-	{\includegraphics[width=\linewidth]{gfx/tikz/axsun/dry-orange-peel}}
-	\caption{B-scan of dry orange peel.}\label{fig:dry-orange-peel}
-\end{figure}%----------------------------------------------------------------------------------------
+	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/onion-surf}
+	\caption{\emph{En-face} view of a sliced onion.}\label{fig:onion-surf}
+\end{figure}
 
 \begin{figure}[hbt]
-	\myfloatalign
-	{\includegraphics[width=\linewidth]{gfx/tikz/axsun/finger}}
-	\caption{B-scan of a human finger.}\label{fig:finger}
-\end{figure}%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-
+	\centering
+	\includegraphics[width=\linewidth]{gfx/ch4/santec/fingervolume-2}
+	\caption{\emph{En-face} view of fingerprints.}\label{fig:enface-fingerprint}
+\end{figure}
 
 \begin{figure}[hbt]
-\myfloatalign
-\includegraphics[width=\linewidth]{gfx/tikz/axsun/spurious-frequencies}
-\caption{Spurious beat frequencies detected by the Exalos \ac{BPD}.}\label{fig:spurious-frequencies}
-\end{figure}%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-
-
-
-
-
-
-\begin{figure}[bth]
-	\myfloatalign
-	\subfloat[Asia personas duo.]
-	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/banana-peel}} \quad
-	\subfloat[Pan ma signo.]
-	{\label{fig:banan-peel}
-		\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/tape}} \\
-	\subfloat[Methodicamente o uno.]
-	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/nastro}} \quad
-	\subfloat[Titulo debitas.]
-	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/spugna-1}}
-	\caption{Tu duo titulo debitas latente.}\label{fig:example}
+	\centering
+	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/tomato-surf}
+	\caption{\emph{En-face} view of a sliced cherry tomato.}\label{fig:tomato-surf}
 \end{figure}
 
 
-\section{USAF Target}
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/strawberry-surf}
+	\caption{\emph{En-face} view of a strawberry.}\label{fig:strawberry-surf}
+\end{figure}
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/orange-surf}
+	\caption{\emph{En-face} view of an orange slice.}\label{fig:orange-surf}
+\end{figure}
+
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/orange-peel-surf}
+	\caption{\emph{En-face} view of an orange peel.}\label{fig:orange-peel-surf}
+\end{figure}
+
+
+\FloatBarrier
+\subsection{Measuring the transversal resolution}
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=\linewidth]{gfx/ch4/axsun/target/grid}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:target-grid}
+\end{figure}
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/ronchi}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:target-ronchi}
+\end{figure}
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/star-sector}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:target-star}
+\end{figure}
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.6\linewidth]{gfx/ch4/axsun/target/usaf}
+	\caption{B-scan of the Thorlabs test target.}\label{fig:target-usaf}
+\end{figure}
+
+
+
+
+%\begin{figure}[bth]
+%	\myfloatalign
+%	\subfloat[Asia personas duo.]
+%	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/banana-peel}} \quad
+%	\subfloat[Pan ma signo.]
+%	{\label{fig:banan-peel}
+%		\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/tape}} \\
+%	\subfloat[Methodicamente o uno.]
+%	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/nastro}} \quad
+%	\subfloat[Titulo debitas.]
+%	{\includegraphics[width=.45\linewidth]{gfx/tikz/axsun/spugna-1}}
+%	\caption{Tu duo titulo debitas latente.}\label{fig:example}
+%\end{figure}
+
+
+\FloatBarrier
+\subsection{Volumetric Data}
     \begin{figure}[hbt]
         \centering
         \includegraphics[width=0.8\linewidth]{gfx/3d/finger}
@@ -370,8 +606,20 @@ Solutions to mitigate this effect could not be investigated in detail and will b
 
 	\begin{figure}[hbt]
 		\centering
-		\includegraphics[width=0.8\linewidth]{gfx/3d/dry-orange}
-		\caption[]{3D rendering of a human finger.}\label{fig:orange-3d}
+		\includegraphics[width=0.8\linewidth]{gfx/3d/strawberry}
+		\caption[]{3D rendering of a strawberry.}\label{fig:strawberry-3d}
+	\end{figure}
+
+	\begin{figure}[hbt]
+		\centering
+		\includegraphics[width=0.8\linewidth]{gfx/3d/onion}
+		\caption[]{3D rendering of an onion slice.}\label{fig:onion-3d}
+	\end{figure}
+
+	\begin{figure}[hbt]
+		\centering
+		\includegraphics[width=0.8\linewidth]{gfx/3d/orange}
+		\caption[]{3D rendering of an orange slice.}\label{fig:orange-3d}
 	\end{figure}
 
     \begin{figure}[hbt]
@@ -379,13 +627,3 @@ Solutions to mitigate this effect could not be investigated in detail and will b
         \includegraphics[width=1\linewidth]{gfx/3d/target}
         \caption[]{3D rendering of the USAF target}\label{fig:targer-3d}
     \end{figure}
-
-	\begin{enumerate}
-		\item What it is
-		\item How it works
-		\item Acquisitions in different conditions
-		\item B-scans
-		\item Surface images -> verifying transverse resolution
-	\end{enumerate}
-
-Content
