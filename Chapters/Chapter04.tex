@@ -7,7 +7,7 @@ This chapter is dedicated to the description of the OCT software that was develo
 
 \noindent The transversal resolution of the system described in \autoref{ch:setup} is also evaluated using the test resolution target introduced in the same chapter. \\
 
-\noindent Finally, a series of B-scans, C-scans and \emph{en-face} images of a variety of different samples is presented. A part of these were acquired using a second SS-OCT system designed to work in the 1060 nm range. 
+\noindent Finally, a series of B-scans, C-scans and \emph{en-face} images of a variety of different samples is presented. A subset of these images were acquired using a second SS-OCT system designed to work in the 1060 nm range. 
 
 
 %----------------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ The final component that is needed to obtain a working SS-OCT system is a comput
 \noindent The application is developed for the Windows 10 Operating System using the Object-Oriented C++ programming language, which is the only one that allows low-level memory management among those supported by the ATS9350 acquisition board. Additionally, it permits the native integration of the high performance graphics library called OpenGL\footnote{\url{https://www.opengl.org/}}. \\
 
 
-The code is built using the Qt application framework\footnote{\url{https://www.qt.io/}}, which consists in a set of tools for event handling and the design of \acp{GUI}. In Qt, asynchronous code can be easily written using the Signals and Slots paradigm: when a particular event occurs, an object \emph{emits} a signal; objects that are connected to this signal will execute the appropriate slot, which is a function that takes the parameters passed by the emitted signals and perform some actions. For example, the object dealing with OCT data acquisition can emit a signal with a newly acquire B-scan, while a data visualization object connected to this signal can retrieve this data and display it without blocking the acquisition task. 
+The code is built using the Qt application framework\footnote{\url{https://www.qt.io/}}, which consists in a set of tools for event handling and the design of \acp{GUI}. In Qt, asynchronous code can be easily written using the Signals and Slots paradigm: when a particular event occurs, an object \emph{emits} a signal; objects that are connected to this signal will execute the appropriate slot, which is a function that takes the parameters passed by the connected signals and perform some actions. For example, the object dealing with OCT data acquisition can emit a signal with a newly acquire B-scan, while a data visualization object connected to this signal can retrieve this data and display it without blocking the acquisition task. 
 
 \begin{figure}[htb]
 	\myfloatalign
@@ -32,19 +32,19 @@ The code is built using the Qt application framework\footnote{\url{https://www.q
 	\caption{Data flow of the OCT application.}\label{fig:dataflow}
 \end{figure}
 
-The data flow of the application in illustrated in \autoref{fig:dataflow}. The \ac{GUI} initiates an acquisition by communicating with the ATS9350 board and an additional \ac{DAQ} board dedicated to the control of the galvo mirrors and supplying a "B-scan start" signal. This device is the National Instruments USB-6343\footnote{\url{http://www.ni.com/it-it/support/model.usb-6343.html}}, which is a USB board equipped with 4 analog outputs, 32 analog inputs and 48 digital I/O ports capable of 900 kilosamples/s. Once the ATS9350 receives the "B-scan start" signal, it will listen for A-scan triggers provided by the Axsun laser and start sampling the interference signal using the $k$-clock. After the acquisition of a B-scan is complete, the board returns a memory block containing the acquired data to the application, that will then process it and send it to two objects which asynchronously display it using OpenGL and save it to disk. 
+The data flow of the application in illustrated in \autoref{fig:dataflow}. The \ac{GUI} initiates an acquisition by communicating with the ATS9350 board and an additional \ac{DAQ} board dedicated to the control of the galvo mirrors and to supply a "frame start" signal. This device is the National Instruments USB-6343\footnote{\url{http://www.ni.com/it-it/support/model.usb-6343.html}}, which is a USB board equipped with 4 analog outputs, 32 analog inputs and 48 digital I/O ports capable of 900 kilosamples/s. Once the ATS9350 receives the "frame start" signal, it will listen for A-scan triggers provided by the Axsun laser and start sampling the interference signal using the $k$-clock. After the acquisition of a B-scan is complete, the board returns a memory block containing the acquired data to the application, that will then process it and send it to two objects which asynchronously display it using OpenGL and save it to disk. 
 
 \subsection{Controlling the galvanometric mirrors}
 In order to control the galvo system, voltage signals that are proportional to the scan angle have to be sent to its driver boards. As explained in \autoref{ch:setup}, two separate signals are needed for each mirror: one for positive and one for negative angles. This requires the use of a \ac{DAQ} board with at least 4 analog output ports, explaining the choice of the USB-6434. 
 
-To scan an area of the sample, the $X$ motor is driven with a triangle wave of frequency $f_B$ while the $Y$ motor is controlled with a "staircase" signal with a number of "steps" equal to the number of frames in the volume. At the start of each rising edge of the triangle wave, a TTL pulse will also be generated and sent to the AUX port of the ATS9350 board to signal the start of a B-scan. An example is available in \autoref{fig:galvo-signals}, where the B-scan frequency is $f_b = 20$ Hz, and the number of frames per volume is equal to 4. Using these voltages, the area that will be scanned is equal to 
+To scan an area of the sample, the $X$ motor is driven with a triangle wave of frequency $f_b$ while the $Y$ motor is controlled with a "staircase" signal with a number of "steps" equal to the number of frames in the volume. At the start of each rising edge of the triangle wave, a TTL pulse will also be generated and sent to the AUX port of the ATS9350 board to signal the start of a B-scan. An example is available in \autoref{fig:galvo-signals}, where the B-scan frequency is $f_b = 20$ Hz, and the number of frames per volume is equal to 4. Using these voltages, the area that will be scanned is equal to 
 
 \begin{equation}
 	A = \left[2 EFL \tan\left( 2 \times 2 V \times 1  ^ \circ/V \times \frac{\pi}{180}\right)\right]^2 \approx 7.55\times 7.55 \text{ mm}^2.
 \end{equation}
 If only cross-sectional images are required, the $Y$ motor will be controlled with a constant voltage. 
 
-During the falling edge of the triangle wave the $X$ mirror will return to its initial position, meaning that the data generated in this time interval is not useful. Hence, the number of A-scans to acquire in order to scan the entire interval covered by this mirror is
+During the falling edge of the triangle wave the $X$ mirror will return to its initial position, meaning that the data generated in this time interval is not useful. Hence, the number of A-scans to acquire in order to scan the entire space covered by this mirror is
 
 \begin{equation}\label{eq:bscan-maxwidth}
 	N = \frac{1}{2} \frac{f_a}{f_b},
@@ -70,17 +70,17 @@ The control of the USB-6343 board is integrated in the OCT application using the
 
 In our case two tasks are created:
 \begin{enumerate}
-	\item Digital Task: handles the generation of the "Frame start" signal. It consists in a single digital channel which can be configured as a "digital pulse" with the \texttt{DAQmxCreateCOPulseChanFreq} function, specifying the output port of the board, the frequency of the pulse and its duty cycle. In order to generate a sequence of pulses instead of just a single one, the function \texttt{DAQmxCfgImplicitTiming} must be called to configure the task as "continuous generation". 
+	\item Digital Task: handles the generation of the "Frame start" signal. It consists in a single digital channel which can be configured as a "digital pulse" with the \texttt{DAQmxCreateCOPulseChanFreq} function, specifying the output port of the board, the frequency of the pulse and its duty cycle. In order to generate a sequence of pulses instead of just a single one, the function \texttt{DAQmxCfgImplicit\-Timing} must be called to configure the task as "continuous generation". 
 
 
 	
 	\item Analog Task: drives the galvo system with the aforementioned signals. This task is a collection of four analog channels, which can be added with the \texttt{DAQmxCreateAOVoltageChan} command, specifying the output ports and a maximum expected voltage. 
 	
-	The signals are computed and stored in an array of floating point samples which will be uploaded to a buffer on the board and converted into a continuous signal by a Digital-to-Analog converter. The length of each signal is determined by the selected generation rate $R_{clk}$, the B-scan rate $f_B$ and the number of frames per volume $N_v$ as 
+	The signals are computed and stored in an array of floating point samples which will be uploaded to a buffer on the board and converted into a continuous signal by a \ac{DAC}. The length of each signal is determined by the selected generation rate $R_{clk}$, the B-scan rate $f_B$ and the number of frames per volume $N_v$ as 
 	\begin{equation}
 		N_{\text{samples}} = R_{clk} \cdot \frac{1}{f_B} \cdot N_v,
 	\end{equation}
-	meaning that the length of the buffer uploaded to the board has length $4 \cdot N_{\text{samples}}$, as two analog signals are required for each mirror. Just like before, "continuous generation" must be configured, otherwise a single volume (or a single frame in case of 2D acquisition) will be scanned. To synchronize the two tasks, analog data generation is triggered by the digital pulse train created above using the \texttt{DAQmxCfgDigEdgeStartTrig} function. 
+	meaning that the buffer uploaded to the board has length $4 \cdot N_{\text{samples}}$, as two analog signals are required for each mirror. Just like before, "continuous generation" must be configured, otherwise a single volume (or a single frame in case of 2D acquisition) will be scanned. To synchronize the two tasks, analog data generation is triggered by the digital pulse train created above using the \texttt{DAQmxCfgDigEdgeStartTrig} function. 
 		
 \end{enumerate}
 
@@ -96,11 +96,11 @@ The data transfer between the board and the software works as follows:
 
 	\item The board will acquire the number of records necessary to fill a buffer into its main memory. 
 
-	\item Once the records have been acquired, an AutoDMA transfer will start copying the records from the board memory to the application buffer. At the same time, the board is acquiring new records to fill the next buffer, so no trigger events are missed while copying data to the PC.
+	\item Once the records have been acquired, an AutoDMA transfer will start copying the records from the on-board memory to the application buffer. At the same time, the board is acquiring new records to fill the next buffer, so no trigger events are missed while copying data to the PC.
 
 	\item After the DMA transfer is complete, the board generates an interrupt, causing an event message to be sent to the application so it can start consuming data. 
 	
-	\item Once the buffer has been processed by the application, it must be returned to the board. The processing time must be sufficiently low so that the board will always have one buffer available, otherwise the acquisition will fail with a BUFFER\_OVERFLOW error.
+	\item Once the buffer has been processed by the application, it must be returned to the board. The processing time must be sufficiently low so that the board will always have one buffer available, otherwise the acquisition will fail with a \emph{buffer overflow} error.
 \end{enumerate}
 
 
@@ -133,7 +133,7 @@ AlazarSetTriggerOperation(
 
 \end{lstlisting}
 
-Similarly, clocking the board with the $k$-clock is achieved by using the \texttt{AlazarSetCaptureClock} command to select the clock source and the \texttt{AlazarSetExternalClockLevel} to select the voltage level at which samples are captured.
+Similarly, clocking the board with the $k$-clock is achieved by using the \texttt{AlazarSetCaptureClock} function to select the clock source and the \texttt{AlazarSetExternalClockLevel} function to select the voltage level at which samples are captured.
 
 
 \subsubsection{FFT module configuration}
@@ -238,7 +238,7 @@ The floating point values from which the image is computed are first clipped in 
 ...
 \end{lstlisting}
 
-Finally, the raw floating point data are sent to an object that asynchronously saves it to disk while the computed image is displayed with OpenGL. 
+Finally, the raw floating point data are sent to an object that asynchronously saves it to disk, while the computed image is displayed with OpenGL. 
 
 \subsection{Processing time and delay}
 Real-time data acquisition and visualization is achieved if the mean processing time of a B-scan is smaller than the time between two consecutive "frame start" signals:
@@ -265,7 +265,8 @@ where $T_{\text{DMA}}$ is the time to transfer a B-scan from the ATS9350 to the 
 	T_{\text{DMA}} = \frac{\text{bytes per DMA buffer}}{\text{PCIe 2.0 throughput}} = \frac{\frac{1}{2}\frac{f_a}{f_b}\times 4096}{1.735 \text{ GB/s}},
 \end{equation} 
 
-where the PCIe throughput was measured in \autoref{ch:setup} using the AlazarDSO software. $T_{\text{GPU}}$ was instead measured directly inside the application. The result is visible in \autoref{fig:delay}: using 4 cores, delays shorter than 10 milliseconds are achievable even for large B-scans. 
+where the PCIe throughput was measured in \autoref{sec:daq} using the AlazarDSO software. $T_{\text{GPU}}$ was instead measured directly inside the application. The result is visible in \autoref{fig:delay}: using 4 cores, delays lower
+than 10 milliseconds are achievable even for large B-scans. 
 
 
 \begin{figure}[htb]
@@ -287,7 +288,7 @@ and illustrated in \autoref{fig:gpu-throughput}. The maximum throughput achieved
 
 
 \subsection{Saving data to disk}
-A desirable feature for a OCT software is the ability to save the acquired data to disk so that further post-processing can be performed. In \autoref{sub:acq-loop} it was explained that each buffer returned by the board to the user application is duplicated, converted to floating point format and emitted using a Qt signal. A filesaving object is connects to this signal and appends the received buffer to a dynamic FIFO queue. This structure is then emptied in an asynchronous loop running on a separate thread, writing each buffer to file. If the writing speed is not sufficiently high, the buffer fills up until the amount of RAM available on the workstation is completely used or the acquisition stops. 
+A desirable feature for a OCT software is the ability to save the acquired data to disk so that further post-processing can be performed. In \autoref{sub:acq-loop} it was explained that each buffer returned by the board to the user application is duplicated, converted to floating point format and emitted using a Qt signal. A filesaving object connects to this signal and appends the received buffer to a dynamic FIFO queue. This structure is then emptied in an asynchronous loop running on a separate thread, writing each buffer to file in a binary format using standard C++ I/O operations. If the writing speed is not sufficiently high, the buffer fills up until the amount of \ac{RAM} available on the workstation is completely used or the acquisition stops. 
 
 Considering that the size of each buffer is
 
@@ -312,16 +313,9 @@ Even though this value is higher than $\eta_q$, for long acquisition sessions (t
 
 Solutions to mitigate this effect could not be investigated in detail and will be addressed in future works. 
 
-
-\begin{figure}[htb]
-	\myfloatalign
-	\includegraphics[width=0.8\linewidth]{gfx/ch4/gui}
-	\caption{The SSD write cliff.}\label{fig:gui}
-\end{figure}
-
+\clearpage
 \section{Acquisitions}
-In this section I will showcase a series of acquisitions made with the SS-OCT system that was described in the previous chapters and the custom-made OCT software. \\
-
+In this section I will showcase a series of acquisitions made with the SS-OCT system that was described in the previous chapters and the custom-made OCT software.
 \subsection{B-scans}
 The first sample that was imaged is the Thorlabs test target introduced in \autoref{sub:thickness-measurements}. In \autoref{fig:target-bscan} we can see the highly reflective chrome coating on the top, while the bottom surface is only visible where the clear pattern is present.
 \begin{figure}[hbt]
@@ -343,7 +337,7 @@ As explained in \autoref{sub:thickness-measurements}, the BPD utilized up until 
 The use of this receiver enabled the imaging of a lot of different samples. In \autoref{fig:bscans-artifacts} a few are presented:
 \begin{itemize}
 	\item Scotch tape (\autoref{fig:tape-bande}): the various layers of tape are clearly distinguishable. Each layer is measured at $\sim 60$ $\mu$m of thickness using $n=1$. 
-		\item A fiber optic ribbon cable consisting of 12 \acp{SMF} (\autoref{fig:nastro-bande})
+		\item A fiber optic ribbon cable consisting of 12 \acp{SMF} (\autoref{fig:nastro-bande}).
 		
 	\item A dry orange peel (\autoref{fig:dry-orange-peel-bande}). 
 	
@@ -387,11 +381,11 @@ The use of this receiver enabled the imaging of a lot of different samples. In \
 
 
 
-In these images a series of horizontal bands occupies the middle of the imaging range. The cause of this effect has not yet been determined, but it has been observed that placing a polarization controller after the reference arm reduces the visibility of these artifacts. 
+In these images a series of horizontal bands occupy the middle of the imaging range. The cause of this effect has not yet been determined, but it has been observed that placing a polarization controller after the reference arm reduces the visibility of these artifacts. 
 
 This can be seen in the following images, representing:
 \begin{itemize}
-	\item a fresh orange peel (\autoref{fig:orange-peel}). The glans containing the natural oil are visible.
+	\item a fresh orange peel (\autoref{fig:orange-peel}): the glans containing the natural oil are visible.
 	
 	\item a sliced cherry tomato (\autoref{fig:tomato-1}). Notice the highly scattering seeds and the reticular structure of the pulp;
 	
@@ -483,7 +477,7 @@ Optical components such as scanning lens and collimators are equivalent to those
 
 \subsubsection{B-scans}
 
-Two B-scans acquired with this system are available in \autoref{fig:santec-bscans}: the juice vesicles of an orange slice are reported \autoref{fig:santec-orange}, while a scotch tape covering the entire imaging range is visible in \autoref{fig:santec-tape}. 
+Two B-scans acquired with this system are available in \autoref{fig:santec-bscans}: the juice vesicles of an orange slice are reported \autoref{fig:santec-orange}, while a scotch tape roll covering the entire imaging range is visible in \autoref{fig:santec-tape}. 
 
 \begin{figure}[htb]
 	\myfloatalign
@@ -506,7 +500,7 @@ By changing the state of polarization of the field reflected by the reference ar
 	\subfloat[]
 	{\label{fig:tape-birefringence}
 		\includegraphics[width=.47\linewidth]{gfx/ch4/santec/tape-birefringence}} \\
-	\caption{Birefringence of a scotch tape.}\label{fig:santec-tape-birefringence}
+	\caption{Birefringence effect on the B-scan of a scotch tape roll.}\label{fig:santec-tape-birefringence}
 \end{figure}
 \FloatBarrier
 \subsubsection{Imaging of dynamic samples}
@@ -537,7 +531,7 @@ The two processing methods are compared in the following figures, where the imag
 	\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/orange-peel-surf}}
 	\caption{\emph{En-face} view of an orange peel.}\label{fig:orange-peel-surf}
 \end{figure}
-The difference between the two procedures is clearly observable in \autoref{fig:orange-peel-surf}, where the \emph{en-face} view of an orange peel is presented. In the left image we can see the opening of the glans and a defect mark on the lower part of the picture, while on the right the glans are entirely represented and the defect is not visible. 
+The difference between the two procedures is clearly observable in \autoref{fig:orange-peel-surf}, where the \emph{en-face} view of an orange peel is presented. In the left image we can see the top portion of the glans and a defect mark on the lower part of the picture, while on the right the glans are entirely represented and the defect is not visible. 
 
 \begin{figure}[H]
 	\myfloatalign
@@ -547,7 +541,7 @@ The difference between the two procedures is clearly observable in \autoref{fig:
 	\subfloat[]
 	{\label{fig:orange-peel-enface}
 		\includegraphics[width=\linewidth]{gfx/ch4/axsun/enface/tomato-surf}}
-	\caption{\emph{En-face} view of an orange peel.}\label{fig:tomato-surf}
+	\caption{\emph{En-face} view of sliced cherry tomato.}\label{fig:tomato-surf}
 \end{figure}
 
 A similar effect is observable in the \emph{en-face} projections of a cherry tomato presented in \autoref{fig:tomato-surf}, where the veins located underneath the top surface are only detected by the \emph{sum} method.
@@ -606,12 +600,12 @@ The transversal resolution of the SS-OCT is experimentally determined by generat
 \subsubsection{Grids}
 This pattern consists in three grid patterns of different sizes: $10$ $\mu$m, $50$ $\mu$m and $100$ $\mu$m. The $10$ $\mu$m grid is a $20\times 20$ array with $1.5$ $\mu$m wide lines and a $10$ $\mu$m pitch in the $x$ and $y$ directions. The $50$ $\mu$m grid is a $20\times 20$ array with $1.5$ $\mu$m wide lines and a $50$ $\mu$m pitch in the $x$ and $y$ directions. The $100$ $\mu$m grid is a $20\times 20$ array with $5$ $\mu$m wide lines and a $100$ $\mu$m pitch in the $x$ and $y$ directions. 
 
-The Grid arrays are used to determine the distortion of a system, as the horizontal and vertical lines of the grid should be perpendicular to each other. A distorted image will show the lines as bent. The acquired image of this pattern is available in \autoref{fig:target-grid}: the $50$ and $100$ $\mu$m grids (center and right) are clearly visible and do not present any distortion. The $10$ $\mu$m is instead completely blurred, with the lines appearing as a unique block. The resolution of the system is then necessarily worse than $10$ $\mu$m. 
+The grid arrays are used to determine the distortion of a system, as the horizontal and vertical lines of the grid should be perpendicular to each other. A distorted image will show the lines as bent. The acquired image of this pattern is available in \autoref{fig:target-grid}: the $50$ and $100$ $\mu$m grids (center and right) are clearly visible and do not present any distortion. The $10$ $\mu$m is instead completely blurred, with the lines appearing as a unique block. The resolution of the system is then necessarily worse than $10$ $\mu$m. 
 
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=\linewidth]{gfx/ch4/axsun/target/grid}
-	\caption{B-scan of the Thorlabs test target.}\label{fig:target-grid}
+	\caption{\emph{En-face} projection of the grid pattern.}\label{fig:target-grid}
 \end{figure}
 
 
@@ -620,7 +614,7 @@ The USAF 1951 is a resolution test pattern conforming to the MIL-STD-150A standa
 \begin{equation}\label{eq:usaf}
 	\delta x,y = 2^{\text{Group} + \left(\frac{\text{Element} - 1}{6}\right)},
 \end{equation}
-where "Element" is the largest set of non-distinguishable horizontal and vertical lines and "Group" is the index of the group in which it is contained. The central part of this pattern is acquired and illustrated in \autoref{fig:target-usaf}, where groups 4, 5, 6 and 7 are visible. Looking at elements 4, 5 and 6 of group 5, it appears that vertical lines are more easily distinguished than horizontal lines. In fact, the first element in which vertical lines are not distinguished is element 1 of group 6, while for horizontal lines it is element 6 of group 5. Using \autoref{eq:usaf}, the $x$ and $y$ resolutions are
+where "Element" is the largest set of non-distinguishable horizontal and vertical lines and "Group" is the index of the group in which this element is contained. The central part of this pattern is acquired and illustrated in \autoref{fig:target-usaf}, where groups 4, 5, 6 and 7 are visible. Looking at elements 4, 5 and 6 of group 5, it appears that vertical lines are more easily distinguished than horizontal lines. In fact, the first element in which vertical lines are not distinguished is element 1 of group 6, while for horizontal lines it is element 6 of group 5. Using \autoref{eq:usaf}, the $x$ and $y$ resolutions are
 \begin{align}
 	&\delta x \approx 64 \text{ lp/mm} \implies 15.6\,\mu\text{m} \\
 	&\delta y \approx 57 \text{ lp/mm} \implies 17.5\,\mu\text{m},
@@ -630,16 +624,16 @@ which are a considerable improvement with respect to the theoretical value of $2
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=0.6\linewidth]{gfx/ch4/axsun/target/usaf}
-	\caption{B-scan of the Thorlabs test target.}\label{fig:target-usaf}
+	\caption{\emph{En-face} projection of the USAF 1951 test target.}\label{fig:target-usaf}
 \end{figure}
 
 \subsubsection{Ronchi rulings}
-Ronchi rulings are a set of parallel bars with widths that are equal to the distance between. This pattern consists in thirteen 1 mm square Ronchi gratings with variable widths capable of measuring resolutions from 30 lp/mm up to 150 lp/mm. \autoref{fig:target-ronchi} all the thirteen gratings are visible. while the bottom images are details of the 60, 70 and 80 lp/mm gratings. 
+Ronchi rulings are a set of parallel bars with widths that are equal to the distance between them. This pattern consists in thirteen 1 mm square Ronchi gratings with variable widths capable of measuring resolutions from 30 lp/mm up to 150 lp/mm. \autoref{fig:target-ronchi} all the thirteen gratings are visible. 
 
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/ronchi-full}
-	\caption{B-scan of the Thorlabs test target.}\label{fig:target-ronchi}
+	\caption{\emph{En-face} projection of variable frequency Ronchi rulings.}\label{fig:target-ronchi}
 \end{figure}
 
 
@@ -654,7 +648,7 @@ A detailed view of the 60, 70 and 80 lp/mm rulings is instead presented in \auto
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/ronchi-detail}
-	\caption{B-scan of the Thorlabs test target.}\label{fig:target-ronchi-detail}
+	\caption{\emph{En-face} projection of the 60, 70 and 80 lp/mm Ronchi gratings.}\label{fig:target-ronchi-detail}
 \end{figure}
 
 \subsubsection{Star Sector}
@@ -674,7 +668,7 @@ From \autoref{fig:target-star}, the bars appear to touch when reaching the secon
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{gfx/ch4/axsun/target/star-sector}
-	\caption{B-scan of the Thorlabs test target.}\label{fig:target-star}
+	\caption{\emph{En-face} projection of the star sector pattern.}\label{fig:target-star}
 \end{figure}
 
 \subsubsection{Concentric circle}
@@ -683,7 +677,7 @@ This pattern consists in 10 concentric circles with cross lines in the center. T
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=0.5\linewidth]{gfx/ch4/axsun/target/concentric-circles}
-	\caption{B-scan of the Thorlabs test target.}\label{fig:concentric-circles}
+	\caption{\emph{En-face} projection of the concentric circles.}\label{fig:concentric-circles}
 \end{figure}
 
 From \autoref{fig:concentric-circles} no apparent distortion is visible, suggesting a correct setup of the focusing optics. 
@@ -720,16 +714,16 @@ The last type of data that can be acquired with a OCT system is volumetric data.
  
 
 
-In this implementation, B-scans are mapped from intensity to RGBA space (Red, Green, Blue, Alpha) with a linear mapping, meaning that low intensity pixels will have a small Alpha value, making them more transparent. Advanced transfer functions can be implemented depending on the particular data that has to be visualized in order to use different colors for each material or structure in the sample. 
+In this implementation, B-scans are mapped from intensity values to RGBA space (Red, Green, Blue, Alpha) with a linear mapping, meaning that low intensity pixels will have a small Alpha value, making them more transparent. Advanced transfer functions can be implemented depending on the particular data that has to be visualized in order to use different colors for each material or structure in the sample. 
 
-The application can also slice the texture along three orthogonal axes to obtain an equivalent B-scan for each direction. An example of these slices can be seen in \autoref{fig:target-3d} along with the volumetric rendering of the USAF 1951 target. 
+The application can also slice the texture along three orthogonal axes to obtain an equivalent B-scan for each direction. An example of these slices can be seen in the top portion of \autoref{fig:target-3d} along with the volumetric rendering of the USAF 1951 target. 
 
 Other examples of C-scan rendering are available in \autoref{fig:3d-volumes}, where the same datasets used to compute \emph{en-face} projections in \autoref{sub:enface} are visualized. 
 
 	\begin{figure}[hbt]
 		\centering
 		\includegraphics[width=0.92\linewidth,height=0.8\linewidth]{gfx/3d/target}
-		\caption[]{Slicing of a 3D texture.}\label{fig:target-3d}
+		\caption[]{Volume rendering and slicing of the USAF 1951 target.}\label{fig:target-3d}
 	\end{figure}
 %
 %
@@ -768,7 +762,7 @@ Other examples of C-scan rendering are available in \autoref{fig:3d-volumes}, wh
 	{\includegraphics[width=.45\linewidth]{gfx/3d/onion}} \quad
 	\subfloat[Orange.]
 	{\includegraphics[width=.45\linewidth]{gfx/3d/orange}}
-	\caption{Tu duo titulo debitas latente.}\label{fig:3d-volumes}
+	\caption{Volume rendering of OCT data.}\label{fig:3d-volumes}
 \end{figure}
 
     

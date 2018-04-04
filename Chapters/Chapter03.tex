@@ -8,17 +8,17 @@ This chapter details the setup that was used in the design of a Swept Source OCT
 \noindent Additionally, two different fiber optic interferometer schemes are tested in order to obtain a working OCT device. 
 
 \section{Optical Source}
-As already discussed in \autoref{ch:theory}, \ac{SS-OCT} systems employ a narrow-bandwidth tunable laser to enable a simple detection scheme and is one of the most critical components of the entire system. The source that was used in this thesis is a SSOCT-1310 by Axsun Technologies, which is a class 3 laser that uses a \ac{MEMS} tunable filter to sweep wavelengths in the 1300 nm range. 
+As already discussed in \autoref{ch:theory}, \ac{SS-OCT} systems employ a narrow-bandwidth tunable laser to enable a simple detection scheme. It is one of the most critical components of the entire system, as several parameters such as axial resolution and imaging depth are directly related to its characteristics. The source that was used in this thesis is a SSOCT-1310 by Axsun Technologies, which is a class 3 laser that uses a \ac{MEMS} tunable filter to sweep wavelengths in the 1300 nm range. 
 
-The two most important features of this laser are the fast sweep rate, which enables high speed imaging, and the presence of the $k$-clock signal used for equalizing the nonlinear frequency sweep. 
+The two most important features of this laser are the fast sweep rate, which enables high speed imaging, and the presence of the $k$-clock signal used in the equalization of the nonlinear frequency sweep. An photo of the device is available in \autoref{fig:axsun-laser}.
 
 \begin{figure}[bth]
 	\myfloatalign
 	{\includegraphics[width=.6\linewidth]{gfx/ch3/axsun}}
-	\caption{The acquisition board, AlazarTech ATS9350.}\label{fig:axsun-laser}
+	\caption{The Axsun SSOCT-1310 swept source.}\label{fig:axsun-laser}
 \end{figure}
 
-An photo of the laser is available in \autoref{fig:axsun-laser}. The emitted light is collected by connecting a fiber optic patch cord to the FC/APC connector on the front panel, which also includes two SMA connectors for the sweep-start trigger and the $k$-clock signal.
+% The emitted light is collected by connecting a fiber optic patch cord to the FC/APC connector on the front panel, which also includes two SMA connectors for the sweep-start trigger and the $k$-clock signal.
 
 
   \begin{table}
@@ -51,9 +51,9 @@ A critical parameter in swept sources for OCT applications is the wavelength int
 	\caption{Spectrum of the Axsun SSOCT-1310 laser, obtained with a 1 nm resolution.}\label{fig:axsun-spectrum}
 \end{figure}
 
-The measurement was executed with a resolution of 1 nanometer, resulting in the spectrum visible in \autoref{fig:axsun-spectrum}. The edge wavelengths turned out to be $\lambda_1 \approx 1237$ nm and $\lambda_2\approx1376$ nm, which result in a bandwith of $\Delta \lambda \approx 139$ nm and central wavelength of $\lambda_0\approx 1307$ nm. These values slightly differ from those reported in the datasheet, but not enough to compromise the performance of the laser. 
+The measurement was performed with a resolution of 1 nanometer, resulting in the spectrum visible in \autoref{fig:axsun-spectrum}. The edge wavelengths turned out to be $\lambda_1 \approx 1237$ nm and $\lambda_2\approx1376$ nm, which result in a bandwidth of $\Delta \lambda \approx 139$ nm and central wavelength of $\lambda_0\approx 1307$ nm. These values slightly differ from those reported in the datasheet, but not enough to compromise the performance of the laser. 
 
-The bandwidth is swept at a frequency $f_a = 100.2$ kHz and with a duty cycle $d_c=0.505$, meaning that the average sweep speed is 
+The bandwidth is swept at a frequency $f_a = 100.2$ kHz and with a duty cycle $d_c=0.505$, meaning that the average wavelength sweep speed is 
 \begin{equation}
 \sigma_{\lambda} = \frac{\Delta\lambda f_c}{d_c} \approx 27.8 \,\,\text{nm}/\mu\text{s}.
 \end{equation}
@@ -111,7 +111,7 @@ The constant $\mathcal{R}$ is called \emph{responsivity} [A/W] and is specific t
 
 
 \subsection{k-clock}
-As already stated, this particular SS-OCT laser is equipped with an internal \ac{MZI} which generates the variable-frequency clock, called $k$-clock, used to sample the A-scan signal at a variable rate and equalize the nonlinear terms in the frequency sweep. As we can see in \autoref{fig:kclock}, this signal assumes values in the $[0, 900]$ mV range with an average value of about 460 mV. This sinusoidal signal will be used to drive the acquisition board for the first $5$ $\mu$seconds of the sweep and from this point forward will be referred to as \emph{useful clock}. As per \autoref{tab:axsun-datasheet}, the total number of samples that cab be acquired using this clock is $N_s = 1536$. In the last 5 $\mu$seconds the clock is called "dummy" because of its undefined behaviour that could lead to issues in the clocking of the DAQ devices.
+As already stated, this particular SS-OCT laser is equipped with an internal \ac{MZI} which generates the variable-frequency clock, called $k$-clock, used to sample the A-scan signal at a variable rate and equalize the nonlinear terms in the frequency sweep. As we can see in \autoref{fig:kclock}, this signal assumes values in the $[0, 900]$ mV range with an average value of about 460 mV. This sinusoidal signal will be used to drive the acquisition board for the first $5$ $\mu$seconds of the sweep and from this point forward will be referred to as \emph{useful clock}. As per \autoref{tab:axsun-datasheet}, the total number of samples that cab be acquired using this clock is $N_s = 1536$. In the last 5 $\mu$seconds the clock is called "dummy" because of its undefined behaviour that could lead to issues in the clocking of the \ac{DAQ} devices.
 
 \begin{figure}[hbt]
 	\myfloatalign
@@ -170,20 +170,20 @@ which results in a maximum depth in air ($n=1$) of
 	\end{equation}
 
 \subsection{Coherence length}
-In \autoref{ch:theory} we have seen that the coherence length of a source is one of the most important parameters of optical sources, independently of the type of OCT system. In \ac{TD-OCT}, this parameter determines the axial resolution of the system, while \ac{FD-OCT} schemes it also affects the imaging range, as the reference arm is fixed. In particular, complex conjugate artifacts arising from the Fourier trasform of the detected signals halve the maximum imaging range. For this reason, the coherence length of a swept source satisfies the following inequality
+In \autoref{ch:theory} we have seen that the coherence length of a source is one of the most important parameters of optical sources, independently of the type of OCT system. In \ac{TD-OCT}, this parameter determines the axial resolution of the system, while \ac{FD-OCT} schemes it also affects the imaging range, as the reference arm is fixed. For this reason, the coherence length of a swept source has to satisfy the following inequality
 \begin{equation}
-	l_c \geq 2 \cdot d_{max},
+	l_c \geq 2\cdot d_{max},
 \end{equation}
-which implies that the coherence length of the SSOCT-1310 source is at least
+where the factor $2$ accounts for the total round-trip time. This implies that the coherence length of the SSOCT-1310 source is at least
 \begin{equation}
-	l_c \geq 2\cdot d_{max} \approx 10.2 \text{ mm.}
+	l_c \geq  10.2 \text{ mm.}
 \end{equation}
 
-The exact value was experimentally determined in \cite{Calabrese2017}, measuring the normalized coherence function $|\gamma(\Delta z)|$ by placing a mirror in the sample arm and acquiring the interference signal for different values of \ac{OPD}. The path length difference was changed by translating the reference mirror. The intensity of the interference signal, normalized by its maximum value, is plotted in  \autoref{fig:axsun-coherence-length} as a function of the \ac{OPD}. When the \ac{OPD} increases above a certain value, the coherence function decays exponentially as
+The exact value was experimentally determined in \cite{Calabrese2017}, measuring the normalized coherence function $|\gamma(\Delta z)|$ by placing a mirror in the sample arm and acquiring the interference signal for different values of \ac{OPD}. The path length difference was changed by moving the reference mirror mounted on a translatable structure. The intensity of the interference signal, normalized by its maximum value, is plotted in  \autoref{fig:axsun-coherence-length} as a function of the \ac{OPD}. When the \ac{OPD} increases above a certain value, the coherence function decays exponentially as
 \begin{equation}
 |\gamma(\Delta z)| \propto e^{-\alpha |\Delta z|},
 \end{equation}
-which corresponds to a linear decay in the logarithmic domain. The parameter $\alpha$ was estimated by fitting the data points to a line using a Least-Squares fit. The coherence length is finally determined as the $\Delta z$ value such that $|\gamma(\Delta z)| = 1/2$, resulting in
+which corresponds to a linear decay in the logarithmic domain. The parameter $\alpha$ was estimated by fitting a line to the data points using a Linear Least Squares fit. The coherence length is finally determined as the value $\Delta z$ such that $|\gamma(\Delta z)| = 1/2$, resulting in
 \begin{equation}
 	l_c = 2 \cdot \frac{\ln 2}{\alpha} \approx 12.3 \text{ mm.}
 \end{equation}
@@ -198,7 +198,7 @@ which corresponds to a linear decay in the logarithmic domain. The parameter $\a
 \newpage
 
 \section{Scanning System}
-One of the most critical components of an OCT is the scanning system. Its role is to receive the light emitted by the source, focus it on the sample under test, and collect the backreflections. A scanning system usually comprises of three different devices
+One of the most critical components of an OCT is the scanning system. Its role is to receive the light emitted by the source, focus it on a specific position on the sample under test, and collect the backreflections. A scanning system usually comprises of three different devices
 
 \begin{enumerate}
 	\item Fiber collimator
@@ -212,7 +212,7 @@ One of the most critical components of an OCT is the scanning system. Its role i
 	\caption{Diagram of a OCT scanning system.}\label{fig:scanning-diagram}
 \end{figure}
 
-A schematic of this system is depicted in \autoref{fig:scanning-diagram}. Light coming from a single mode optical fiber is deflected by a system of galvanometric mirrors towards a lens which in turns focuses the radiation on the sample. By rotating the mirrors the light beam is focused on a different position on the sample. The reflected beam travels the same path in the opposite direction and is collected by the optical fiber. The correct design of these components is paramount in order to guarantee small transversal and axial resolutions of the OCT system. 
+A schematic of this system is depicted in \autoref{fig:scanning-diagram}. Light coming from a single mode optical fiber is deflected by a system of galvanometric mirrors towards a lens which in turns focuses the radiation on the sample. By rotating the mirrors the light beam is focused on a different position on the sample. The reflected beam travels the same path in the opposite direction and is collected by the optical fiber. The correct design of these components is paramount in order to guarantee an optimal transversal resolutions and avoid focusing errors or other distortions. 
 
 
 
@@ -242,7 +242,7 @@ The collimator used in this setup is the Thorlabs F280APC-C\footnote{\url{https:
 \end{table}
 
 \subsection{Scanning lens}
-The light beam deviated by the galvanometric mirrors has to be focused on the sample under test in order to guarantee high resolution images. This is accomplished by a telecentric focusing lens. This type of lenses is characterized by flat image planes which are ideal for OCT applications. 
+The light beam deviated by the galvanometric mirrors has to be focused on the sample under test in order to guarantee high resolution images. This is accomplished by a telecentric scanning lens. This type of lenses is characterized by flat image planes which are ideal for OCT applications. 
 
 The main parameters that characterize this device are the following:
 \begin{itemize}
@@ -269,7 +269,7 @@ The main parameters that characterize this device are the following:
 \begin{figure}[bth]
  	\myfloatalign
  	{\includegraphics[width=0.6\linewidth]{gfx/ch3/spotsize}}
- 	\caption{The Thorlabs GVS002 galvo system.}\label{fig:spotsize}
+ 	\caption{Simulation of the spot size at different scan angles.}\label{fig:spotsize}
  \end{figure}
  
  
@@ -317,12 +317,12 @@ The main parameters that characterize this device are the following:
 	 b = \frac{2 \delta x^2}{\lambda_0}.
  \end{equation}
  
- This effect is illustrated in \autoref{fig:na}, where we can see that using lenses with a high numerical aperture (NA), or small spot size, the depth of view is limited. In OCT systems it is preferred to use low NA lenses to sacrifice lateral resolution in favor of a depth of view comparable to the coherence length of the source. Following this criterion the coherence length is fully exploited. 
+ This effect is illustrated in \autoref{fig:na}, where we can see that using lenses with a high numerical aperture (NA), or small spot size, the depth of view is reduced. In OCT systems it is preferred to use low NA lenses to sacrifice lateral resolution in favor of a depth of view comparable to the coherence length of the source. Following this criterion the coherence length is fully exploited. 
  
   \begin{figure}[bth]
  	\myfloatalign
  	{\includegraphics[width=0.6\linewidth]{gfx/ch3/na}}
- 	\caption{Basic diagram of a  SS-OCT setup}\label{fig:na}
+ 	\caption{Effect of the scanning lens' numerical aperture on spot size and depth of view.}\label{fig:na}
  \end{figure}
  
  
@@ -340,7 +340,7 @@ In order to acquire B-scans and C-scans it is necessary to direct the laser beam
 	\caption{The Thorlabs GVS002 galvo system.}\label{fig:galvo}
 \end{figure}
 
-The galvo system employed in this thesis work is the Thorlabs GVS002\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=GVS002}}, which consists in two 1D silver plated mirrors, the motors that controls them, a detector to measure the mirrors' position  and the servo driver boards that interpret the error signals coming from the detector to correctly drive the motors to the demanded position. A photo of the dual axis motor/mirror assembly is available in \autoref{fig:galvo}. A thorough analysis of the electrical circuitry of the system and its performance characterization is found in \cite{Calabrese2017}. 
+The galvo system employed in this thesis work is the Thorlabs GVS002\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=GVS002}}, which consists in two 1D silver plated mirrors, the motors that drive them, a detector to measure the mirrors' position  and the servo driver boards that interpret the error signals coming from the detector to correctly drive the motors to the demanded position. A photo of the dual axis motor/mirror assembly is available in \autoref{fig:galvo}. A thorough analysis of the electrical circuitry of the system and its performance characterization is found in \cite{Calabrese2017}. 
 
 \subsubsection{Controlling the mirrors}
 The position of each mirror is controlled by sending a voltage signal to the respective driver board which is proportional to the mechanical angle of the respective motor. The maximum mechanical scan angle that the GVS002 system can handle is $\pm 12.5^\circ$, but it can vary depending on the laser beam diameter and the voltage scaling factor. This particular galvo system offers three different scaling factors which also govern the maximum input voltage applied to the servo boards:
@@ -359,7 +359,7 @@ The position of each mirror is controlled by sending a voltage signal to the res
 
 
 
-Through simple trigonometric, it can be shown that the scan angle seen by the focusing lens, called \emph{optical scan angle}, $\theta_o$, is twice the mechanical scan angle applied to the mirror, $\theta_m$. Setting the scaling factor  $\alpha = 1 V/^\circ$, the maximum optical scan angle then becomes $\pm 20^\circ$, which allows us fully exploit the maximum angle supported by the lens. In this case, the full FOV is scanned if the applied voltage is $v_{max} = \pm 7.5^\circ/(2\alpha) = \pm 3.75$ V. 
+Through simple trigonometry, it can be shown that the scan angle seen by the focusing lens, called \emph{optical scan angle}, $\theta_o$, is twice the mechanical scan angle applied to the mirror, $\theta_m$. Setting the scaling factor  $\alpha = 1 V/^\circ$, the maximum optical scan angle then becomes $\pm 20^\circ$, which allows us fully exploit the maximum angle supported by the lens. In this case, the full FOV is scanned if the applied voltage is $v_{max} = \pm 7.5^\circ/(2\alpha) = \pm 3.75$ V. 
 
 The beam spot position on the focal plane is related to the mechanical angle applied to the mirrors and the focal length of the lens through the following relation
 
@@ -412,14 +412,14 @@ Galvo system, collimator and scanning lens are housed in a cage system mount\foo
 
 \begin{figure}[bth]
 	\myfloatalign
-	{\includegraphics[width=0.5\linewidth]{gfx/ch3/testa}}
+	{\includegraphics[width=0.6\linewidth]{gfx/ch3/testa}}
 	\caption{The final scanning system.}\label{fig:testa}
 \end{figure}
 	
 	\newpage
 \section{Acquisition Board}
-	
-	In order to digitize the interference signals generated by the OCT system and reconstruct images of the analyzed sample in real time, a specialized high speed \acf{DAQ} device is required. A desired feature in a \ac{DAQ} board for SS-OCT applications is the ability to sample the signals at a variable rate using a supplied $k$-clock, avoiding the computationally heavy task of data resampling and allowing higher imaging speeds. The \ac{DAQ} board used for this thesis is the AlazarTech ATS9350\footnote{\url{http://www.alazartech.com/product/ats9350}}, which is a specialized digitizer ideal for OCT, ultrasonic and radar applications. 
+\label{sec:daq}	
+	In order to digitize the interference signals generated by the OCT system and reconstruct images of the analyzed sample in real time, a specialized high speed \acf{DAQ} device is required. A desired feature in a \ac{DAQ} board for SS-OCT applications is the ability to sample the signals at a variable rate using a supplied $k$-clock, avoiding the computationally heavy task of data resampling and allowing higher imaging speeds. The \ac{DAQ} board used for this thesis is the AlazarTech ATS9350\footnote{\url{http://www.alazartech.com/product/ats9350}}, which is a designed for OCT, ultrasonic and radar applications. 
 	
 	
 	\begin{figure}[bth]
@@ -498,7 +498,7 @@ Galvo system, collimator and scanning lens are housed in a cage system mount\foo
 		\caption{Time diagram of a Traditional AutoDMA acquisition.}\label{fig:traditional-autodma}
 	\end{figure}
 	
-	Fast trigger repeat rates are not supported and can cause the board to overflow even if data transfer is happening at the maximum sustained rate and the on-board memory has not been completely used up. 
+	Fast trigger repeat rates are not supported and can cause the board to overflow even if data transfer is happening at the maximum sustained rate and the on-board memory has not been completely filled. 
 	
 	\subsubsection{NPT AutoDMA}
 	No Pre-Trigger (NPT) AutoDMA is designed for applications that do not require the acquisition of data before a trigger event. By only storing post-trigger data, the memory bandwidth is optimized. Record headers are also not included, resulting in a more efficient memory utilization. For this reason NPT AutoDMA supports high trigger repeat rates resulting in an acquisition speed which is only limited by the PCIe transfer speed and the rate at which the user application consumes data. 
@@ -512,7 +512,7 @@ Galvo system, collimator and scanning lens are housed in a cage system mount\foo
 	Unlike Traditional AutoDMA, a DMA transfer is initiated only after an entire buffer consisting of multiple records is acquired. This data acquisition method has been specifically designed for ultrasonic scanning, radar and medical imaging applications such as OCT. 
     
     \subsection{FFT module}
-    The ATS9350 is equipped with a \ac{FPGA} module that computes the FFT on data records acquired on the first of the two input channels. For OCT applications this means that a powerful GPU dedicated to data processing is not needed, simplyfing the user application both on the design and efficiency standpoint. In \autoref{fig:fft-module} the flow diagram of the FFT module is available: a data record is zero-padded to a power-of-2 length (and a maximum of 2048), multiplied by a complex windowing function and fed to the FFT module, whose output is then scaled and optionally converted in a logarithmic scale. At the end of the chain it is possible to obtain either FFT data, time-domain data or both. 
+    The ATS9350 is equipped with a \ac{FPGA} module that computes the FFT on data records acquired on the first of the two input channels. For OCT applications this means that a powerful GPU dedicated to data processing is not needed, simplyfing the user application both on the design and efficiency standpoint. In \autoref{fig:fft-module} the flow diagram of the FFT module is available: a data record is zero-padded to a power-of-2 length, multiplied by a complex windowing function and fed to the FFT module, whose output is then scaled and optionally converted in a logarithmic scale. At the end of the chain it is possible to obtain either FFT data, time-domain data or both. 
     
     \begin{figure}[bth]
     	\myfloatalign
@@ -562,7 +562,7 @@ Galvo system, collimator and scanning lens are housed in a cage system mount\foo
     	The number of records per buffer instead determines the width of the B-scan. 
     	
     	\item  To start the acquisition of a B-scan, the Auxiliary port of the board must be configured as "Trigger Enable In" and a TTL pulse must be supplied to the connector. Once the board detects a rising edge on the AUX port, it will wait for a sufficient number of A-scan triggers to fill a buffer. Once the buffer has been filled a DMA transfer will be started and the image will be delivered to the user application.
-    	Afterwards, the board waits for another pulse on the AUX port and start the acquisition of a new B-scan. 
+    	At the same time, the board waits for another pulse on the AUX port and start the acquisition of a new B-scan. 
     \end{enumerate}
     
     A more in-depth explanation of the programming of the board will be given in \autoref{ch:results}.
@@ -577,7 +577,7 @@ In this section I will detail the process of designing and balancing the fiber o
 
 
 \subsection{Fiber Couplers}
-In order to build a fiber optic interferometer, a device called \emph{fiber coupler} must be used. A coupler is a 4-port passive device which is typically used as a signal splitter/adder and that looks like the following:
+In order to build a fiber optic interferometer, a device called \emph{fiber coupler} must be used. A coupler is a 4-port passive device which typically consists in two optical fibers fused together in a common point. Generally it is used as a signal splitter/adder.
 
 \begin{center}
 	{\includegraphics[width=0.35\linewidth]{gfx/ch3/couplers/fiber-coupler.pdf}}
@@ -585,7 +585,7 @@ In order to build a fiber optic interferometer, a device called \emph{fiber coup
 
 
 
-The two couples of ports (1,2) and (3,4) are isolated, meaning that a signal that enters the device from port 1 (2) will not exit from port 2 (1) (the same principle holds for ports 3 and 4).  The "direct" paths ($1\xleftrightarrow{}3 $, $2\xleftrightarrow{} 4$) only let through a fraction of optical power equal to $|\rho|^2$ with no phase shift while the "crossed" paths ($1\xleftrightarrow{}4 $, $2\xleftrightarrow{} 3$) let through a fraction $1-|\rho|^2$ with a $\pi/2$ phase shift. The scattering matrix of this device is thus easily computed:
+The two couples of ports (1,2) and (3,4) are isolated, meaning that a signal that enters the device from port 1 (2) will not exit from port 2 (1) (the same principle holds for ports 3 and 4).  The "direct" paths ($1\xleftrightarrow{}3 $, $2\xleftrightarrow{} 4$) only let through a fraction of optical power equal to $\rho^2$ with no phase shift while the "crossed" paths ($1\xleftrightarrow{}4 $, $2\xleftrightarrow{} 3$) let through a fraction $1-\rho^2$ with a $\pi/2$ phase shift. The scattering matrix of this device is thus easily computed:
 
 \begin{equation}
 	S = \begin{bmatrix}
@@ -617,7 +617,7 @@ For the design of the interferometer it is useful to determine the length of the
 \end{figure}
 
 
-For each input put, the \ac{OFDR} trace will contain two peaks corresponding to the reflections generated by the fiber/air interface of the two non-isolated ports, which can be used to determine the length of the optical paths. In order to associate a spefic port to its peak, a fiber patch cord was connected to the port, resulting in the reduction of the corresponding peak in the trace. For the same input port a second trace is acquired, switching the position of the patch cord. This procedure is repeated for each of the 4 input ports, for a total of $8$ traces per coupler. 
+For each input port, the \ac{OFDR} trace will contain two peaks corresponding to the reflections generated by the fiber/air interface of the two non-isolated ports, which can be used to determine the length of the optical paths. In order to associate a spefic port to its peak, a fiber patch cord was connected to the port, resulting in the reduction of the corresponding peak in the trace. For the same input port a second trace is acquired, switching the position of the patch cord. This procedure is repeated for each of the 4 input ports, for a total of $8$ traces per coupler. 
 
 The resulting traces are available in \autoref{ch:appendixA}. The total length of each path and the difference in length between adjacent arms are summarized in \autoref{tab:couplers-length} and \autoref{tab:couplers-diff} respectively.
 
@@ -708,7 +708,7 @@ When acquiring with the internal clock, the number of useful samples to acquire 
 \end{equation}
 where $F_s=500$ MHz is the sampling frequency, $d_c = 0.505$ is the laser duty cycle and $f=100$ kHz is the sweep repetition rate. In order to satisfy the bit alignment requirement of the board, the actual number of samples was set to the nearest multiple of 32, $\hat{N}=2528$. Instead, when using the external clock option of the board, this number is determined by the number of useful sampling instants of the $k$-clock, $1536$ (\autoref{tab:axsun-datasheet}).  
 
-The acquired signals were multiplied by a Hamming window and then Fourier-trasformed. The result of this procedure is illustrated in \autoref{fig:mzi-comparison}, where the x-axis is mapped from frequency to OPD by inverting \autoref{eq:mzi-freqtoopd}. We can notice that when using the internal clock of the board, the frequency content of the signal is spread over a relatively wide band (left). In fact, since the frequency sweep is not linear, uniformly sampling the interference signal results in a distorted sinusoidal term. Thus,  a precise estimation of the OPD between the \ac{MZI} arms is not possible. 
+The acquired signals were multiplied by a Hamming window and then Fourier-trasformed. The result of this procedure is illustrated in \autoref{fig:mzi-comparison}, where the x-axis is mapped from frequency to \ac{OPD} by inverting \autoref{eq:mzi-freqtoopd}. We can notice that when using the internal clock of the board, the frequency content of the signal is spread over a relatively wide band (left). In fact, since the frequency sweep is not linear, uniformly sampling the interference signal results in a distorted sinusoidal term. Thus,  a precise estimation of the OPD between the \ac{MZI} arms is not possible. 
 
 
 \begin{figure}[hbt]
@@ -717,7 +717,7 @@ The acquired signals were multiplied by a Hamming window and then Fourier-trasfo
 	\caption{Comparison between the beat frequency acquired with the uniform clock (left) and the $k$-clock (right).}\label{fig:mzi-comparison}
 \end{figure}
 
-On the other hand, sampling with the provided $k$-clock produces a clearly defined peak in the frequency domain (right) and permits a precise evalutation of the OPD. 
+On the other hand, sampling with the provided $k$-clock produces a clearly defined peak in the frequency domain (right) and permits a precise evalutation of the \ac{OPD}. 
 
 To better appreciate the effect of external clocking on the imaging quality of an OCT system, a sequence of $W = 1000$ consecutive A-scans was captured, from which an artificial B-scan was generated (\autoref{fig:mzi-frame}). 
 
@@ -728,39 +728,37 @@ To better appreciate the effect of external clocking on the imaging quality of a
 	\caption{Simulated B-scans using the internal 500 MHz clock (top) and the $k$-clock (bottom).}\label{fig:mzi-frame}
 \end{figure}
 
-Using the internal clock and a logarithmic color scale (top), the width of the peak is significantly more pronounced: in this case a perfect reflector would take up a considerable portion of the imaging range. Moreover, the axial resolution of the OCT would not be acceptable for a functioning system. In this image it is also possible to notice two faint peaks at $\sim 7$ mm and $\sim 10$ mm. These are due to reflections accumulating a delay which is a multiple of the OPD between the arms of the interferometer. 
+Using the internal clock and a logarithmic color scale (top), the width of the peak is significantly more pronounced: in this case a perfect reflector would take up a considerable portion of the imaging range. Moreover, the axial resolution of the OCT would not be acceptable for a functioning system. In this image it is also possible to notice two feeble peaks at $\sim 7$ mm and $\sim 10$ mm. These are due to reflections accumulating a delay which is a multiple of the \ac{OPD} between the arms of the interferometer. 
 
 As expected, the improvement when sampling with the $k$-clock is remarkable (bottom left). We can also notice that since the frequency of the $k$-clock is smaller than 500 MHz, the second of the two peaks generated by reflections is undersampled and appears at $\sim 2.5$ mm. 
 When using a real OCT system, this phenomenon will cause artifacts that degrade the overall quality of the final B-scans. Similarly to the complex conjugate artifacts discussed in \autoref{ch:theory}, portion of the sample will be flipped and superimposed to the part of the sample that lies in the imaging range. A possible solution to this issue consists in the use of an electronic low-pass filter placed after the photodetector, removing the frequency content above the Nyquist frequency of the $k$-clock. 
 
-The third image (bottom right) was captured after distancing the APC connectors on one of the arms of the \ac{MZI}, introducing a $\sim 1$ mm layer of air ($n=1$) which corresponds to an additional $\sim 0.68$ mm of OPD in the fiber. The reflection peaks in this case do not appear as the received power is too low. 
+The third image (bottom right) was captured after distancing the APC connectors on one of the arms of the \ac{MZI}, introducing a $\sim 1$ mm layer of air ($n=1$) which corresponds to an additional $\sim 0.68$ mm of \ac{OPD} in the fiber. The reflection peaks in this case do not appear as the received power is too low. 
 
 
 \subsection{Fiber Michelson interferometer}
 
-The first OCT circuit that was tested was a simple Michelson interferometer realized with a 50-50 fiber coupler. The schematic diagram of this setup is illustrated in \autoref{fig:basic-oct}. The reference arm consists in a cage system with a silver mirror mounted on a translatable support and an adjustable FiberPort collimator (\autoref{fig:reference-arm-photo}). This collimator permits a fine aligment with five degrees of freedom to easily maximize the amount of power that gets coupled back in the optical fiber after being reflected by the mirror. Through a careful alignment procedure, the attenuation of the reference arm is minimized, reaching a value of $\sim 4$ dB. 
+The first OCT circuit that was tested was a simple Michelson interferometer realized with a 50-50 fiber coupler. The schematic diagram of this setup is illustrated in \autoref{fig:basic-oct}. The reference arm consists in a cage system with a silver mirror mounted on a translatable support and an adjustable FiberPort collimator (\autoref{fig:reference-arm-photo}). This collimator permits a fine aligment with five degrees of freedom to easily maximize the amount of power that is coupled back in the optical fiber after being reflected by the mirror. Through a careful alignment procedure, the attenuation of the reference arm is minimized, reaching a value of $\sim 4$ dB. 
 
 
 \begin{figure}[bth]
 	\myfloatalign
 	{\includegraphics[width=0.8\linewidth]{gfx/setup-diagrams/basic-oct.pdf}}
-	\caption{SS-OCT setup using a fiber Michelson interferometer.}\label{fig:basic-oct}
+	\caption{SS-OCT setup using a fiber coupler as a Michelson interferometer.}\label{fig:basic-oct}
 \end{figure}
 
 
 \begin{figure}[bth]
 	\myfloatalign
 	{\includegraphics[width=0.6\linewidth]{gfx/ch3/reference-arm-photo}}
-	\caption{SS-OCT setup using a fiber Michelson interferometer.}\label{fig:reference-arm-photo}
+	\caption{The reference arm used for this setup. The adjustable fiber collimator (left) and translatable mirror (right) are visible.}\label{fig:reference-arm-photo}
 \end{figure}
 
 This setup, while fairly simple, gave rise to two different issues:
 \begin{enumerate}
 	\item a balanced detection scheme could not be implemented.
 	
-	\item the output of the optical source experienced instability, as half of the power reflected by the two arms is coupled back in the laser output port. This behaviour was tested by replacing the reference arm with a photodiode and monitoring its current. In \autoref{fig:first-scheme-instability} we can see that the power profile of the source is substantially distorted when a high-reflectivity object such as a mirror is placed under the focusing lens of the sample arm. With the additional power reflected by the reference mirror this behaviour can only worsen. 
-	
-	
+	\item the output of the optical source experienced instability, as half of the power reflected by the two arms is coupled back in the laser output port. This behaviour was tested by replacing the reference arm with a photodiode and monitoring its current. In \autoref{fig:first-scheme-instability} we can see that the power profile of the source is substantially distorted when a high-reflectivity object such as a mirror is placed under the scanning lens of the sample arm. With the additional power reflected by the reference mirror this behaviour can only worsen. 	
 \end{enumerate}
 
 
@@ -774,7 +772,7 @@ This setup, while fairly simple, gave rise to two different issues:
 
 
 \subsection{Second scheme}
-In order to limit the amount of power returning to the laser and avoid permanent damage, the setup in \autoref{fig:final-setup} has been designed. Connecting the source to the 90-10 coupler, only 10\% of the total output power is directed to the sample and only 10\% of the reflected power is directed back to the laser, reducing the reflected power by a factor of 25. The power profile of the source was measured by connecting a photodiode to connector D and monitoring its current. Unlike before, placing a mirror in the sample arm did not alter the shape of the laser pulse. 
+In order to limit the amount of power returning to the laser and avoid permanent damage, the setup in \autoref{fig:final-setup} has been designed. Connecting the source to the 90-10 coupler, only 10\% of the total output power is directed to the sample and only 10\% of the reflected power is directed back to the laser, reducing the total power returning to the input port by a factor of 25. The power profile of the source was measured by connecting a photodiode to connector D and monitoring its current. Unlike before, placing a mirror in the sample arm did not alter the shape of the laser pulse. 
 
 With respect to the previous scheme, the power returning to the laser from the reference arm is attenuated by $\sim 2$ dB thanks to the 90-10 coupler. 
 The effect of the reference arm on the stability of the laser output was tested in a similar way, connecting the photodiode to connector I. With the silver mirror stilll on the sample arm, the FiberPort collimator was slightly mis-aligned until the measured power profile did not exhibit any distortion. 
@@ -792,7 +790,7 @@ With reference to \autoref{fig:final-setup}, the length of the sample arm, defin
 \begin{equation}
 L_{\text{sample}} = \overline{\text{ABCJCBGK}} = 5L_{\text{arm}} + 2L_{\text{patch}},
 \end{equation}
-where $L_{\text{arm}}$ is the length of the couplers' arm and $L_{\text{patch}}$ is the length of the fiber patch cord (illustrated in blue). The reference arm is instead defined by the path ABDEFEHK, whose length is
+where $L_{\text{arm}}$ is the length of the couplers' arm and $L_{\text{patch}}$ is the length of the fiber patch cord connecting the first coupler to the scanning system (illustrated in blue). The reference arm is instead defined by the path ABDEFEHK, whose length is
 \begin{equation}
 	L_{\text{ref}} = \overline{\text{ABDEFEHK}} = 7L_{\text{arm}},
 \end{equation}
@@ -804,7 +802,7 @@ Since $L_{\text{arm}} \sim 1$ m, a patch cord of the same length has to be used.
 \begin{equation}
 | L_{\text{ref}} - \overline{\text{ABDEFEDBGK}}| = 2L_{\text{arm}} \approx 2 \text{ m},
 \end{equation}
-the mismatch is far greater than the coherence length of the source, $l_c \approx 12$ mm meaning that no interference will be generated. 
+the mismatch is far greater than the coherence length of the source, $l_c \approx 12$ mm, meaning that no interference will be generated. 
 
 This setup is therefore able to protect the laser source from damage caused by strong reflections, removes unwanted coherent noise and enables balanced detection. In order to minimize distortions due to the detection scheme, the BPD is connected to the fiber coupler with the smallest mismatch between adjacent ports: looking at \autoref{tab:couplers-diff}, the Blue and White arms of coupler 50-50 A are the optimal choice. 
 
@@ -827,7 +825,7 @@ The acquired traces are illustrated in \autoref{fig:obr-balancing}. From left to
 	\item The two reflections coming from connectors F and I. As we can see, the two are distanced by $\sim 2$ centimeters, confirming the measurements reported in \autoref{tab:couplers-diff}. 
 \end{itemize}
 
-Using connector F to connect the reference system, the path length difference becomes $\Delta L \approx 70$ mm, as this path is travelled in the two directions. Since the interference between the two signals occurs in the fused section of coupler 50-50 A (point K in \autoref{fig:final-setup}), the length mismatch of its White and Red arms ($\approx 6.2$ mm) can be exploited to bring the total \ac{OPD} down to $\Delta L \approx 64$ mm. These 6 centimeters can then be compensated with the translatable mirror in the reference arm. 
+Using connector F to connect the reference system, the path length difference becomes $\Delta L \approx 35$ mm. Since the interference between the two signals occurs in the fused section of coupler 50-50 A (point K in \autoref{fig:final-setup}), the length mismatch of its White and Red arms ($\approx 6.2$ mm) can be exploited to bring the total \ac{OPD} down to $\Delta L \approx 29$ mm. These 3 centimeters can then be compensated with the translatable mirror in the reference arm. It is important to closely match the space travelled by the two arms in the same medium to minimize the effect of chromatic dispersion, which can hinder the axial resolution of the final system.
 
 
 \begin{figure}[hbt]
@@ -861,7 +859,7 @@ Finally, with the aid of the spectrum analyzer feature of the AlazarDSO software
 
 
 \subsection{Signal-to-noise ratio profile}
-In order to test the combined effect of sensitivity falloff and the limited DOV of the lens, multiple A-scans were acquired while placing the mirror at different imaging depths. This was accomplished by translating the scanning system on a vertical support with the help of micrometer screw. The whole imaging range was covered with 11 acquisitions at multiples of $\sim 500$ $\mu$m, resulting in \autoref{fig:power-falloff}. An additional acquisition has been acquired without placing the silver mirror on the sample arm to obtain the noise level of the system. 
+In order to test the combined effect of sensitivity falloff and the limited DOV of the lens, multiple A-scans were acquired while placing the mirror at different imaging depths. This was accomplished by translating the scanning system on a vertical support with the help of a micrometer screw. The whole imaging range was covered with 11 acquisitions at multiples of $\sim 500$ $\mu$m, resulting in \autoref{fig:power-falloff}. An additional acquisition has been acquired without placing the silver mirror on the sample arm to obtain the noise level of the system. 
 
 
 \begin{figure}[hbt]
@@ -916,7 +914,7 @@ The same method was tested for different mirror depths in order to estimate the 
 \begin{figure}[hbt]
 	\myfloatalign
 	{\includegraphics[width=0.8\linewidth]{gfx/ch3/risoluzione-profondita}}
-	\caption{Axial resolution profile on the entire imaging depth using four different apodization windows.}\label{fig:axial-resolution-depth}
+	\caption{Axial resolution profile on the entire imaging range using four different apodization windows.}\label{fig:axial-resolution-depth}
 \end{figure}
 
 
@@ -958,7 +956,7 @@ which is typical for a \ac{SMF} with the external acrylic coating and no plastic
 \begin{figure}[t]
 	\myfloatalign
 	\includegraphics[width=\linewidth]{gfx/tikz/thickness-measure/fiber-thickness}
-	\caption{Axial measurement of \ac{SMF} with its acrylic coating.}\label{fig:fiber-thickness}
+	\caption{Axial measurement of a \ac{SMF} with its acrylic coating.}\label{fig:fiber-thickness}
 \end{figure}
 
 

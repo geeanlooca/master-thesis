@@ -7,13 +7,13 @@ In this chapter I will report the basic theoretical background needed to compreh
 
 
 \section{Principles of Coherence and Interference}
-A solution to a generic electromagnetic problem is completely determined by the vector couple $\mathcal{S} = \left\{\mathbf{E}(\mathbf{r}, t),\; \mathbf{H}(\mathbf{r}, t)\right\}$, whose components represent the time-varying electric and magnetic field, respectively ($\textbf{r}$ is the three-dimensional vector determining the position in space at which the field is evaluated). The electromagnetic field determined by $\mathcal{S}$ is considered a valid solution if it satisfies both Maxwell's Equations and the boundary conditions specific to the problem. 
+A solution to a generic electromagnetic problem is completely determined by the vector couple $\mathcal{S} = \left\{\mathbf{E}(\mathbf{r}, t),\; \mathbf{H}(\mathbf{r}, t)\right\}$, whose components represent the time-varying electric and magnetic field at a specific point $\textbf{r}$  in space. The electromagnetic field determined by $\mathcal{S}$ is considered a valid solution if it satisfies both Maxwell's Equations and the boundary conditions specific to the problem. 
 
 For monochromatic waves, i.e. fields oscillating at a single frequency $\omega$, we can use Steinmetz notation and write
 \begin{equation}\label{eq:steinmetz}
 	\textbf{E}(\textbf{r}, t) = \Re\left[\widetilde{\mathbf{E}}(\textbf{r})e^{j\omega t}\right] \qquad \textbf{H}(\textbf{r}, t) = \Re\left[\widetilde{\mathbf{H}}(\textbf{r})e^{j\omega t}\right]\,,
 \end{equation}
-where $\widetilde{\textbf{E}}$ and $\widetilde{\textbf{H}}$ are complex 3D vectors and $\Re\left[\cdot\right]$ is the real value operator. Maxwell Equations can then be rewritten in the frequency domain. In a linear, homogeneous, isotropic, and current-free medium, Maxwell's equations can be written in the following way
+where $\widetilde{\textbf{E}}$ and $\widetilde{\textbf{H}}$ are complex 3D vectors and $\Re\left[\cdot\right]$ is the real value operator. In a linear, homogeneous, isotropic, and current-free medium, Maxwell's equations can be written in the frequency domain in the following way
 
 \begin{subequations}\label{eq:maxwell-frequency}
 \begin{align}
@@ -21,7 +21,7 @@ where $\widetilde{\textbf{E}}$ and $\widetilde{\textbf{H}}$ are complex 3D vecto
 & \nabla \times \widetilde{\textbf{H}} = j\omega\varepsilon_c\widetilde{\textbf{E}}\label{eq:maxwell-h}
 \end{align}
 \end{subequations}
-where $\mu$ is the magnetic permeability of the medium, $\varepsilon_c = \varepsilon - \sigma/\omega$ is the complex dielectric permettivity. The simplest solution of \autoref{eq:maxwell-frequency} is given by the \emph{homogeneous plane wave}. Using a cartesian coordinate system, the electric field can be expressed as
+where $\mu$ is the magnetic permeability of the medium, $\varepsilon_c = \varepsilon - \sigma/\omega$ is the complex dielectric permettivity and $\sigma$ is the conductivity. The simplest solution of \autoref{eq:maxwell-frequency} is given by the \emph{homogeneous plane wave}. Using a cartesian coordinate system, the electric field can be expressed as
 \begin{equation}\label{eq:e-field-expansion}
 		\widetilde{\textbf{E}}(\textbf{r}) = \sum_{i=1}^3 A_i \cdot \hat{\textbf{x}}_i  = \sum_{i=1}^3 a_i \exp\left[jg_i(\textbf{r})\right]  \cdot \hat{\textbf{x}}_i
 \end{equation}
@@ -31,7 +31,7 @@ where the amplitudes $a_i$ are constant and $g_i(\textbf{r}) = \textbf{k}\cdot\t
 \end{equation}
 while the $\delta_i$'s are the phase differences which determine the state of polarization of the electromagnetic field. The magnetic field is instead obtained by applying \autoref{eq:maxwell-e} to \autoref{eq:e-field-expansion}. 
 
-The intensity of an electromagnetic field is given by the average of the amount of energy which crosses in a unit time a unit area perpendicular to the direction of the energy flow. In the case of homogenous plane waves, it is expressed as
+The intensity of an electromagnetic field is given by the average amount of energy which crosses in a unit time a unit area perpendicular to the direction of the energy flow. In the case of homogenous plane waves, it is expressed as
 \begin{equation}\label{eq:intensity}
 	I \propto \langle \textbf{E}^2 \rangle
 \end{equation}
@@ -51,7 +51,6 @@ Averaging over a time interval sufficiently larger than the period $T=2\pi/ \ome
 as the high frequency terms at $2\omega$ are canceled by the detector.
 
 Suppose now that the field $\textbf{E}$ is split in two components $\textbf{E}_1$ and $\textbf{E}_2$ which are then superimposed in a certain point $\textbf{r}'$ in space, then
-
 \begin{equation}
 \textbf{E}(\textbf{r}') = \textbf{E}_1(\textbf{r}') + \textbf{E}_2(\textbf{r}'),
 \end{equation}
@@ -85,7 +84,7 @@ The intensity profile is displayed in \autoref{fig:intensity-interference}. In t
 
 \subsection{Michelson interferometer}
 \label{sub:michelson}
-A classical example of the application of interference is given by the scheme called \emph{Michelson interferometer}. In \autoref{fig:michelson} the schematic diagram of the interferometer is given. A light source emits an electric field $\textbf{E}_0$ which is then split in two by a semitransparent mirror. The two replicas, $\textbf{E}_1$ and $\textbf{E}_2$, travel along the two \emph{arms} of the interferometer, of length $l_1$ and $l_2$, are reflected by two mirrors and finally recombined. The intensity of the superposition of two fields is then measured by a photodetector. The two replicas arrive at the detector with a time difference given by
+A classical example of the application of interference is given by the scheme called \emph{Michelson interferometer}, whose schematic diagram is available in \autoref{fig:michelson}. A light source emits an electric field $\textbf{E}_0$ which is then split in two by a semitransparent mirror. The two replicas, $\textbf{E}_1$ and $\textbf{E}_2$, travel along the two \emph{arms} of the interferometer, of length $l_1$ and $l_2$, are reflected by two mirrors and finally recombined. The intensity of the superposition of two fields is then measured by a photodetector. The two replicas arrive at the detector with a time difference given by
 \begin{equation}
 	\tau = 2\frac{l_2 - l_1}{c},
 \end{equation}
@@ -115,7 +114,7 @@ v = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}.
 \end{equation}
 
 
-For a perfectly monochromatic source, $v$ will always be constant. In particular, in the case when $I_1 = I_2$  $v$ is equal to 1, as $I_{min} = 0$. Real-life optical sources however will always have a bandwidth $\Delta f$ greater than 0. In these cases $v$ is a monotonically decreasing function of the time delay $\tau$.  The \emph{coherence time} of a source is defined as the value $\tau_c$ such that $v(\tau_c) = 1/e$ (\autoref{fig:fringe-visibility}). 
+For a perfectly monochromatic source, $v$ will always be constant. In particular, in the case when $I_1 = I_2$  $v$ is equal to 1, as $I_{min} = 0$. Real-life optical sources however will always have a bandwidth $\Delta f$ greater than 0 due to random fluctuations of the electromagnetic radiation. In these cases $v$ is a monotonically decreasing function of the time delay $\tau$.  The \emph{coherence time} of a source is defined as the value $\tau_c$ such that $v(\tau_c) = 1/e$ (\autoref{fig:fringe-visibility}). 
 
 
 
@@ -127,15 +126,9 @@ For a perfectly monochromatic source, $v$ will always be constant. In particular
 \end{figure}
 
 
-Intuitively, we may think of the coherence time as the time slot after which the optical source loses memory of what it was at the beginning. In fact, after this time slot has passed, some properties of the source randomly change due to the stochastic nature of photon emission. A perfectly coherent source emits a sinusoidal field with a well defined and constant phase relation. Similarly, two electromagnetic fields are perfectly coherent if the phase difference between the two is mantained constant for an infinite amount of time. This property is however impossible to obtain in real life, as every source has a finite coherence time. This concept is explained by the uncentainty-principle, which states that 
-\begin{equation}
-	\tau_c \geq \tau_{min} = \frac{1}{\mathcal{B}},
-\end{equation}
-where $\mathcal{B}$ is the bandwidth of the source. This equation results in the fact that there are no sources which are completely incoherent in time, as they would require an infinite bandwidth.
-
+Intuitively, we may think of the coherence time as the time slot after which the optical source loses memory of what it was at the beginning. In fact, after this time slot has passed, some properties of the source randomly change due to the stochastic nature of photon emission. A perfectly coherent source emits a sinusoidal field with a well defined and constant phase relation. Similarly, two electromagnetic fields are perfectly coherent if the phase difference between the two is mantained constant for an infinite amount of time. This property is however impossible to obtain in real life, as every source has a finite coherence time.
 \subsection{The coherence function}
 Another way to describe the coherence property of light other than the fringe visibility parameter, is through the so-called \emph{mutual coherence function}. It is defined for polychromatic, i.e., non-monochromatic fields as follows \cite{Wolf1999}:
-
 \begin{equation}\label{eq:mutual-coherence}
 	\Gamma_{12}(\tau) = \left\langle  \mathbf{E}_1(t+\tau)\mathbf{E}_2^*(t)   \right\rangle,
 \end{equation}
@@ -147,7 +140,7 @@ It is then useful to apply the following normalization
 \begin{equation}
 	\gamma_{ij} (\tau) = \frac{\Gamma_{ij}(\tau)}{\sqrt{\Gamma_{ii}(0)}\sqrt{\Gamma_{jj}(0)}},
 \end{equation}
-so that it assumes values in the $[0,1]$ interval. This normalized function is called \emph{complex degree of coherence}, and it allows the following definitions:
+so that the function assumes values in the $[0,1]$ interval. This normalized function is called \emph{complex degree of coherence}, and it allows the following definitions:
 \begin{enumerate}
 	\item Completely incoherent fields: $|\gamma_{ij}| = 0$, no interference fringes are visible.
 	\item Completely coherent fields: $|\gamma_{ij}| = 1$, the total intensity includes the interference term. 
@@ -160,7 +153,7 @@ so that it assumes values in the $[0,1]$ interval. This normalized function is c
 
 Using this notation, the equation for the intensity of two partially-coherent beams is then
 \begin{equation}
-	I = I_1 + I_2 + 2\sqrt{I_1I_2}|\gamma_{12}(\tau)| \cos( \delta )\,
+	I = I_1 + I_2 + 2\sqrt{I_1I_2}|\gamma_{12}(\tau)| \cos( \delta + \angle \gamma_{12}(\tau) )\,
 \end{equation}
 where we can clearly see the effect of coherence on the shaping of the interference fringes. Using the coherence function instead of the fringe visibility as a measure of coherence, the coherence time of a source, $\tau_c$, is defined as the \ac{FWHM} parameter of its self-coherence function, that is, the value of $\tau$ such that
 \begin{equation}
@@ -229,7 +222,7 @@ Finally, 3D volumetric data can be generated by acquiring consecutive B-scans al
 %Copy from \cite{Wolf1999,Someda2006}
 
 \section{Time Domain OCT}
- \acf{TD-OCT} was the first OCT technique that was demonstrated in the literature \cite{Huang1991}. The basic setup is that of a Michelson Interferometer in which one of the two mirrors is translatable and the other is replaced by the sample that we wish to analyze. The two arms are called respectively \emph{Reference arm} and \emph{Sample arm}. As explained in \autoref{sub:michelson}, the two beams arriving at the photodetector generate interference fringes if the \ac{OPD} is less than the coherence length $l_c$ of the source. A diagram of this setup is available in \autoref{fig:tdoct-michelson}. 
+ \acf{TD-OCT} is the first OCT technique that was demonstrated in the literature \cite{Huang1991}. The basic setup is that of a Michelson Interferometer in which one of the two mirrors is translatable and the other is replaced by the sample that we wish to analyze. The two arms are called respectively \emph{Reference arm} and \emph{Sample arm}. As explained in \autoref{sub:michelson}, the two beams arriving at the photodetector generate interference fringes if the \ac{OPD} is less than the coherence length $l_c$ of the source. A diagram of this setup is available in \autoref{fig:tdoct-michelson}. 
  
  
  \begin{figure}[hbt]
@@ -260,7 +253,7 @@ I(\Delta z) \propto |\rho_s|^2 |E_i|^2 + |\rho_r|^2 |E_i|^2 + |\rho_s\rho_r|^2|E
 Apart from the DC offset given by the intensity of the two signals there is an oscillating term with period equal to $\lambda_0$, which is the central wavelength of the source. \autoref{fig:tdoct-signal} illustrates the oscillating term and its envelope, which is dictated by the coherence function $\gamma$ and the sample reflectivity $\rho_s$ (set equal to 1). With a perfectly coherent source $\gamma$ would be equal to 1 for all values of $\Delta z $ and we would not be able to identify the reflector. On the other hand, with an increasingly sharper $\gamma$, the ideal reflector would be more and more defined. 
 
 
-Since the difference between the arm lengths is $\Delta l = \Delta z / 2$, when scanning the reference arm, interference fringes will be generated as a function of time with periodicity equal to $(\lambda/2) / \sigma$ where $\sigma$ is the scanning speed. 
+Since the difference between the arm lengths is $\Delta l = \Delta z / 2$, when scanning the reference arm, interference fringes will be generated as a function of time with periodicity equal to $(\lambda/2) / \sigma$ where $\sigma$ is the mirror scanning speed. 
 
  
 \begin{figure}[hbt]
@@ -311,7 +304,7 @@ The two main \ac{FD-OCT} schemes are called \acf{SD-OCT} and \acf{SS-OCT}, and w
 \end{figure}
 
 \subsection{Spectral Domain OCT}
-\ac{SD-OCT} was the first type of \ac{FD-OCT} to be implemented, and was proposed by \citeauthor{Wojtkowski2002} in 2002 \cite{Wojtkowski2002}. This technique uses a \ac{SLD} as a broadband optical source, a Michelson interferometer similar to that in \autoref{fig:tdoct-michelson} and a detector consisting of a spectrometer. A diagram of the setup is available in \autoref{fig:fdoct-setup}. As already mentioned in \autoref{sec:fdoct}, \ac{SD-OCT} can acquire an A-scan with a single optical pulse, without the need to select the imaging depth through a scanning reference mirror. This comes at the price of a more complex detection scheme and the need for computationally intensive post-processing solutions. In order to achieve real-time performances, \ac{SD-OCT} scheme typically require the use of fast \acp{GPU}. 
+\ac{SD-OCT} was the first type of \ac{FD-OCT} to be implemented, and was proposed by \citeauthor{Wojtkowski2002} in 2002 \cite{Wojtkowski2002}. This technique uses a \ac{SLD} as a broadband optical source, a Michelson interferometer similar to that in \autoref{fig:tdoct-michelson} and a detector consisting of a spectrometer. A diagram of the setup is available in \autoref{fig:fdoct-setup}. As already mentioned in \autoref{sec:fdoct}, \ac{SD-OCT} can acquire an A-scan with a single optical pulse, without the need to select the imaging depth through a scanning reference mirror. This comes at the price of a more complex detection scheme and the need for computationally intensive post-processing solutions. In order to achieve real-time performances, \ac{SD-OCT} schemes typically require the use of fast \acp{GPU}. 
 
 \begin{figure}[hbt]
 	\myfloatalign
@@ -340,7 +333,7 @@ A key observation has to be made regarding the role of the coherence function $\
 \subsubsection{Drawbacks}
 
 \paragraph{Sampling distortion}
-One of the major problems corcerning this detection technique is that the interference spectrum is usually detected linearly in the wavelength. For example, a diffraction grating spatially separates the different wavelengths at an angle $\beta_m$ with respect to the axis normal to the grating such that
+One of the major problems corcerning this detection technique is that the interference spectrum is usually detected linearly in the wavelength domain. For example, a diffraction grating spatially separates the different wavelengths at an angle $\beta_m$ with respect to the axis normal to the grating such that
 \begin{equation}
 	\sin\beta_m = m \frac{\lambda}{\Lambda} + \sin\alpha,
 \end{equation}
@@ -355,7 +348,7 @@ This behaviour requires a re-sampling of the acquired spectrum before computing 
 \end{figure}
 
 \paragraph{Sensitity falloff}
-A second harmful effect on the performance of these types of FD-OCT devices is the so-called \emph{Sensitivity falloff}. Sensitivity is defined as the \ac{SNR} when the sample is an ideal reflector. It's been experimentally demostrated that for increasing imaging depths, the sensitivity value drops. Such effect is illustrated in \autoref{fig:falloff}. This behaviour is due to the fact that when increasing the \ac{OPD} between reference and sample arm, the coherence function $\gamma(\Delta z)$ decreases as the two reflected signals only partially overlap, resulting in a lower signal intensity. 
+A second harmful effect on the performance of this type of FD-OCT devices is the so-called \emph{Sensitivity falloff}. Sensitivity is defined as the \ac{SNR} when the sample is an ideal reflector. It's been experimentally demostrated that for increasing imaging depths, the sensitivity value drops. Such effect is illustrated in \autoref{fig:falloff}. This behaviour is due to the fact that when increasing the \ac{OPD} between reference and sample arm, the coherence function $\gamma(\Delta z)$ decreases as the two reflected signals only partially overlap, resulting in a lower signal intensity. 
 
 \begin{figure}[bth]
 	\myfloatalign
@@ -366,7 +359,7 @@ A second harmful effect on the performance of these types of FD-OCT devices is t
 
 An additional factor that contributes to this detrimental effect is the resolution of the photodetector arrays used to acquire the interference signal. As previously explained, higher imaging depths correspond to higher spectrum modulation frequencies. If the number of pixel $N$ of, e.g., a \ac{CCD} camera is not sufficiently high, the higher frequency components will be undersampled, reducing the range of visibility. Beam diameter and camera's pixel size also influence the loss of sensitivity. 
 
-\paragraph{Imaging Artifacts} The massive gain in acquisition rate that comes from detecting the whole imaging range in a single shot is offset by the introduction of different artifacts in the reconstructed A-scans. The interference pattern acquired by the photodetectors array is comprised of three terms:
+\paragraph{Imaging Artifacts} The massive gain in acquisition rate that comes from detecting the whole imaging range in a single shot is offset by the introduction of different artifacts in the reconstructed A-scans. The interference pattern acquired by the photodetectors array comprises three terms:
 \begin{enumerate}
 	\item \emph{DC component}. All the reflected replicas of the impinging signal coming from the sample contribute to a constant DC offset in the interference signal. These are equivalent to the non-interfering terms in the Michelson interferometer formula. When Fourier-transformed, they will appear as a reflector positioned at the very start of the imaging range, where the \ac{OPD} is close to zero. A simple solution to this problem is to compute and subtract the average value of the spectrum before applying the Fourier Transform.
 	
@@ -382,7 +375,7 @@ An additional factor that contributes to this detrimental effect is the resoluti
 	\caption{Artifacts contained in the \ac{FD-OCT} A-scans\cite{Drexler2015}}\label{fig:artifacts}
 \end{figure}
 
-These components are visible in \autoref{fig:artifacts}, who depicts the Fourier Transform of the interference signal generated by two reflectors. A further issue that is highlighted by this plot is the presence of the so called \emph{complex conjugate artifacts}, or mirror image artifacts. This phenomenon arises from the Fourier Transformation of a real signal, which will have the property of Hermitian simmetry (even modulus and odd phase). This means that \ac{FD-OCT} techniques cannot differentiate between positive and negative frequencies, or equivalently, between a sample placed before or after the zero \ac{OPD} position. 
+These components are visible in \autoref{fig:artifacts}, who depicts the Fourier Transform of the interference signal generated by two reflectors. A further issue that is highlighted by this plot is the presence of the so called \emph{complex conjugate artifacts}, or mirror image artifacts. This phenomenon arises from the Fourier Transformation of a real signal, which will have the property of Hermitian simmetry (even magnitude and odd phase). This means that \ac{FD-OCT} techniques cannot differentiate between positive and negative frequencies, or equivalently, between a sample placed before or after the zero \ac{OPD} position. 
 
 The easiest way to deal with this problem is to simply drop one half of the acquired A-scan, effectively halving the maximum imaging depth of the system. Mirror artifacts will still appear in the image if the sample is too close to the scanning lens and crosses the zero \ac{OPD} position, which is fixed by the reference mirror. The part of the sample which is in the "negative" \ac{OPD} range will appear flipped and superimposed to the other part of the sample. This effect is illustrated in \autoref{fig:artifacts-mirror}, in which the scanning lens is progressively moved forward, closer to the patient's retina. 
 
@@ -405,7 +398,7 @@ Different methods to solve this issue and restore the full imaging range have be
 \begin{equation}\label{eq:frequency-sweep-linear}
 	f(t) = f_0 + \sigma_f \cdot t,
 \end{equation}
-where $\sigma_f$, typically measured in Terahertz per microsecond, is the sweep rate of the source. If this requirement is satisfied, the intensity at the ouput of the interferometer when the sample is a sigle reflector positioned at the depth $d = \Delta z/2$, can be expressed as
+where $\sigma_f$, typically measured in Terahertz per microsecond, is the sweep speed of the source. If this requirement is satisfied, the intensity at the ouput of the interferometer when the sample is a single reflector positioned at the depth $d = \Delta z/2$, can be expressed as
 \begin{equation}
 	I(t) = I_1 + I_2 + 2\sqrt{I_1I_2}\cos\left( 2\pi \Delta f  t\right)\,
 \end{equation}
@@ -414,7 +407,7 @@ where
 	\Delta f = \sigma_f \cdot \Delta t = \sigma_f \cdot \frac{\Delta z}{c} = \sigma_f \cdot \frac{d}{2c},
 \end{equation}
 
- called the \emph{beat frequency}, is linearly dependant on the depth of the reflector. When the reflector is replaced by a real sample, multiple beat frequencies arise in the photodetector's current and the reflectivity profile can be reconstructed with a Fourier Transform. This technique is equivalent to \ac{SD-OCT}, with the key difference that the frequency sweep enables the detection as a function of time through a simple photodetector, while the diffraction grating spatially separates the different wavelengths and directs them to a detector array.
+ called the \emph{beat frequency}, is linearly dependant on the depth of the reflector. When the reflector is replaced by a real sample, multiple beat frequencies arise in the photodetector's current and the reflectivity profile can be reconstructed with a Fourier Transform. This technique is equivalent to \ac{SD-OCT}, with the key difference that the frequency sweep enables the detection as a function of time through a simple photodetector, while the diffraction grating spatially separates the different wavelengths and directs over a photodetector array.
 
 
 \begin{figure}[hbt]
@@ -441,11 +434,11 @@ where $\eta(t)$ contains the aforementioned nonlinearities. If the detector's ou
 
 \subsubsection{k-clocking}
 
-While in \ac{SD-OCT} the resampling step is the only possible solution for this issue, \ac{SS-OCT} enables a hardware approach through a non-uniform clocking of the \ac{DAQ} device. This is accomplished by extracting a clock signal, called \emph{k-clock}, by means of an unbalanced \acf{MZI} which detects the frequency-sweep and generates a sinusoidal signal with a variable frequency. This approach removes the need for the computationally-intensive resampling step, but requires special \ac{DAQ} devices that can handle external clocks with a wide range of frequencies and duty cycles, which are generally more expensive.  
+While in \ac{SD-OCT} the resampling step is the only possible solution for this issue, \ac{SS-OCT} enables a hardware approach through a non-uniform clocking of the \ac{DAQ} device. This is accomplished by extracting a clock signal, called \emph{k-clock}, by means of an unbalanced \acf{MZI} which detects the frequency-sweep and generates a sinusoidal signal with a variable frequency. This approach removes the need for the computationally-intensive resampling step, but requires special \ac{DAQ} devices that can handle external clocks with a wide range of frequencies and duty cycles.  
 
 \subsubsection{Acquisition rate}
 
-The acquisition speed of \ac{SS-OCT} systems is dictated by the source sweep repetition rate, that is, the frequency at which the source is able to sweep the entire bandwidth. This parameter is determined by the laser cavity length. In fact, for a given frequency, the spontaneous emission has to build up in order to reach a saturation limit to be correctly amplified by the active region. Shorter cavities with a smaller round-trip generally guarantee higher repetition rates than longer cavities. Novel swept-source designs enable acquisition speeds in the order of 100,000 A-scans per second, with \ac{FDML} and \acp{VCSEL} reaching repetition rates above 500 kHz. These high rates make \ac{SS-OCT} the primary candidate for real-time 3D visualization of \emph{in vivo} samples, where motion artifacts could hinder image quality. This is possible because the detection schemes is no longer the bottleneck like in \ac{SD-OCT}, where the slow camera response times limited the overall rate of the system. 
+The acquisition speed of \ac{SS-OCT} systems is dictated by the source sweep repetition rate, that is, the frequency at which the source is able to sweep the entire bandwidth. This parameter is determined by the laser cavity length. In fact, for a given frequency, the spontaneous emission has to build up in order to reach a saturation limit to be correctly amplified by the active region. Shorter cavities with a smaller round-trip generally guarantee higher repetition rates than longer cavities. Novel swept-source designs enable acquisition speeds in the order of 100,000 A-scans per second, with \ac{FDML} and \acp{VCSEL} reaching repetition rates above 500 kHz. These unprecedented values make \ac{SS-OCT} the primary candidate for real-time 3D visualization of \emph{in vivo} samples, where motion artifacts could hinder image quality. This is possible because the detection scheme is no longer the bottleneck like in \ac{SD-OCT}, where slow camera response times limited the overall rate of the system. 
 
 \subsubsection{Axial resolution}
 Just like in the case of \ac{SD-OCT}, the axial resolution depends on the tuning range of the source, $\Delta \lambda$, which is defined as the \ac{FWHM} of the spectrum. In the case of a Gaussian spectrum, the axial resolution, defined as the \ac{FWHM} of the reflection peak generated by a perfect reflector, is given by
@@ -455,7 +448,7 @@ Just like in the case of \ac{SD-OCT}, the axial resolution depends on the tuning
 where $\lambda_0$ is the central wavelength of operation, which is chosen based on the application (1060 nm for Ophtalmology, 1300 nm for tissue imaging). 
 
 \subsubsection{Imaging range}
-Imaging range of \ac{SS-OCT} systems is, like other \ac{FD-OCT} schemes, limited by the coherence length of the source, which we have previously defined as the \ac{OPD} at which the visibility of the interference fringes drops to 0.5. This parameter is controlled by the istantaneous linewidth of the source $\delta \lambda$ by the following equation:
+Imaging range of \ac{SS-OCT} systems is, like other \ac{FD-OCT} schemes, limited by the coherence length of the source, which we have previously defined as the \ac{OPD} at which the visibility of the interference fringes drops to half of its maximum. This parameter is controlled by the istantaneous linewidth of the source $\delta \lambda$ by the following equation:
 \begin{equation}
 	l_c \approx 0.44 \frac{\lambda_0^2}{\delta \lambda}.
 \end{equation}
@@ -465,7 +458,7 @@ As with \ac{SD-OCT}, complex conjugate artifacts typically limit the imaging ran
 When using a $k$-clock to acquire A-scans, the imaging range is also dependant on the path difference of the \ac{MZI}'s arms, which has to be 4 times the maximum imaging depth, $d_{max}$. A factor of 2 is needed because a reflector positioned at $d_{max}$ will have \ac{OPD} equal to $\Delta z = 2d_{max}$ with respect to the reference mirror. The other factor of 2 is needed to satisfy Nyquist's criterion, so that the $k$-clock will have a maximum frequency that is 2 times the beat frequency generated by the reflector at $d_{max}$. 
 
 \subsubsection{Balanced detection}
-The use of simple photodetectors instead of more complex setups involving diffraction gratings and prisms allows for a dual balanced detection scheme. By collecting the reference and sample signals through a circulator and feeding them to a 3 dB fiber coupler, two interference signals can be obtained. A balanced detector can then subtract the common DC component and the excess noise while adding the interference term. This detection scheme has been proved to be more efficient than a simple Michelson interferometer. A complete \ac{SS-OCT} scheme with dual balanced detection and external $k$-clock is illustrated in \autoref{fig:ssoct-scheme}.
+The use of simple photodetectors instead of more complex setups involving diffraction gratings and prisms allows for a dual balanced detection scheme. By collecting the reference and sample signals through a circulator and feeding them to a 3 dB fiber coupler, two interference signals can be obtained. A balanced detector can then subtract the common DC component and excess noise, while at the same time summing the interference term. This detection scheme has been proved to be more efficient than a simple Michelson interferometer. A complete \ac{SS-OCT} scheme with dual balanced detection and external $k$-clock is illustrated in \autoref{fig:ssoct-scheme}.
 
 \begin{figure}[hbt]
 	\myfloatalign
