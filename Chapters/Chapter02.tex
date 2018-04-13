@@ -3,7 +3,7 @@
 \chapter{Basic Theory of Optical Coherence Tomograpy} % Chapter title
 \label{ch:theory} % For referencing the chapter elsewhere, use \autoref{ch:examples} 
 
-In this chapter I will report the basic theoretical background needed to comprehend the working mechanisms behind the OCT technique, introduce the different schemes and compare them in terms of performance. The content of this chapter is partially adapted from \cite{Midrio2006,Someda2006,Wolf1999}. 
+In this chapter, the basic theoretical background needed to comprehend the working mechanisms behind the OCT technique are reported, the different schemes are introduced and compared in terms of performance. The content of this chapter is partially adapted from Refs. \cite{Midrio2006,Someda2006,Wolf1999}. 
 
 
 \section{Principles of Coherence and Interference}
@@ -33,7 +33,7 @@ while the $\delta_i$'s are the phase differences which determine the state of po
 
 The intensity of an electromagnetic field is given by the average amount of energy which crosses in a unit time a unit area perpendicular to the direction of the energy flow. In the case of homogenous plane waves, it is expressed as
 \begin{equation}\label{eq:intensity}
-	I \propto \langle \textbf{E}^2 \rangle
+	I \propto \langle |\textbf{E} |^2\rangle
 \end{equation}
 
 Using \autoref{eq:steinmetz}, we can express the electric field as
@@ -42,11 +42,11 @@ Using \autoref{eq:steinmetz}, we can express the electric field as
 \end{equation}
 so that \autoref{eq:intensity} can be written as
 \begin{equation}
-	\langle\textbf{E}^2\rangle = \frac{1}{4} \left\langle\widetilde{\textbf{E}}^2 e^{-2j\omega t} + \widetilde{\textbf{E}}^{*2}e^{2j\omega t} + 2  \widetilde{\textbf{E}}\cdot\widetilde{\textbf{E}}^*\right\rangle \,.
+	\langle|\textbf{E}|^2\rangle = \frac{1}{4} \left\langle\widetilde{|\textbf{E}}|^2 e^{-2j\omega t} + |\widetilde{\textbf{E}}^*|^{2}e^{2j\omega t} + 2  \widetilde{\textbf{E}}\cdot\widetilde{\textbf{E}}^*\right\rangle \,.
 \end{equation}
 Averaging over a time interval sufficiently larger than the period $T=2\pi/ \omega$, we obtain
 \begin{equation}
-	\langle \textbf{E}^2 \rangle =\frac{1}{2}\widetilde{\textbf{E}}\cdot\widetilde{\textbf{E}}^* =\frac{1}{2}\left(a_1^2 + a_2^2 + a_3^2\right) = \text{constant},
+	\langle| \textbf{E}|^2 \rangle =\frac{1}{2}\widetilde{\textbf{E}}\cdot\widetilde{\textbf{E}}^* =\frac{1}{2}\left(a_1^2 + a_2^2 + a_3^2\right) = \text{constant},
 \end{equation}
 as the high frequency terms at $2\omega$ are canceled by the detector.
 
@@ -271,7 +271,7 @@ A setup similar to \autoref{fig:tdoct-michelson} can be created using fiber opti
 	\subfloat[Optical ranging setup]
 	{\label{fig:fujimoto-setup}
 		\includegraphics[width=0.45\linewidth]{gfx/ch2/fujimoto-setup}} \quad
-	\subfloat[Lettuce leaf]
+	\subfloat[Rabbit cornea.]
 	{\label{fig:fujimoto-rabbit}
 		\includegraphics[width=0.45\linewidth]{gfx/ch2/fujimoto-rabbit}}\\
 	\caption{ Optical ranging setup (left) and measurement (right) of the cornea of the rabbit eye \cite{Fujimoto1986}. }\label{fig:fujimoto}
@@ -327,7 +327,7 @@ This means that a reflector placed at a depth $d = \Delta z/2$ will frequency mo
 
 Using a diffraction grating or a prism, the spectrum of the interference signal is spatially separated and acquired through a linear photodetector, typically a \ac{CCD} or \ac{CMOS} camera. The corresponding A-scan is then computed using an inverse Fourier Transform operation, mapping modulation frequency to axial position. The depth of the various layers of the sample are encoded in the modulation frequency of the spectrum, while their reflectivity is encoded in the fringe visibility. 
 
-A key observation has to be made regarding the role of the coherence function $\gamma$. In fact, the spectrum modulation induced by a reflection at depth $d=\Delta z /2$ can only be detected if $\gamma(d/2)$ is non-zero, that is, only the portion of the sample that is within the coherence length of the source can be imaged. This is the main disadvantage compared to \ac{TD-OCT} schemes, in which the depth of focus in the sample was selected with the mechanical movement of the reference mirror.
+A key observation has to be made regarding the role of the coherence function $\gamma$. In fact, the spectrum modulation induced by a reflection at depth $d=\Delta z /2$ can be detected only if $\gamma(d/2)$ is non-zero, that is, only the portion of the sample that is within the coherence length of the source can be imaged. This is the main disadvantage compared to \ac{TD-OCT} schemes, in which the depth of focus in the sample was selected with the mechanical movement of the reference mirror.
 
 
 \subsubsection{Drawbacks}
@@ -348,7 +348,7 @@ This behaviour requires a re-sampling of the acquired spectrum before computing 
 \end{figure}
 
 \paragraph{Sensitity falloff}
-A second harmful effect on the performance of this type of FD-OCT devices is the so-called \emph{Sensitivity falloff}. Sensitivity is defined as the \ac{SNR} when the sample is an ideal reflector. It's been experimentally demostrated that for increasing imaging depths, the sensitivity value drops. Such effect is illustrated in \autoref{fig:falloff}. This behaviour is due to the fact that when increasing the \ac{OPD} between reference and sample arm, the coherence function $\gamma(\Delta z)$ decreases as the two reflected signals only partially overlap, resulting in a lower signal intensity. 
+A second harmful effect on the performance of this type of FD-OCT devices is the so-called \emph{Sensitivity falloff}. Sensitivity is defined as the \ac{SNR} when the sample is an ideal reflector. It's been experimentally demostrated that for increasing imaging depths, the sensitivity value drops. Such effect is illustrated in \autoref{fig:falloff}. This behaviour is due to the fact that when increasing the \ac{OPD} between reference and sample arm, the coherence function $\gamma(\Delta z)$ decreases, resulting in a lower visibility of the interference fringes. 
 
 \begin{figure}[bth]
 	\myfloatalign
@@ -375,7 +375,7 @@ An additional factor that contributes to this detrimental effect is the resoluti
 	\caption{Artifacts contained in the \ac{FD-OCT} A-scans\cite{Drexler2015}}\label{fig:artifacts}
 \end{figure}
 
-These components are visible in \autoref{fig:artifacts}, who depicts the Fourier Transform of the interference signal generated by two reflectors. A further issue that is highlighted by this plot is the presence of the so called \emph{complex conjugate artifacts}, or mirror image artifacts. This phenomenon arises from the Fourier Transformation of a real signal, which will have the property of Hermitian simmetry (even magnitude and odd phase). This means that \ac{FD-OCT} techniques cannot differentiate between positive and negative frequencies, or equivalently, between a sample placed before or after the zero \ac{OPD} position. 
+These components are visible in \autoref{fig:artifacts}, which depicts the Fourier Transform of the interference signal generated by two reflectors. A further issue that is highlighted by this plot is the presence of the so called \emph{complex conjugate artifacts}, or mirror image artifacts. This phenomenon arises from the Fourier Transformation of a real signal, which will have the property of Hermitian simmetry (even magnitude and odd phase). This means that \ac{FD-OCT} techniques cannot differentiate between positive and negative frequencies, or equivalently, between a sample placed before or after the zero \ac{OPD} position. 
 
 The easiest way to deal with this problem is to simply drop one half of the acquired A-scan, effectively halving the maximum imaging depth of the system. Mirror artifacts will still appear in the image if the sample is too close to the scanning lens and crosses the zero \ac{OPD} position, which is fixed by the reference mirror. The part of the sample which is in the "negative" \ac{OPD} range will appear flipped and superimposed to the other part of the sample. This effect is illustrated in \autoref{fig:artifacts-mirror}, in which the scanning lens is progressively moved forward, closer to the patient's retina. 
 

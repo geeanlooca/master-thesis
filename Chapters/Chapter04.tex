@@ -14,14 +14,14 @@ This chapter is dedicated to the description of the OCT software that was develo
 
 \section{Data Acquisition Software}
 
-The final component that is needed to obtain a working SS-OCT system is a computer application that handles data acquisition and image visualization. This program should be able to achieve real-time performances, enabling a low-delay video stream of cross-sectional OCT data. Ideally, the total acquisition rate of the system in terms of B-scan/s should be limited by the scanning speed of the galvanometric mirrors and not by the OCT software. In fact, given the transversal resolution of the system, the FOV of the scanning lens and the spot size on the focal plane, there exists a maximum frequency at which the mirrors can be driven in order to obtain distortion-free images. An extensive analysis on this matter is carried out in \cite{Calabrese2017}. \\
+The final component that is needed to obtain a working SS-OCT system is a computer application that handles data acquisition and image visualization. This program should be able to achieve real-time performances, enabling a low-delay video stream of cross-sectional OCT data. Ideally, the total acquisition rate of the system in terms of B-scans per second should be limited by the scanning speed of the galvanometric mirrors and not by the OCT software. In fact, given the transversal resolution of the system, the FOV of the scanning lens and the spot size on the focal plane, there exists a maximum frequency at which the mirrors can be driven in order to obtain distortion-free images. An extensive analysis on this matter is carried out in \cite{Calabrese2017}. \\
 
 
 %Leave this chapter for the explanation of the software, technologies used, performance achieved and showcase of the measurements. B-scans, volumes and enface. Also include control of the galvo mirrors in here since it's about C++ programming. 
 
 %Explain in detail the fact that for real time the average time to process has to be < frame time and explain buffer ring to get buffer from board using DMA. Check datasheet in the pdfviwer since there is a nice explanation of async drivers. 
 
-\noindent The application is developed for the Windows 10 Operating System using the Object-Oriented C++ programming language, which is the only one that allows low-level memory management among those supported by the ATS9350 acquisition board. Additionally, it permits the native integration of the high performance graphics library called OpenGL\footnote{\url{https://www.opengl.org/}}. \\
+\noindent The application has been developed for the Windows 10 Operating System using the Object-Oriented C++ programming language, which is the only one that allows low-level memory management among those supported by the ATS9350 acquisition board. Additionally, it permits the native integration of the high performance graphics library called OpenGL\footnote{\url{https://www.opengl.org/}}. \\
 
 
 The code is built using the Qt application framework\footnote{\url{https://www.qt.io/}}, which consists in a set of tools for event handling and the design of \acp{GUI}. In Qt, asynchronous code can be easily written using the Signals and Slots paradigm: when a particular event occurs, an object \emph{emits} a signal; objects that are connected to this signal will execute the appropriate slot, which is a function that takes the parameters passed by the connected signals and perform some actions. For example, the object dealing with OCT data acquisition can emit a signal with a newly acquire B-scan, while a data visualization object connected to this signal can retrieve this data and display it without blocking the acquisition task. 
@@ -40,8 +40,9 @@ In order to control the galvo system, voltage signals that are proportional to t
 To scan an area of the sample, the $X$ motor is driven with a triangle wave of frequency $f_b$ while the $Y$ motor is controlled with a "staircase" signal with a number of "steps" equal to the number of frames in the volume. At the start of each rising edge of the triangle wave, a TTL pulse will also be generated and sent to the AUX port of the ATS9350 board to signal the start of a B-scan. An example is available in \autoref{fig:galvo-signals}, where the B-scan frequency is $f_b = 20$ Hz, and the number of frames per volume is equal to 4. Using these voltages, the area that will be scanned is equal to 
 
 \begin{equation}
-	A = \left[2 EFL \tan\left( 2 \times 2 V \times 1  ^ \circ/V \times \frac{\pi}{180}\right)\right]^2 \approx 7.55\times 7.55 \text{ mm}^2.
+	\mathcal{A} = \left[2\cdot EFL \tan\left( 2 \times 2 V \times 1  ^ \circ/V \times \frac{\pi}{180}\right)\right]^2 \approx 7.55\times 7.55 \text{ mm}^2,
 \end{equation}
+where $EFL = 54$ mm is the effective focal length of the lens introduced in \autoref{ch:setup}. 
 If only cross-sectional images are required, the $Y$ motor will be controlled with a constant voltage. 
 
 During the falling edge of the triangle wave the $X$ mirror will return to its initial position, meaning that the data generated in this time interval is not useful. Hence, the number of A-scans to acquire in order to scan the entire space covered by this mirror is
@@ -315,9 +316,9 @@ Solutions to mitigate this effect could not be investigated in detail and will b
 
 \clearpage
 \section{Acquisitions}
-In this section I will showcase a series of acquisitions made with the SS-OCT system that was described in the previous chapters and the custom-made OCT software.
+In this section, a series of acquisitions made with the SS-OCT system described in the previous chapters are showcased.
 \subsection{B-scans}
-The first sample that was imaged is the Thorlabs test target introduced in \autoref{sub:thickness-measurements}. In \autoref{fig:target-bscan} we can see the highly reflective chrome coating on the top, while the bottom surface is only visible where the clear pattern is present.
+The first sample is the Thorlabs test target introduced in \autoref{sub:thickness-measurements}. In \autoref{fig:target-bscan} we can see the highly reflective chrome coating on the top, while the bottom surface is only visible where the clear pattern is present.
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=0.8\linewidth]{gfx/ch4/axsun/target-bscan}

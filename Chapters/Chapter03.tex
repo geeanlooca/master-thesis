@@ -51,7 +51,7 @@ A critical parameter in swept sources for OCT applications is the wavelength int
 	\caption{Spectrum of the Axsun SSOCT-1310 laser, obtained with a 1 nm resolution.}\label{fig:axsun-spectrum}
 \end{figure}
 
-The measurement was performed with a resolution of 1 nanometer, resulting in the spectrum visible in \autoref{fig:axsun-spectrum}. The edge wavelengths turned out to be $\lambda_1 \approx 1237$ nm and $\lambda_2\approx1376$ nm, which result in a bandwidth of $\Delta \lambda \approx 139$ nm and central wavelength of $\lambda_0\approx 1307$ nm. These values slightly differ from those reported in the datasheet, but not enough to compromise the performance of the laser. 
+The measurement was performed with a resolution of 1 nanometer, resulting in the spectrum shown in \autoref{fig:axsun-spectrum}. The edge wavelengths turned out to be $\lambda_1 \approx 1237$ nm and $\lambda_2\approx1376$ nm, which result in a bandwidth of $\Delta \lambda \approx 139$ nm and central wavelength of $\lambda_0\approx 1307$ nm. These values slightly differ from those reported in the datasheet, but not enough to compromise the performance of the laser. 
 
 The bandwidth is swept at a frequency $f_a = 100.2$ kHz and with a duty cycle $d_c=0.505$, meaning that the average wavelength sweep speed is 
 \begin{equation}
@@ -96,11 +96,11 @@ For a correct acquisition of A-scans, the datasheet recommends to trigger the ac
 \end{figure}
 
 \subsection{Power profile}
-Using a photodiode it's possible to measure the istantaneous power profile of the laser emission. The photodiode generates an electrical current which is proportional to the power of the detected electromagnetic field: 
+Using a photodiode it's possible to measure the istantaneous power profile of the laser emission. The photodiode generates an electrical current which is proportional to the power of the detected light: 
 \begin{equation}
 	I_{ph} = \mathcal{R} \cdot P 
 \end{equation}
-The constant $\mathcal{R}$ is called \emph{responsivity} [A/W] and is specific to the detector used. The current can then be measured with an oscilloscope. In order to avoid the saturation of the receiver, a 3 dB coupler was inserted between the source and the photodiode. The obtained power profile is depicted in \autoref{fig:axsun-power} along with the sweep trigger. We can observe that in the first $\sim 5$ $\mu$s after the positive edge of the trigger, the istantaneous power behaves like a typical laser pulse while outside of this interval it assumes an irregular profile. 
+The constant $\mathcal{R}$ is called \emph{responsivity} [A/W] and is specific to the detector used. The current can then be measured with an oscilloscope. In order to avoid the saturation of the receiver, a 3 dB coupler was inserted between the source and the photodiode. The obtained power profile is depicted in \autoref{fig:axsun-power} along with the sweep trigger. We can observe that outside of the first $\sim 5$ $\mu$s after the positive edge of the trigger, the istantaneous power assumes an irregular profile. 
 
 
 \begin{figure}[hbt]
@@ -192,7 +192,7 @@ which corresponds to a linear decay in the logarithmic domain. The parameter $\a
 \begin{figure}[hbt]
 	\myfloatalign
 	{\includegraphics[width=0.8\linewidth]{gfx/ch3/axsun-coherence-length}}\\
-	\caption{Experimental estimation of the normalized coherence function.}\label{fig:axsun-coherence-length}
+	\caption{Experimental estimation of the normalized coherence function \cite{Calabrese2017}.}\label{fig:axsun-coherence-length}
 \end{figure}
 
 \newpage
@@ -446,7 +446,7 @@ Galvo system, collimator and scanning lens are housed in a cage system mount\foo
 	\end{itemize}
 
 
-	The board also comes with the proprietary AlazarDSO software to configure the device, acquire and display signals. For custom applications, the board can be integrated using a supplied \ac{SDK} which includes libraries and headers for a variety of different programming languages, including C/C++, Python and MATLAB. The device was installed in a Dell Precision T5810\footnote{\url{https://www.dell.com/us/business/p/precision-t5810-workstation/fs}} workstation with the following specifications:
+	The board also comes with the proprietary AlazarDSO software to configure the device, acquire and display signals. For custom applications, the board can be integrated using a supplied \ac{SDK} which includes libraries and headers for a variety of different programming languages, including C/C++, Python and MATLAB. The device was installed in a Dell Precision T5810 workstation\footnote{\url{https://www.dell.com/us/business/p/precision-t5810-workstation/fs}} with the following specifications:
 	\begin{itemize}
 		\item Intel Xeon E5-1650 v4, 3.6 GHz, 6 cores, 12 threads
 		\item 16 GB of DDR4 ECC RAM at 2400 MHz
@@ -601,13 +601,13 @@ For a 50:50 fiber coupler, $\rho = 1/\sqrt{2}$ so that 50\% of the optical power
 
 For this thesis, three fiber couplers were used:
 \begin{itemize}
-	\item 2 Thorlabs TW1300R5A2\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=TW1300R5A2}} 50:50 fiber couplers
-	\item 1 Thorlabs TW1300R2A2\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=TW1300R2A2}} 90:10 fiber coupler	
+	\item 2 Thorlabs TW1300R5A2 50:50 fiber couplers\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=TW1300R5A2}}
+	\item 1 Thorlabs TW1300R2A2 90:10 fiber coupler\footnote{\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=TW1300R2A2}}	
 \end{itemize} 
 The arms of the couplers are color coded to easily distinguish the direct paths, which are White$\xleftrightarrow{}$White and Blue$\xleftrightarrow{}$Red.
 
 \subsection{Measuring the couplers' length}
-For the design of the interferometer it is useful to determine the length of the coupler's arms with high precision. This was accomplished using an \acf{OFDR} and the setup in \autoref{fig:setup-couplers-length}. 
+For the design of the interferometer it is useful to determine the length of the coupler's arms with high precision. This was accomplished using an \acf{OFDR} and the setup in \autoref{fig:setup-couplers-length}. In particular, the OFDR used in this thesis is a OBR 4600 by Luna Innovations\footnote{\url{http://lunainc.com/product/sensing-solutions/obr-4600/}}.
 
 
 \begin{figure}[bth]
